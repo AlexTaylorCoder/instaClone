@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "fName": "Alex",
+      "lName": "Taylor",
+      "birthday": "2022-07-15",
+      "username": "Brandon_Inhaber",
+      "password": "awrawr",
+      "picture": "",
+      "id": 1
+    },
+    {
+      "fName": "Charlie",
+      "lName": "Dawn",
+      "birthday": "2022-07-22",
+      "username": "123",
+      "password": "123",
+      "picture": "",
+      "id": 2
+    },
+    {
+      "fName": "Brad",
+      "lName": "Jenkin",
+      "birthday": "",
+      "username": "567",
+      "password": "890",
+      "picture": "",
+      "id": 3
+    }
+  ],
+  "posts": []
+}
