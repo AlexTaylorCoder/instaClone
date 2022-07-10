@@ -47,7 +47,8 @@ function Validation({validCallback}) {
         })
 
        function postCreateUserAccount(returned) {
-            fetch(userUrl,{...postHeader,body:JSON.stringify(returned)}).then(()=>handleLogin(username,returned.password))
+            const timeofCreation = new Date()
+            fetch(userUrl,{...postHeader,body:JSON.stringify({...returned,timeofCreation:timeofCreation})}).then(()=>handleLogin(username,returned.password))
 
        }
 
@@ -57,7 +58,7 @@ function Validation({validCallback}) {
         checkDB({"username":username,"password":password}).then((check)=> {
             console.log(check)
             if (check) {
-                validCallback(true)
+                validCallback(true,check[0])
             }
             else {
                 validCallback(false)

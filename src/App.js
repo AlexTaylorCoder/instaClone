@@ -14,17 +14,17 @@ import { useCookies } from "react-cookie";
 function App() {
   const [cookies, setCookie] = useCookies('')
   const [valid,setValid] = useState(false)
+  const [userObj, setuserObj] = useState({})
   
-  function validCallback(returned) {
+  function validCallback(returned,obj=null) {
     setValid(()=>returned)
-    setCookie('valid',valid, {path: '/'})
-    console.log(cookies)
+    setuserObj(()=>obj)
   }
   return (
     <div id="App">
       <Routes>
         
-        <Route path="validation" element={<Validation/>}/>
+        <Route path="validation" element={<Validation validCallback={validCallback}/>}/>
  
       </Routes>
       <Footer/> 

@@ -51,7 +51,7 @@ function CreateAccount({handleNewAccount}) {
                         <input onChange = {handleInput}value={inputs.fName}type="text" className="form-control" id="fName"/>
                         </div>
                     <div className="col-md-6">
-                        <label htmlFor="lName" className="form-label form-label">Last Name:</label>
+                        <label htmlFor="lName" className="form-label">Last Name:</label>
                         <input onChange = {handleInput}value={inputs.lName}type="text" className="form-control" id="lName"/>
                     </div> 
                     <div className="col-md-12">
@@ -59,11 +59,11 @@ function CreateAccount({handleNewAccount}) {
                         <input onChange = {handleInput}value={inputs.birthday}type="date" className="form-control" id="birthday"/>
                     </div> 
                     <div className="col-md-12">
-                        <label htmlFor="username" className="form-label form-label ">Username:</label>
+                        <label htmlFor="username" className="form-label">Username:</label>
                         <input onChange = {handleInput}value={inputs.username}type="text" className="form-control" id="username"/>
                     </div>  
                     <div className="col-md-12">
-                        <label htmlFor="password" className="form-label form-label">Password:</label>
+                        <label htmlFor="password" className="form-label">Password:</label>
                         <input onChange = {handleInput}value={inputs.password}type="password" className="form-control" id="password"/>
                     </div> 
                     <div className="col-md-12">
