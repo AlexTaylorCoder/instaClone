@@ -1,32 +1,34 @@
 import Login from "../elements/Login"
 import CreateAccount from "../elements/Createaccount"
 import { Link, Outlet} from "react-router-dom"
+import checkDB from "../helperFunc/checkDB"
 
+const userUrl = "http://localhost:3001/users"
 const postHeader = {
     method: 'POST', // or 'PUT'
     headers: {
         'Content-Type': 'application/json',
     }
 }
-const userUrl = "http://localhost:3001/users"
 
-function checkDB(...args) {
-    return fetch(userUrl).then(resp=>resp.json()).then(userData=>{
-            const filteredUsers = userData.filter(user=> {
-            for (let arg of args) {
-                for (let prop in arg) {
-                    if (arg[prop]===user[prop]) {
-                        return true;
-                    }
-                }
-            }
-            return false;
 
-        })
-        if (filteredUsers.length === 0) return false
-        return filteredUsers
-    })
-}
+// function checkDB(...args) {
+//     return fetch(userUrl).then(resp=>resp.json()).then(userData=>{
+//             const filteredUsers = userData.filter(user=> {
+//             for (let arg of args) {
+//                 for (let prop in arg) {
+//                     if (arg[prop]===user[prop]) {
+//                         return true;
+//                     }
+//                 }
+//             }
+//             return false;
+
+//         })
+//         if (filteredUsers.length === 0) return false
+//         return filteredUsers
+//     })
+// }
 
 
 
@@ -37,7 +39,7 @@ function Validation({validCallback}) {
         //Check db to see if username is already taken, if not, set state
         const username = returned.username
         console.log(username)
-       checkDB({"username":username}).then(resp=> {
+       checkDB(userUrl,{"username":username}).then(resp=> {
             if (!resp) {
                 postCreateUserAccount(returned)
             }
@@ -55,7 +57,7 @@ function Validation({validCallback}) {
     }
     function handleLogin(username,password) {
 
-        checkDB({"username":username,"password":password}).then((check)=> {
+        checkDB(userUrl,{"username":username,"password":password}).then((check)=> {
             console.log(check)
             if (check) {
                 validCallback(true,check[0])
