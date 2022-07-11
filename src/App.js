@@ -1,6 +1,6 @@
 import Main from "./components/Main";
 import Validation from "./components/Validation";
-import Footer from "./components/Footer";
+
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import CreateAccount from "./elements/Createaccount";
@@ -31,7 +31,6 @@ function App() {
         <Route path="/createpost" element={<PostsPage />} />
         <Route path="/home" element={<Home />} />
       </Routes>
-      <Footer />
     </div>
   );
 }
