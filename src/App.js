@@ -1,8 +1,8 @@
 import Main from "./components/Main";
 import Validation from "./components/Validation";
 
-import { Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import CreateAccount from "./elements/Createaccount";
 import Login from "./elements/Login";
 import PostsPage from "./elements/PostsPage";
@@ -20,16 +20,24 @@ function App() {
     setValid(() => returned);
     setuserObj(() => obj);
   }
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    //get cookies and set to the setUserObj but for now hardcode use state
+
+    if (JSON.stringify(userObj) === "{}") {
+      navigate("/login");
+    }
+  }, []);
+
   return (
     <div id="App">
       <Routes>
-        <Route
-          path="/"
-          element={<Validation validCallback={validCallback} />}
-        />
+        <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/createpost" element={<PostsPage />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/createaccount" element={<CreateAccount />} />
       </Routes>
     </div>
   );
