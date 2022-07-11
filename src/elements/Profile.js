@@ -1,12 +1,7 @@
-import OwnPostContainer from "../subelements/Ownpostcontainer"
+import OwnPostContainer from "../subelements/Ownpostcontainer";
 
 function Profile() {
-
-    return (
-        <div id = "profile">
-
-        </div>
-    )
+  return <div id="profile">Profile</div>;
 }
 
-export default Profile
+export default Profile;
