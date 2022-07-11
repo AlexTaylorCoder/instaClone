@@ -2,12 +2,14 @@ import { useState } from "react";
 import { Card } from "react-bootstrap"
 import { Outlet,useLocation } from "react-router-dom";
 
+import handleNewAccount from "../helperFunc/handleNewAccount";
+
 const allowedChar = /[^\w\b]|_/
 const allowedCharUser = /[^\w\b.$%&-]/
 const allowedCharPass = /[^\w\b.`~!@#$%^&*()_+=-?*]/
 
 
-function CreateAccount({handleNewAccount}) {
+function CreateAccount() {
   
     const [inputs,setInputs] = useState({
         fName:"",
@@ -27,7 +29,7 @@ function CreateAccount({handleNewAccount}) {
         else if (e.target.id === "username") {
             res = allowedCharUser.test(e.target.value)
         }
-        else if(e.target.id==="birthday" || e.target.id==="picture") {
+        else if(e.target.id==="birthday") {
             res = false
         }
 
@@ -40,7 +42,7 @@ function CreateAccount({handleNewAccount}) {
     }
     function handleSubmit(e) {
         e.preventDefault()
-        handleNewAccount(inputs)
+        console.log(handleNewAccount(inputs))
     }
     return (
         <Card style ={{width:"60%",margin:"20px auto"}}>
@@ -68,7 +70,11 @@ function CreateAccount({handleNewAccount}) {
                     </div> 
                     <div className="col-md-12">
                         <label htmlFor="picture" className="form-label">Profile Picture: </label>
-                        <input onChange = {handleInput}value={inputs.picture}type="file" className="form-control" id="picture"/>
+                        <input onChange = {handleInput}value={inputs.picture}type="text" className="form-control" id="picture"/>
+                    </div> 
+                    <div className="col-md-12">
+                        <label htmlFor="bioform" className="form-label">Description: </label>
+                        <textarea onChange = {handleInput}value={inputs.bioform}type="text" className="form-control" id="bioform"/>
                     </div> 
                     <div className="col-12">
                     <button type="submit" className="btn btn-primary">Create Account</button>

@@ -1,5 +1,4 @@
 import Main from "./components/Main";
-import Validation from "./components/Validation";
 
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
@@ -23,13 +22,11 @@ function App() {
   return (
     <div id="App">
       <Routes>
-        <Route
-          path="/"
-          element={<Validation validCallback={validCallback} />}
-        />
+
         <Route path="/profile" element={<Profile />} />
         <Route path="/createpost" element={<PostsPage />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/createaccount" element={<CreateAccount />} />
       </Routes>
     </div>
   );
