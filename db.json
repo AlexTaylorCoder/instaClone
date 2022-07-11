@@ -49,27 +49,6 @@
       "id": 2,
       "timeStamp": 1655821248892,
       "bio": "this is the bio for alex"
-    },
-    {
-      "fName": "Charlie",
-      "lName": "3wtgses",
-      "birthday": "",
-      "username": "atwgse",
-      "password": "hdrhftjftvm",
-      "picture": "",
-      "bioform": "awtag",
-      "timeofCreation": "2022-07-11T19:53:40.928Z",
-      "id": 3
-    },
-    {
-      "fName": "awfawf",
-      "lName": "awgawg",
-      "birthday": "",
-      "username": "",
-      "password": "awg",
-      "picture": "",
-      "timeofCreation": "2022-07-11T20:33:29.905Z",
-      "id": 4
     }
   ],
   "posts": [
@@ -89,6 +68,24 @@
           "comment": "some comment"
         }
       ]
+    },
+    {
+      "caption": "this is a picture of kim K",
+      "photo": "https://ca-times.brightspotcdn.com/dims4/default/b49b9d8/2147483647/strip/true/crop/3500x1969+0+0/resize/1200x675!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
+      "timeStamp": 1657572834993,
+      "userId": 1,
+      "likes": 0,
+      "comments": [],
+      "id": 2
+    },
+    {
+      "caption": "cool movie with will smith",
+      "photo": "https://upload.wikimedia.org/wikipedia/en/5/5b/GeminiManPoster.jpeg",
+      "timeStamp": 1657573030619,
+      "userId": 1,
+      "likes": 0,
+      "comments": [],
+      "id": 3
     }
   ]
 }

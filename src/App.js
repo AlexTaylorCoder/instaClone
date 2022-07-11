@@ -11,11 +11,12 @@ import { useCookies } from "react-cookie";
 import Profile from "./elements/Profile";
 import { useLocalStorage } from "./customHooks/uselocalstorage";
 import BottomBar from "./components/Bottombar";
+import NavigationBar from "./elements/Navbar";
 
 function App() {
   const [cookies, setCookie] = useCookies("");
   // const [valid, setValid] = useState(false);
-  const [userObj, setuserObj] = useLocalStorage("userObj",{});
+  const [userObj, setuserObj] = useLocalStorage("userObj", {});
 
   function validCallback(obj = "{}") {
     // setValid(() => returned);
@@ -23,9 +24,9 @@ function App() {
   }
   const navigate = useNavigate();
 
-  useEffect(()=> {
-    navigate("/")
-  },[userObj])
+  useEffect(() => {
+    navigate("/");
+  }, [userObj]);
   useEffect(() => {
     //get cookies and set to the setUserObj but for now hardcode use state
     if (JSON.stringify(userObj) === "{}") {
@@ -35,12 +36,19 @@ function App() {
 
   return (
     <div id="App">
+      <NavigationBar userObj={userObj} />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/createpost" element={<PostsPage />} />
-        <Route path="/login" element={<Login validCallback={validCallback}/>} />
-        <Route path="/createaccount" element={<CreateAccount validCallback={validCallback} />} />
+        <Route path="/" element={<Home userObj={userObj} />} />
+        <Route path="/profile" element={<Profile userObj={userObj} />} />
+        <Route path="/createpost" element={<PostsPage userObj={userObj} />} />
+        <Route
+          path="/login"
+          element={<Login validCallback={validCallback} />}
+        />
+        <Route
+          path="/createaccount"
+          element={<CreateAccount validCallback={validCallback} />}
+        />
       </Routes>
       <BottomBar/>
     </div>

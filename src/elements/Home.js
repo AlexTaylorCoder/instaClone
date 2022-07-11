@@ -1,24 +1,65 @@
-import PostContainer from "../subelements/Postcontainer"
-import { Card } from "react-bootstrap"
+import PostContainer from "../subelements/Postcontainer";
+import { Card } from "react-bootstrap";
+import "../styles.css";
+import { FaRegComment } from "react-icons/fa";
+import { BsHeartFill } from "react-icons/bs";
 
-//470 x 587.5
 function Home() {
-
-    return (
-        <div id = "home">
-        <Card>
-            <Card.Header>
-                Name
-            </Card.Header>
-            <Card.Img variant="top"src="https://cie.ucdavis.edu/sites/g/files/dgvnsk6861/files/styles/sf_profile/public/media/images/blank-headshot_15.png?h=345be249&itok=N-xKtfUn"/>
-                
-            <Card.Body>
-
-            </Card.Body>
+  return (
+    <div id="home" className="d-flex">
+      <div className="w-75 overflow-auto">
+        <Card className="mx-auto m-3 w-50">
+          <Card.Header>
+            <div className="d-flex">
+              <div
+                className="profile-picture"
+                style={{
+                  width: "50px",
+                  height: "50px",
+                  backgroundImage:
+                    "url(https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg?w=2000)",
+                }}
+              ></div>
+              <h2>username</h2>
+            </div>
+          </Card.Header>
+          <Card.Img
+            variant="top"
+            src="https://cie.ucdavis.edu/sites/g/files/dgvnsk6861/files/styles/sf_profile/public/media/images/blank-headshot_15.png?h=345be249&itok=N-xKtfUn"
+          />
+          <div className="d-flex">
+            <h1 className="p-2">
+              <BsHeartFill />
+            </h1>
+            <h1 className="p-2">
+              <FaRegComment />
+            </h1>
+          </div>
+          <h5>20 Likes</h5>
+          <div className="d-flex">
+            <h4>adsfasd</h4>
+            <h6>
+              lorem ipsum adfa adfdasf kjls dkfjlkdjf sldkfj s dfklslkdjf sld
+              flsdkfj sdlkfj sldkfj sdflkjn sdflkj sdlfkj
+            </h6>
+          </div>
+          <Card.Text className="mb-2 text-muted">View Comments</Card.Text>
+          <Card.Footer>add a comment</Card.Footer>
         </Card>
-
-        </div>
-    )
+      </div>
+      <div>
+        <div
+          className="profile-picture"
+          style={{
+            width: "50px",
+            height: "50px",
+            backgroundImage:
+              "url(https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg?w=2000)",
+          }}
+        ></div>
+      </div>
+    </div>
+  );
 }
 
-export default Home
+export default Home;
