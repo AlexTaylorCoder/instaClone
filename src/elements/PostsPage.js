@@ -3,25 +3,52 @@ import Card from "react-bootstrap/Card";
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
-import ListGroup from "react-bootstrap/ListGroup";
-import CardGroup from "react-bootstrap/CardGroup";
-import Image from "react-bootstrap/Image";
 import "../styles.css";
 import InputGroup from "react-bootstrap/InputGroup";
+import { useNavigate } from "react-router-dom";
+import { FaChevronLeft } from "react-icons/fa";
 
-function PostsPage() {
+function PostsPage({ userObj }) {
   const [show, setShow] = useState(false);
   const [imageUrl, setImageUrl] = useState("");
+  const [caption, setCaption] = useState("");
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const navigate = useNavigate();
+
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(e.target.formImageUrl.value);
     handleClose();
     setImageUrl(e.target.formImageUrl.value);
   }
+
+  function handlePost() {
+    let tempObj = {
+      caption: caption,
+      photo: imageUrl,
+      timeStamp: Date.now(),
+      userId: userObj.id,
+      likes: 0,
+      comments: [],
+    };
+
+    fetch("http://localhost:3001/posts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: JSON.stringify(tempObj),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        navigate("/profile");
+      });
+  }
+
   return (
     <>
       {imageUrl === "" ? (
@@ -38,11 +65,16 @@ function PostsPage() {
         <Card className="mx-auto m-3 w-75">
           <Card.Header>
             <div className="d-flex justify-content-between">
-              <h4 onClick={() => setImageUrl("")}>Back</h4>
-              <h3>Create new post</h3> <Button variant="primary">Post</Button>
+              <h4 onClick={() => setImageUrl("")}>
+                <FaChevronLeft />
+              </h4>
+              <h3>Create new post</h3>{" "}
+              <Button variant="primary" onClick={handlePost}>
+                Post
+              </Button>
             </div>
           </Card.Header>
-          <div class="d-flex">
+          <div className="d-flex">
             <img src={imageUrl} className="w-50 h-auto" />
             <div className="d-flex flex-column flex-grow-1 p-2 align-items-start">
               <div className="d-flex align-items-center">
@@ -51,17 +83,17 @@ function PostsPage() {
                   style={{
                     width: "50px",
                     height: "50px",
-                    backgroundImage:
-                      "url(https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg?w=2000)",
+                    backgroundImage: "url(" + userObj.picture + ")",
                   }}
                 ></div>
-                <h2 className="m-2">username</h2>
+                <h2 className="m-2">{userObj.username}</h2>
               </div>
               <InputGroup className="flex-grow-1 m-2">
                 <Form.Control
                   as="textarea"
                   aria-label="textarea"
                   placeholder="Write a caption..."
+                  onChange={(e) => setCaption(e.target.value)}
                 />
               </InputGroup>
             </div>
