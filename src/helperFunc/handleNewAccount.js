@@ -6,10 +6,9 @@ function handleNewAccount(returned) {
     //Check db to see if username is already taken, if not, set state
     const username = returned.username
     const password = returned.password
-    console.log(username)
-   checkDB(userUrl,{"username":username}).then(resp=> {
+    return checkDB(userUrl,{"username":username}).then(resp=> {
         if (!resp) {
-            postCreateUserAccount(returned,username,password)
+            return postCreateUserAccount(returned,username,password)
         }
         else {
             console.log("username taken!")

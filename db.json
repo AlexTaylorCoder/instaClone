@@ -7,16 +7,23 @@
       "username": "derekvogt",
       "password": "derekvogt",
       "picture": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*",
-      "followers":[{"username": "alextaylor",
-        "id":2,
-        "picture":"https://static.wikia.nocookie.net/monster/images/6/6e/DragonRed.jpg/revision/latest/scale-to-width-down/1200?cb=20160809235604"}],
-      "following":[{"username": "alextaylor",
-        "id":2,
-        "picture":"https://static.wikia.nocookie.net/monster/images/6/6e/DragonRed.jpg/revision/latest/scale-to-width-down/1200?cb=20160809235604"}],
+      "followers": [
+        {
+          "username": "alextaylor",
+          "id": 2,
+          "picture": "https://static.wikia.nocookie.net/monster/images/6/6e/DragonRed.jpg/revision/latest/scale-to-width-down/1200?cb=20160809235604"
+        }
+      ],
+      "following": [
+        {
+          "username": "alextaylor",
+          "id": 2,
+          "picture": "https://static.wikia.nocookie.net/monster/images/6/6e/DragonRed.jpg/revision/latest/scale-to-width-down/1200?cb=20160809235604"
+        }
+      ],
       "id": 1,
       "timeStamp": 1655821248892,
       "bio": "this is the bio for derek"
-  
     },
     {
       "fName": "Alex",
@@ -25,33 +32,63 @@
       "username": "alextaylor",
       "password": "alextaylor",
       "picture": "https://static.wikia.nocookie.net/monster/images/6/6e/DragonRed.jpg/revision/latest/scale-to-width-down/1200?cb=20160809235604",
-      "followers":[{"username": "derekvogt",
-        "id":1,
-        "picture":"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*"}],
-      "following":[{"username": "derekvogt",
-        "id":1,
-        "picture":"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*"}],
+      "followers": [
+        {
+          "username": "derekvogt",
+          "id": 1,
+          "picture": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*"
+        }
+      ],
+      "following": [
+        {
+          "username": "derekvogt",
+          "id": 1,
+          "picture": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*"
+        }
+      ],
       "id": 2,
       "timeStamp": 1655821248892,
       "bio": "this is the bio for alex"
-  
+    },
+    {
+      "fName": "Charlie",
+      "lName": "3wtgses",
+      "birthday": "",
+      "username": "atwgse",
+      "password": "hdrhftjftvm",
+      "picture": "",
+      "bioform": "awtag",
+      "timeofCreation": "2022-07-11T19:53:40.928Z",
+      "id": 3
+    },
+    {
+      "fName": "awfawf",
+      "lName": "awgawg",
+      "birthday": "",
+      "username": "",
+      "password": "awg",
+      "picture": "",
+      "timeofCreation": "2022-07-11T20:33:29.905Z",
+      "id": 4
     }
-
   ],
-  "posts": [    {
-    "id": 1,
-    "caption": "adfasdlkfjasdf",
-    "photo": "imgurl",
-    "timeStamp": 1655821248892,
-    "userId": 1,
-    "likes": 0,
-    "comments":[{"username": "alextaylor",
-      "id":1,
-      "userId":2,
-      "picture":"https://static.wikia.nocookie.net/monster/images/6/6e/DragonRed.jpg/revision/latest/scale-to-width-down/1200?cb=20160809235604",
-      "comment": "some comment"
-      }]
-
-  }
-]
+  "posts": [
+    {
+      "id": 1,
+      "caption": "adfasdlkfjasdf",
+      "photo": "imgurl",
+      "timeStamp": 1655821248892,
+      "userId": 1,
+      "likes": 0,
+      "comments": [
+        {
+          "username": "alextaylor",
+          "id": 1,
+          "userId": 2,
+          "picture": "https://static.wikia.nocookie.net/monster/images/6/6e/DragonRed.jpg/revision/latest/scale-to-width-down/1200?cb=20160809235604",
+          "comment": "some comment"
+        }
+      ]
+    }
+  ]
 }

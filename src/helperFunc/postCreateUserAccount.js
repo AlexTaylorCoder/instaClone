@@ -10,7 +10,7 @@ const postHeader = {
 
 function postCreateUserAccount(returned,username,password) {
     const timeofCreation = new Date()
-    fetch(userUrl,{...postHeader,body:JSON.stringify({...returned,timeofCreation:timeofCreation})}).then(()=>handleLogin(username,password))
+    return fetch(userUrl,{...postHeader,body:JSON.stringify({...returned,timeofCreation:timeofCreation})}).then(()=>handleLogin(username,password))
 
 }
 
