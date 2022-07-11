@@ -13,7 +13,7 @@ function checkDB(userUrl,...args) {
 
         })
         if (filteredUsers.length === 0) return false
-        return filteredUsers
+        return filteredUsers[0]
     })
 }
 

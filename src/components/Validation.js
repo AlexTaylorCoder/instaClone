@@ -60,7 +60,7 @@ function Validation({validCallback}) {
         checkDB(userUrl,{"username":username,"password":password}).then((check)=> {
             console.log(check)
             if (check) {
-                validCallback(true,check[0])
+                validCallback(true,check)
             }
             else {
                 validCallback(false)

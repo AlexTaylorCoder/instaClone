@@ -29,6 +29,7 @@ function App() {
         />
         <Route path="/profile" element={<Profile />} />
         <Route path="/createpost" element={<PostsPage />} />
+        <Route path="/home" element={<Home />} />
       </Routes>
       <Footer />
     </div>
