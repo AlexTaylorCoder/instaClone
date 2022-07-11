@@ -2,7 +2,9 @@ import { useState } from "react";
 import { useLocation, NavLink } from "react-router-dom";
 import { Card } from "react-bootstrap";
 
-function Login({ handleLogin, handleNewAccount }) {
+import handleLogin from "../helperFunc/handleLogin";
+
+function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
