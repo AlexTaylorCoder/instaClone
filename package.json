@@ -12,6 +12,7 @@
     "react-bootstrap": "^2.4.0",
     "react-cookie": "^4.1.1",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
@@ -21,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch -p 3001 db.json"
+    "server": "json-server -p 3001 --watch db.json --routes routes.json"
   },
   "eslintConfig": {
     "extends": [

@@ -9,6 +9,7 @@ import Home from "./elements/Home";
 import NavBar from "./elements/Navbar";
 import { useCookies } from "react-cookie";
 import Profile from "./elements/Profile";
+import NavigationBar from "./elements/Navbar";
 
 function App() {
   const [cookies, setCookie] = useCookies("");
@@ -58,10 +59,11 @@ function App() {
 
   return (
     <div id="App">
+      <NavigationBar userObj={userObj} />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home userObj={userObj} />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/createpost" element={<PostsPage />} />
+        <Route path="/createpost" element={<PostsPage userObj={userObj} />} />
         <Route path="/login" element={<Login />} />
         <Route path="/createaccount" element={<CreateAccount />} />
       </Routes>
