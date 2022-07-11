@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card } from "react-bootstrap"
 import { Outlet,useLocation } from "react-router-dom";
 
+import { useLocalStorage } from "../customHooks/uselocalstorage";
 import handleNewAccount from "../helperFunc/handleNewAccount";
 
 const allowedChar = /[^\w\b]|_/
@@ -9,9 +10,9 @@ const allowedCharUser = /[^\w\b.$%&-]/
 const allowedCharPass = /[^\w\b.`~!@#$%^&*()_+=-?*]/
 
 
-function CreateAccount() {
+function CreateAccount({validCallback}) {
   
-    const [inputs,setInputs] = useState({
+    const [inputs,setInputs] = useLocalStorage("accountobj",{
         fName:"",
         lName:"",
         birthday:"",
@@ -42,7 +43,7 @@ function CreateAccount() {
     }
     function handleSubmit(e) {
         e.preventDefault()
-        console.log(handleNewAccount(inputs))
+        handleNewAccount(inputs).then(validCallback)
     }
     return (
         <Card style ={{width:"60%",margin:"20px auto"}}>

@@ -3,14 +3,17 @@ import { useLocation, NavLink } from "react-router-dom";
 import { Card } from "react-bootstrap";
 
 import handleLogin from "../helperFunc/handleLogin";
+import { useLocalStorage } from "../customHooks/uselocalstorage";
 
-function Login() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+function Login({validCallback}) {
+
+  const [username, setUsername] = useLocalStorage("username","");
+  const [password, setPassword] = useLocalStorage("password","");
+
 
   function handleSubmit(e) {
     e.preventDefault();
-    handleLogin(username, password);
+    handleLogin(username, password).then(validCallback);
   }
   return (
     <div id="loginpage">
