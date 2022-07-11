@@ -10,6 +10,7 @@ import NavBar from "./elements/Navbar";
 import { useCookies } from "react-cookie";
 import Profile from "./elements/Profile";
 import { useLocalStorage } from "./customHooks/uselocalstorage";
+import BottomBar from "./components/Bottombar";
 
 function App() {
   const [cookies, setCookie] = useCookies("");
@@ -41,6 +42,7 @@ function App() {
         <Route path="/login" element={<Login validCallback={validCallback}/>} />
         <Route path="/createaccount" element={<CreateAccount validCallback={validCallback} />} />
       </Routes>
+      <BottomBar/>
     </div>
   );
 }
