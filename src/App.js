@@ -1,4 +1,3 @@
-
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 
 import { useContext, useEffect } from "react";
@@ -15,8 +14,8 @@ import NavigationBar from "./elements/Navbar";
 import { UserContext } from "./customHooks/userObj";
 
 function App() {
-  const location = useLocation()
-  const {userObj, setuserObj} = useContext(UserContext)
+  const location = useLocation();
+  const { userObj, setuserObj } = useContext(UserContext);
 
   function validCallback(obj = "{}") {
     setuserObj(obj);
@@ -24,19 +23,16 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(location)
+    console.log(location);
     if (!userObj || JSON.stringify(userObj) === "{}") {
       navigate("/login");
+    } else if (location.pathname.includes("/profile")) {
+      navigate(location.pathname);
+    } else if (userObj) {
+      navigate("/");
     }
-    else if(location.pathname.includes("/profile")) {
-      navigate(location.pathname)
-    }
-    else if (userObj){
-      navigate("/");   
-    }
-
   }, [userObj]);
-  
+
   return (
     <div id="App">
       <NavigationBar userObj={userObj} />

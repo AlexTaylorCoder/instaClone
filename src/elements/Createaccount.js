@@ -27,7 +27,11 @@ function CreateAccount({ validCallback }) {
     } else if (e.target.id === "username") {
       console.log(input.length);
       res = allowedCharUser.test(input) || input.length > 30;
-    } else {
+    } else if(e.target.id === "picture") {
+      res = false
+    }
+    
+    else {
       res = false || input.length > 300;
     }
 

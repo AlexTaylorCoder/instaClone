@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Col } from "react-bootstrap"
 
 const styleObj = {
     margin: "30px 20px",
@@ -17,7 +18,9 @@ function OwnPost({post}) {
     return (
         
         <div onMouseEnter={handleHover}className = "ownPost">
-            <img style= {styleObj} src= {post.photo}/> :
+            <Col style={{margin:10}}>
+                <img style= {styleObj} src= {post.photo}/> 
+            </Col>
 
         </div>
     )

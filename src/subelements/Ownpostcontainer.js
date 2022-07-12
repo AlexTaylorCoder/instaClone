@@ -1,25 +1,18 @@
 import { useEffect, useState } from "react"
 import OwnPost from "./Ownpost"
+import { Row } from "react-bootstrap"
 
-function OwnPostContainer({id}) {
+function OwnPostContainer({posts=[]}) {
+    
+    const postList = posts.map(post=><OwnPost key = {post.id} post={post}/>)
 
-    const [posts,setPost] = useState([])
-    useEffect(()=> {
-        setPost([])
-        fetch("http://localhost:3001/users/"+id).then(resp=>resp.json()).then(displayPosts)
-    },[])
-
-    function displayPosts(userData) {
-        const postList = userData.posts.map(post=><OwnPost key = {post.id} post={post}/>)
-        setPost(postList) 
-        console.log(posts)
-
-    }
     return (
         <div id = "ownpostcontainer">
-            {posts}
+            <Row sm = {4}>
+            {postList}
+            </Row>
         </div>
     )
-}
+    }
 
 export default OwnPostContainer

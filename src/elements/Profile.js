@@ -26,12 +26,15 @@ function Profile() {
 
 
   useEffect(()=> {
-    fetch("http://localhost:3001/users/"+params.id).then(resp=>resp.json()).then(data=> setlocaluserObj(data))
+    fetch("http://localhost:3001/users/"+params.id).then(resp=>resp.json()).then(data=> setlocaluserObj(()=>data))
   },[])
 
-  const {fName, bioForm, lName, picture, username, followers, following,id} = localuserObj
+  console.log(localuserObj)
+  const {fName, bioForm, lName, picture, username, followers = 0, following = 0,posts,id} = localuserObj
+  
+  
 
-
+  console.log(following)
   function handleLogOutToggle() {
     console.log("click")
     setlogoutDrop((logoutDrop)=>!logoutDrop)
@@ -59,7 +62,7 @@ function Profile() {
 
             <Col style={styleObj} xs= {{span:2}}>
               <Button style={{width:"50%", marginBottom:"8px"}}variant="outline-secondary" size="sm">Edit</Button>
-              <p><b></b>followers</p>
+              <p><b></b>{followers.length}  followers</p>
             </Col>
             <Col style={styleObj} xs= {{span:2}}>
             <BsGearWide onClick={handleLogOutToggle}style={{margin: "5px 0 15px 0"}}/>  
@@ -69,12 +72,12 @@ function Profile() {
             </ListGroup>
             : null
             }
-            <p><b></b> following</p>
+            <p><b></b>{following.length} following</p>
             </Col>
       </Row>
       <hr />
     </Container>
-    {/* <OwnPostContainer id = {id}/> */}
+    <OwnPostContainer posts = {posts} />
   </div>
   );
 }
