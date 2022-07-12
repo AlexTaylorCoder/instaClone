@@ -48,7 +48,7 @@ function NavigationBar({ userObj }) {
             </h1>
           </Link>
 
-          <Link to={"/profile"}>
+          <Link to={`/profile/${userObj.id}`}>
             <h1>
               {location.pathname === "/profile" ? (
                 <IoPerson />

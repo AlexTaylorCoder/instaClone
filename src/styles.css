@@ -9,3 +9,8 @@ a:link {
 #root {
         background-color: whitesmoke;
 }
+
+.hover-cover {
+        opacity: .4;
+        background-color: black;
+}

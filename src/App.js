@@ -1,5 +1,5 @@
 
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 
 import { useContext, useEffect} from "react";
 import { useLocalStorage } from "./customHooks/uselocalstorage";
@@ -17,7 +17,7 @@ import { UserContext } from "./customHooks/userObj";
 
 
 function App() {
-
+  const location = useLocation()
   const {userObj, setuserObj} = useContext(UserContext)
 
   function validCallback(obj = "{}") {
@@ -26,21 +26,24 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log("fire")
+    console.log(location)
     if (!userObj || JSON.stringify(userObj) === "{}") {
       navigate("/login");
+    }
+    else if(location.pathname.includes("/profile")) {
+      navigate(location.pathname)
     }
     else if (userObj){
       navigate("/");   
     }
+
   }, [userObj]);
   
   return (
     <div id="App">
       <NavigationBar userObj={userObj} />
       <Routes>
-        <Route path="/" element={<Home userObj={userObj} />} />
-        <Route path="/profile" element={<Profile userObj={userObj} />} />
+        <Route path="/profile/:id" element={<Profile />} />
         <Route path="/createpost" element={<PostsPage userObj={userObj} />} />
         <Route
           path="/login"
@@ -50,6 +53,7 @@ function App() {
           path="/createaccount"
           element={<CreateAccount validCallback={validCallback} />}
         />
+        <Route path="/" element={<Home userObj={userObj} />} />
       </Routes>
       <BottomBar />
     </div>

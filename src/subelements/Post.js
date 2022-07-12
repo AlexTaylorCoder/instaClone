@@ -1,10 +1,8 @@
 
 
-
 function Post() {
-
     return (
-        <div id = "post">
+        <div className = "post">
 
         </div>
     )

@@ -62,6 +62,19 @@
       "followers": [],
       "timestamp": 1657637821301,
       "id": 3
+    },
+    {
+      "fName": "Jordan",
+      "lName": "Taylor",
+      "birthday": "1995-04-23",
+      "username": "BFGinger",
+      "password": "Jordan",
+      "picture": "",
+      "bioform": "It's Jordan!",
+      "following": [],
+      "followers": [],
+      "timestamp": 1657642580586,
+      "id": 4
     }
   ],
   "posts": [
