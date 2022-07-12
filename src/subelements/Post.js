@@ -2,10 +2,19 @@ import { Card } from "react-bootstrap";
 import "../styles.css";
 import { FaRegComment } from "react-icons/fa";
 import { BsHeartFill } from "react-icons/bs";
+import { useState } from "react";
 
-function Post({ post }) {
+function Post({ post=[],addcomment,id}) {
+    const [comment, setComment] = useState("")
+
+    function handleInput(e) {
+        setComment(e.target.value)
+    }
+    function handleSubmit() {
+        addcomment(post,comment)
+    }
   return (
-    <Card className="mx-auto m-3 w-50">
+    <Card style = {{borderRadius:"10px"}}className="mx-auto m-3 w-50">
       <Card.Header>
         <div className="d-flex">
           <div
@@ -28,13 +37,17 @@ function Post({ post }) {
           <FaRegComment />
         </h1>
       </div>
+      <Card.Body>
       <h5>{post.likes} Likes</h5>
-      <div className="d-flex">
-        <h4>{post.username}</h4>
-        <h6>{post.caption}</h6>
+      <div className="d-flex center-text">
+        <p><b>{post.username}</b> {post.caption}</p>
       </div>
-      <Card.Text className="mb-2 text-muted">View Comments</Card.Text>
-      <Card.Footer>add a comment</Card.Footer>
+      <Card.Text className="mb-2 text-muted">View all {post.comments.length} Comments</Card.Text>
+      </Card.Body>
+      <Card.Footer style={{backgroundColor:"white", padding:"5px"}}>
+        <input value={comment} onChange={handleInput}className = "inputNone" type="text"placeholder="Add a comment..."/>
+        <p onClick = {handleSubmit}className="postFooter ">Post</p>
+      </Card.Footer>
     </Card>
   );
 }

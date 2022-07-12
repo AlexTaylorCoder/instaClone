@@ -3,10 +3,29 @@ import { UserContext } from "../customHooks/userObj";
 import "../styles.css";
 import Post from "../subelements/Post";
 
+const patcherHeader = {
+  method: "PATCH",
+  headers: {
+    'content-type':'application/json'
+  }
+}
+
 function Home() {
   const [posts, setPosts] = useState([]);
   const { userObj, setuserObj } = useContext(UserContext);
 
+
+  function addcomment(submitPost,comment) {
+
+    const date = new Date()
+    let timeofCreation = date.getTime()
+
+    submitPost.comments.push(comment, timeofCreation)
+    
+    fetch("http://localhost:3001/posts/"+submitPost.id,{...patcherHeader, body: JSON.stringify(
+      {...submitPost,lastComment:timeofCreation}
+    )})
+  }
   function getPostsGlobalUserFollows() {
     setPosts([]);
     getPosts(userObj.following.length - 1);
@@ -38,7 +57,7 @@ function Home() {
   }
 
   const postsToInclude = posts.map((post) => {
-    return <Post key={post.id} post={post} />;
+    return <Post key={post.id} post={post} addcomment = {addcomment} />;
   });
 
   return (

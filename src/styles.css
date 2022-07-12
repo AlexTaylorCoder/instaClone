@@ -14,3 +14,18 @@ a:link {
         opacity: .4;
         background-color: black;
 }
+.center-text {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+}
+
+.inputNone {
+        width: 90%;
+        border:white
+}
+
+.postFooter {
+        display: inline-block;
+        color:"#458eff"     
+}
