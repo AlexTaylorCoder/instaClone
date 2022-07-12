@@ -11,8 +11,6 @@ import { useState, useEffect } from "react";
 import "../styles.css";
 
 function NavigationBar({ userObj }) {
-  const [currentUrl, setCurrentUrl] = useState("");
-
   const location = useLocation();
 
   return (
@@ -20,16 +18,16 @@ function NavigationBar({ userObj }) {
       <Container>
         <Navbar.Brand>
           <Link to={""}>
-           <div className="d-flex align-items-center">
-            <h1>Fake</h1>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png"
-              style={{
-                width: "auto",
-                height: "75px",
-              }}
-            ></img>
-          </div>
+            <div className="d-flex align-items-center">
+              <h1>Fake</h1>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png"
+                style={{
+                  width: "auto",
+                  height: "75px",
+                }}
+              ></img>
+            </div>
           </Link>
         </Navbar.Brand>
         <SearchBar userObj={userObj} />
