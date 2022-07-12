@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
-=======
-import { Routes, Route, useNavigate } from "react-router-dom";
->>>>>>> homefeed
 
 import { useContext, useEffect } from "react";
 import { useLocalStorage } from "./customHooks/uselocalstorage";
