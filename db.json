@@ -23,7 +23,7 @@
       ],
       "id": 1,
       "timeStamp": 1655821248892,
-      "bio": "this is the bio for derek"
+      "bioForm": "this is the bio for derek"
     },
     {
       "fName": "Alex",
@@ -48,51 +48,9 @@
       ],
       "id": 2,
       "timeStamp": 1655821248892,
-      "bio": "this is the bio for alex"
-    },
-    {
-      "fName": "Rodger",
-      "lName": "Federer",
-      "birthday": "1965-06-08",
-      "username": "rodgerfederer",
-      "password": "rodgerfederer",
-      "picture": "https://static01.nyt.com/images/2022/07/04/multimedia/04JPtennis-retirement1-print/04tennis-retirement1-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
-      "bioform": "Iplaytennis",
-      "timeofCreation": "2022-07-11T21:50:26.029Z",
-      "id": 3
-    },
-    {
-      "fName": "Kim",
-      "lName": "Kardashian",
-      "birthday": "1924-01-01",
-      "username": "kimkardashian",
-      "password": "kimkardasian",
-      "picture": "https://cdn.britannica.com/42/184142-050-5B50BDC2/Kim-Kardashian-2008.jpg",
-      "bioform": "Imkim",
-      "timeofCreation": "2022-07-12T14:08:55.247Z",
-      "id": 4
-    },
-    {
-      "fName": "Anne",
-      "lName": "Hathaway",
-      "birthday": "1996-03-04",
-      "username": "annehathaway",
-      "password": "annehathaway",
-      "picture": "https://media.vogue.fr/photos/62b591fa8a4275dbe4097b25/2:3/w_2560%2Cc_limit/1240769828",
-      "bioform": "imanne",
-      "timeofCreation": "2022-07-12T14:11:40.537Z",
-      "id": 5
-    },
-    {
-      "fName": "Derek",
-      "lName": "Jeter",
-      "birthday": "1993-03-04",
-      "username": "derekjeter",
-      "password": "derekjeets",
-      "picture": "https://cdn.britannica.com/33/114433-050-E1C0903C/New-York-Yankees-baseball-Derek-Jeter-2007.jpg",
-      "timeofCreation": "2022-07-12T14:13:17.389Z",
-      "id": 6
+      "bioForm": "this is the bio for alex"
     }
+
   ],
   "posts": [
     {

@@ -1,17 +1,24 @@
-import handleLogin from "./handleLogin"
+import handleLogin from "./handleLogin";
 
-const userUrl = "http://localhost:3001/users"
+const userUrl = "http://localhost:3001/users";
 const postHeader = {
-    method: 'POST', // or 'PUT'
-    headers: {
-        'Content-Type': 'application/json',
-    }
+  method: "POST", // or 'PUT'
+  headers: {
+    "Content-Type": "application/json",
+  },
+};
+
+function postCreateUserAccount(returned, username, password) {
+  const timeofCreation = new Date().now();
+  return fetch(userUrl, {
+    ...postHeader,
+    body: JSON.stringify({
+      ...returned,
+      following: [],
+      followers: [],
+      timestamp: timeofCreation,
+    }),
+  }).then(() => handleLogin(username, password));
 }
 
-function postCreateUserAccount(returned,username,password) {
-    const timeofCreation = new Date()
-    return fetch(userUrl,{...postHeader,body:JSON.stringify({...returned,timeofCreation:timeofCreation})}).then(()=>handleLogin(username,password))
-
-}
-
-export default postCreateUserAccount
+export default postCreateUserAccount;
