@@ -25,7 +25,7 @@ function CreateAccount({validCallback}) {
         const input = e.target.value
         let res = allowedChar.test(input) 
         if (e.target.id === "password") {
-            res = allowedCharPass.test(input) || input.length < 12
+            res = allowedCharPass.test(input) || input.length > 12
         }
         else if (e.target.id === "username") {
             console.log(input.length)

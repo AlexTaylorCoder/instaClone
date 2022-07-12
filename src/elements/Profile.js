@@ -1,15 +1,23 @@
 import { Button } from "react-bootstrap";
 import OwnPostContainer from "../subelements/Ownpostcontainer";
-import {Row,Col,Container} from "react-bootstrap";
+import {Row,Col,Container,ListGroup} from "react-bootstrap";
 import {BsGearWide} from "react-icons/bs"
-
+import { useState } from "react";
 
 const styleObj = {
   display:"flex",
   flexDirection:"column",
 }
 
+
 function Profile() {
+
+  const [logoutDrop,setlogoutDrop] = useState(false)
+
+  function handleLogOut() {
+    console.log("click")
+    setlogoutDrop((logoutDrop)=>!logoutDrop)
+  }
   return (
   <div id="profile" style={{margin: "100px 200px 10px 350px"}}>
 
@@ -30,7 +38,7 @@ function Profile() {
               <p><b>num </b>Followers</p>
             </Col>
             <Col style={styleObj} xs= {{span:2}}>
-            <BsGearWide style={{margin: "5px 0 15px 0"}}/>       
+            <BsGearWide onClick={handleLogOut}style={{margin: "5px 0 15px 0"}}/>  
             <p><b>num </b>Following</p>
             </Col>
       </Row>
