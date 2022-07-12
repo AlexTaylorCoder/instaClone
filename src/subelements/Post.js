@@ -13,17 +13,13 @@ function Post({ post }) {
             style={{
               width: "50px",
               height: "50px",
-              backgroundImage:
-                "url(https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg?w=2000)",
+              backgroundImage: "url(" + post.profPic + ")",
             }}
           ></div>
-          <h2>{post.userId}</h2>
+          <h2>{post.username}</h2>
         </div>
       </Card.Header>
-      <Card.Img
-        variant="top"
-        src="https://cie.ucdavis.edu/sites/g/files/dgvnsk6861/files/styles/sf_profile/public/media/images/blank-headshot_15.png?h=345be249&itok=N-xKtfUn"
-      />
+      <Card.Img variant="top" src={post.photo} />
       <div className="d-flex">
         <h1 className="p-2">
           <BsHeartFill />
@@ -32,13 +28,10 @@ function Post({ post }) {
           <FaRegComment />
         </h1>
       </div>
-      <h5>20 Likes</h5>
+      <h5>{post.likes} Likes</h5>
       <div className="d-flex">
-        <h4>adsfasd</h4>
-        <h6>
-          lorem ipsum adfa adfdasf kjls dkfjlkdjf sldkfj s dfklslkdjf sld
-          flsdkfj sdlkfj sldkfj sdflkjn sdflkj sdlfkj
-        </h6>
+        <h4>{post.username}</h4>
+        <h6>{post.caption}</h6>
       </div>
       <Card.Text className="mb-2 text-muted">View Comments</Card.Text>
       <Card.Footer>add a comment</Card.Footer>
