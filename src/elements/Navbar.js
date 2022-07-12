@@ -1,6 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import SearchBar from "../subelements/SearchBar";
 import { Link } from "react-router-dom";
 import { AiFillHome, AiOutlineHome } from "react-icons/ai";
 import { RiAddBoxLine, RiAddBoxFill } from "react-icons/ri";
@@ -29,6 +30,8 @@ function NavigationBar({ userObj }) {
             ></img>
           </div>
         </Navbar.Brand>
+        <SearchBar userObj={userObj} />
+
         <Nav className="me-auto">
           <Link to={"/"}>
             <h1>

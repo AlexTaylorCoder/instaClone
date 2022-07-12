@@ -50,7 +50,7 @@ function App() {
           element={<CreateAccount validCallback={validCallback} />}
         />
       </Routes>
-      <BottomBar/>
+      <BottomBar />
     </div>
   );
 }
