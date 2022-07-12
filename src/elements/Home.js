@@ -1,62 +1,43 @@
-import PostContainer from "../subelements/Postcontainer";
-import { Card } from "react-bootstrap";
+import React, { useState, useContext, useEffect } from "react";
+import { UserContext } from "../customHooks/userObj";
 import "../styles.css";
-import { FaRegComment } from "react-icons/fa";
-import { BsHeartFill } from "react-icons/bs";
+import Post from "../subelements/Post";
 
 function Home() {
+  const [posts, setPosts] = useState([]);
+  const { userObj, setuserObj } = useContext(UserContext);
+
+  function getPostsGlobalUserFollows() {
+    setPosts([]);
+    getPosts(userObj.following.length - 1);
+  }
+
+  useEffect(() => {
+    getPostsGlobalUserFollows();
+  }, []);
+
+  function getPosts(i) {
+    if (i < 1) {
+      return;
+    }
+    fetch("http://localhost:3001/users/" + userObj.following[i].id)
+      .then((res) => res.json())
+      .then((data) => {
+        setPosts((posts) => [...posts, ...data.posts]);
+
+        getPosts(i - 1);
+      });
+  }
+
+  const postsToInclude = posts.map((post) => {
+    return <Post post={post} />;
+  });
+
   return (
     <div id="home" className="d-flex">
-      <div className="w-75 overflow-auto">
-        <Card className="mx-auto m-3 w-50">
-          <Card.Header>
-            <div className="d-flex">
-              <div
-                className="profile-picture"
-                style={{
-                  width: "50px",
-                  height: "50px",
-                  backgroundImage:
-                    "url(https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg?w=2000)",
-                }}
-              ></div>
-              <h2>username</h2>
-            </div>
-          </Card.Header>
-          <Card.Img
-            variant="top"
-            src="https://cie.ucdavis.edu/sites/g/files/dgvnsk6861/files/styles/sf_profile/public/media/images/blank-headshot_15.png?h=345be249&itok=N-xKtfUn"
-          />
-          <div className="d-flex">
-            <h1 className="p-2">
-              <BsHeartFill />
-            </h1>
-            <h1 className="p-2">
-              <FaRegComment />
-            </h1>
-          </div>
-          <h5>20 Likes</h5>
-          <div className="d-flex">
-            <h4>adsfasd</h4>
-            <h6>
-              lorem ipsum adfa adfdasf kjls dkfjlkdjf sldkfj s dfklslkdjf sld
-              flsdkfj sdlkfj sldkfj sdflkjn sdflkj sdlfkj
-            </h6>
-          </div>
-          <Card.Text className="mb-2 text-muted">View Comments</Card.Text>
-          <Card.Footer>add a comment</Card.Footer>
-        </Card>
-      </div>
+      <div className="w-75 overflow-auto">{postsToInclude}</div>
       <div>
-        <div
-          className="profile-picture"
-          style={{
-            width: "50px",
-            height: "50px",
-            backgroundImage:
-              "url(https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg?w=2000)",
-          }}
-        ></div>
+        <div></div>
       </div>
     </div>
   );
