@@ -19,7 +19,8 @@ function NavigationBar({ userObj }) {
     <Navbar bg="light" variant="light">
       <Container>
         <Navbar.Brand>
-          <div className="d-flex align-items-center">
+          <Link to={""}>
+           <div className="d-flex align-items-center">
             <h1>Fake</h1>
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png"
@@ -29,6 +30,7 @@ function NavigationBar({ userObj }) {
               }}
             ></img>
           </div>
+          </Link>
         </Navbar.Brand>
         <SearchBar userObj={userObj} />
 
