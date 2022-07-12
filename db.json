@@ -18,12 +18,12 @@
         {
           "username": "alextaylor",
           "id": 2,
-          "picture": "https://static.wikia.nocookie.net/monster/images/6/6e/DragonRed.jpg/revision/latest/scale-to-width-down/1200?cb=20160809235604"
+          "picture": "https://cdn.mos.cms.futurecdn.net/JYEXpJURGks76oHVBc5cik.jpg"
         }
       ],
       "id": 1,
       "timeStamp": 1655821248892,
-      "bio": "this is the bio for derek"
+      "bioForm": "this is the bio for derek"
     },
     {
       "fName": "Alex",
@@ -31,7 +31,7 @@
       "birthday": "2022-07-15",
       "username": "alextaylor",
       "password": "alextaylor",
-      "picture": "https://static.wikia.nocookie.net/monster/images/6/6e/DragonRed.jpg/revision/latest/scale-to-width-down/1200?cb=20160809235604",
+      "picture": "https://cdn.mos.cms.futurecdn.net/JYEXpJURGks76oHVBc5cik.jpg",
       "followers": [
         {
           "username": "derekvogt",
@@ -48,19 +48,9 @@
       ],
       "id": 2,
       "timeStamp": 1655821248892,
-      "bio": "this is the bio for alex"
-    },
-    {
-      "fName": "Alan",
-      "lName": "Peaches",
-      "birthday": "1999-01-16",
-      "username": "celestinorino",
-      "password": "Ppeepee123poo",
-      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
-      "bioform": "Live love and laugh",
-      "timeofCreation": "2022-07-11T22:15:24.167Z",
-      "id": 3
+      "bioForm": "this is the bio for alex"
     }
+
   ],
   "posts": [
     {
@@ -99,13 +89,85 @@
       "id": 3
     },
     {
-      "caption": "ayo peepee poopoo check\n",
-      "photo": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
-      "timeStamp": 1657577773330,
+      "caption": "This is me in a suit, looking good!",
+      "photo": "https://static01.nyt.com/images/2022/07/04/multimedia/04JPtennis-retirement1-print/04tennis-retirement1-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
+      "timeStamp": 1657576494072,
       "userId": 3,
       "likes": 0,
       "comments": [],
       "id": 4
+    },
+    {
+      "caption": "I am good at tennis",
+      "photo": "https://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill,d_placeholder_vogue.png,fl_progressive,g_face,h_1080,q_80,w_1920/v1562008285/vogue_73-questions-with-roger-federer.jpg",
+      "timeStamp": 1657576687860,
+      "userId": 3,
+      "likes": 0,
+      "comments": [],
+      "id": 5
+    },
+    {
+      "caption": "I love trophy",
+      "photo": "https://media.cnn.com/api/v1/images/stellar/prod/220704093915-03-roger-federer-wimbledon.jpg?c=16x9&q=h_270,w_480,c_fill",
+      "timeStamp": 1657576716707,
+      "userId": 3,
+      "likes": 0,
+      "comments": [],
+      "id": 6
+    },
+    {
+      "caption": "Me and my friend\n\nGoing to practice",
+      "photo": "https://pbs.twimg.com/media/FRN5QYLWQAAkYIr?format=jpg&name=medium",
+      "timeStamp": 1657576773474,
+      "userId": 3,
+      "likes": 0,
+      "comments": [],
+      "id": 7
+    },
+    {
+      "caption": "look how nice kim looks",
+      "photo": "https://ca-times.brightspotcdn.com/dims4/default/b49b9d8/2147483647/strip/true/crop/3500x1969+0+0/resize/1200x675!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
+      "timeStamp": 1657589933559,
+      "userId": 1,
+      "likes": 0,
+      "comments": [],
+      "id": 8
+    },
+    {
+      "caption": "look at me",
+      "photo": "https://cdn.britannica.com/42/184142-050-5B50BDC2/Kim-Kardashian-2008.jpg",
+      "timeStamp": 1657634977230,
+      "userId": 4,
+      "likes": 0,
+      "comments": [],
+      "id": 9
+    },
+    {
+      "caption": "check out my sisters",
+      "photo": "https://variety.com/wp-content/uploads/2022/03/Kardashian-Cover-Story-Variety-16x9-5.jpg?w=1360&h=765&crop=1",
+      "timeStamp": 1657634999023,
+      "userId": 4,
+      "likes": 0,
+      "comments": [],
+      "id": 10
+    },
+    {
+      "caption": "Yeezzzzyyy",
+      "photo": "https://static01.nyt.com/images/2021/02/19/lens/19xp-kardashian-photo/19xp-kardashian-photo-videoSixteenByNine3000-v2.jpg?year=2021&h=1688&w=3000&s=887c4a57d1725cee7e3979180572f03b5ac7e6e65dde8a75c9d75c89517952c5&k=ZQJBKqZ0VN&tw=1",
+      "timeStamp": 1657635029847,
+      "userId": 4,
+      "likes": 0,
+      "comments": [],
+      "id": 11
+    },
+    {
+      "caption": "hey",
+      "photo": "https://media.vogue.fr/photos/62b591fa8a4275dbe4097b25/2:3/w_2560%2Cc_limit/1240769828",
+      "timeStamp": 1657635138994,
+      "userId": 5,
+      "likes": 0,
+      "comments": [],
+      "id": 12
     }
   ]
 }
