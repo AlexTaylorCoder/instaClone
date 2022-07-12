@@ -21,10 +21,12 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate("/");
+    console.log(userObj)
+    if (userObj) {
+      navigate("/");
+    }
   }, [userObj]);
   useEffect(() => {
-    console.log(userObj)
     if (JSON.stringify(userObj) === "{}") {
       navigate("/login");
     }
