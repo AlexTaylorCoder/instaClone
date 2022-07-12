@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
+=======
+import { Routes, Route, useNavigate } from "react-router-dom";
+>>>>>>> homefeed
 
-import { useContext, useEffect} from "react";
+import { useContext, useEffect } from "react";
 import { useLocalStorage } from "./customHooks/uselocalstorage";
 
 import CreateAccount from "./elements/Createaccount";
@@ -13,8 +17,6 @@ import BottomBar from "./components/Bottombar";
 import NavigationBar from "./elements/Navbar";
 
 import { UserContext } from "./customHooks/userObj";
-
-
 
 function App() {
   const location = useLocation()
@@ -55,7 +57,6 @@ function App() {
         />
         <Route path="/" element={<Home userObj={userObj} />} />
       </Routes>
-      <BottomBar />
     </div>
   );
 }
