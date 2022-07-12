@@ -12,9 +12,24 @@
           "username": "paulwalker",
           "id": 6,
           "picture": "https://cdn.motor1.com/images/mgl/QyprZ/s1/daughter-of-paul-walker-suing-porsche-over-his-death.jpg"
+        },
+        {
+          "username": "aaronrodgers",
+          "id": 7,
+          "picture": "https://media.npr.org/assets/img/2021/11/10/ap21307557834002-cd89c02aede35901b651d3519ed655baf862faf4-s1100-c50.jpg"
         }
       ],
       "following": [
+        {
+          "username": "kimkardashian",
+          "id": 5,
+          "picture": "https://cdn.britannica.com/42/184142-050-5B50BDC2/Kim-Kardashian-2008.jpg"
+        },
+        {
+          "username": "alextaylor",
+          "id": 2,
+          "picture": "https://cdn.mos.cms.futurecdn.net/JYEXpJURGks76oHVBc5cik.jpg"
+        },
         {
           "username": "bob",
           "id": 3,
@@ -75,9 +90,9 @@
           "picture": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*"
         },
         {
-          "username": "derekvogt",
-          "id": 1,
-          "picture": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*"
+          "username": "aaronrodgers",
+          "id": 7,
+          "picture": "https://media.npr.org/assets/img/2021/11/10/ap21307557834002-cd89c02aede35901b651d3519ed655baf862faf4-s1100-c50.jpg"
         }
       ],
       "timestamp": 1657637821301,
@@ -99,9 +114,9 @@
           "picture": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*"
         },
         {
-          "username": "derekvogt",
-          "id": 1,
-          "picture": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*"
+          "username": "aaronrodgers",
+          "id": 7,
+          "picture": "https://media.npr.org/assets/img/2021/11/10/ap21307557834002-cd89c02aede35901b651d3519ed655baf862faf4-s1100-c50.jpg"
         }
       ],
       "timestamp": 1657638060395,
@@ -121,6 +136,11 @@
           "username": "derekvogt",
           "id": 1,
           "picture": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*"
+        },
+        {
+          "username": "aaronrodgers",
+          "id": 7,
+          "picture": "https://media.npr.org/assets/img/2021/11/10/ap21307557834002-cd89c02aede35901b651d3519ed655baf862faf4-s1100-c50.jpg"
         }
       ],
       "timestamp": 1657641837332,
@@ -151,15 +171,43 @@
           "picture": "https://lh3.googleusercontent.com/2hDpuTi-0AMKvoZJGd-yKWvK4tKdQr_kLIpB_qSeMau2TNGCNidAosMEvrEXFO9G6tmlFlPQplpwiqirgrIPWnCKMvElaYgI-HiVvXc=w600"
         }
       ],
-      "followers": [
+      "followers": [],
+      "timestamp": 1657649210324,
+      "id": 6
+    },
+    {
+      "fName": "Aaron",
+      "lName": "Rodgers",
+      "birthday": "1995-01-01",
+      "username": "aaronrodgers",
+      "password": "aaronrodger",
+      "picture": "https://media.npr.org/assets/img/2021/11/10/ap21307557834002-cd89c02aede35901b651d3519ed655baf862faf4-s1100-c50.jpg",
+      "bioform": "i play football",
+      "following": [
         {
           "username": "derekvogt",
           "id": 1,
           "picture": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*"
+        },
+        {
+          "username": "kimkardashian",
+          "id": 5,
+          "picture": "https://cdn.britannica.com/42/184142-050-5B50BDC2/Kim-Kardashian-2008.jpg"
+        },
+        {
+          "username": "bob",
+          "id": 3,
+          "picture": "https://lh3.googleusercontent.com/2hDpuTi-0AMKvoZJGd-yKWvK4tKdQr_kLIpB_qSeMau2TNGCNidAosMEvrEXFO9G6tmlFlPQplpwiqirgrIPWnCKMvElaYgI-HiVvXc=w600"
+        },
+        {
+          "username": "rodgerfederer",
+          "id": 4,
+          "picture": "https://static01.nyt.com/images/2022/07/04/multimedia/04JPtennis-retirement1-print/04tennis-retirement1-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
         }
       ],
-      "timestamp": 1657649210324,
-      "id": 6
+      "followers": [],
+      "timestamp": 1657662049258,
+      "id": 7
     }
   ],
   "posts": [
@@ -278,6 +326,24 @@
       "likes": 0,
       "comments": [],
       "id": 12
+    },
+    {
+      "caption": "I play golf too",
+      "photo": "https://s.yimg.com/ny/api/res/1.2/4JgshZKPs.dLHdR5YicsPw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNw--/https://s.yimg.com/uu/api/res/1.2/Ntm4k1iWvzd7.oQ39.JxRQ--~B/aD0xNzA2O3c9MjU2MDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/green_bay_packers_wire_usa_today_sports_articles_327/5fd9f2b4813179a7efb5175b938903bb",
+      "timeStamp": 1657662104306,
+      "userId": 7,
+      "likes": 0,
+      "comments": [],
+      "id": 13
+    },
+    {
+      "caption": "vibes",
+      "photo": "https://clutchpoints.com/wp-content/uploads/2022/07/Packers-Aaron-Rodgers-Aaron-Rodgers-Tattoo.jpeg",
+      "timeStamp": 1657662250976,
+      "userId": 7,
+      "likes": 0,
+      "comments": [],
+      "id": 14
     }
   ]
 }

@@ -45,7 +45,7 @@ function PostsPage({ userObj }) {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        navigate("/profile");
+        navigate("/");
       });
   }
 
