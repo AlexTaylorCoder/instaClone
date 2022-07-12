@@ -38,11 +38,18 @@ function SearchBar({ userObj }) {
     return <SearchResult key={user.id} user={user} />;
   });
 
+  function handleBlur(e) {
+    // if the blur was because of outside focus
+    // currentTarget is the parent element, relatedTarget is the clicked element
+    if (!e.currentTarget.contains(e.relatedTarget)) {
+      setShowDropdown(false);
+    }
+  }
   return (
     <Form
       className="d-flex"
       onFocus={focusSearch}
-      onBlur={() => setShowDropdown(false)}
+      onBlur={handleBlur}
       onChange={handleSearch}
     >
       <Form.Control

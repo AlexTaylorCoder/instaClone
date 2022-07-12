@@ -9,18 +9,12 @@
       "picture": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*",
       "followers": [
         {
-          "username": "alextaylor",
-          "id": 2,
-          "picture": "https://static.wikia.nocookie.net/monster/images/6/6e/DragonRed.jpg/revision/latest/scale-to-width-down/1200?cb=20160809235604"
+          "username": "paulwalker",
+          "id": 6,
+          "picture": "https://cdn.motor1.com/images/mgl/QyprZ/s1/daughter-of-paul-walker-suing-porsche-over-his-death.jpg"
         }
       ],
-      "following": [
-        {
-          "username": "alextaylor",
-          "id": 2,
-          "picture": "https://cdn.mos.cms.futurecdn.net/JYEXpJURGks76oHVBc5cik.jpg"
-        }
-      ],
+      "following": [],
       "id": 1,
       "timeStamp": 1655821248892,
       "bioForm": "this is the bio for derek"
@@ -34,18 +28,12 @@
       "picture": "https://cdn.mos.cms.futurecdn.net/JYEXpJURGks76oHVBc5cik.jpg",
       "followers": [
         {
-          "username": "derekvogt",
-          "id": 1,
-          "picture": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*"
+          "username": "paulwalker",
+          "id": 6,
+          "picture": "https://cdn.motor1.com/images/mgl/QyprZ/s1/daughter-of-paul-walker-suing-porsche-over-his-death.jpg"
         }
       ],
-      "following": [
-        {
-          "username": "derekvogt",
-          "id": 1,
-          "picture": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*"
-        }
-      ],
+      "following": [],
       "id": 2,
       "timeStamp": 1655821248892,
       "bioForm": "this is the bio for alex"
@@ -59,9 +47,70 @@
       "picture": "https://lh3.googleusercontent.com/2hDpuTi-0AMKvoZJGd-yKWvK4tKdQr_kLIpB_qSeMau2TNGCNidAosMEvrEXFO9G6tmlFlPQplpwiqirgrIPWnCKMvElaYgI-HiVvXc=w600",
       "bioform": "Uncaught Error: Invalid hook call. Hooks can only be called inside of the body of a function component.",
       "following": [],
-      "followers": [],
+      "followers": [
+        {
+          "username": "paulwalker",
+          "id": 6,
+          "picture": "https://cdn.motor1.com/images/mgl/QyprZ/s1/daughter-of-paul-walker-suing-porsche-over-his-death.jpg"
+        }
+      ],
       "timestamp": 1657637821301,
       "id": 3
+    },
+    {
+      "fName": "Rodger",
+      "lName": "Federer",
+      "birthday": "1990-01-01",
+      "username": "rodgerfederer",
+      "password": "rodgerfederer",
+      "picture": "https://static01.nyt.com/images/2022/07/04/multimedia/04JPtennis-retirement1-print/04tennis-retirement1-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
+      "bioform": "i play tennis",
+      "following": [],
+      "followers": [],
+      "timestamp": 1657638060395,
+      "id": 4
+    },
+    {
+      "fName": "Kim",
+      "lName": "Kardashian",
+      "birthday": "1992-01-01",
+      "username": "kimkardashian",
+      "password": "kimkardashian",
+      "picture": "https://cdn.britannica.com/42/184142-050-5B50BDC2/Kim-Kardashian-2008.jpg",
+      "bioform": "I am famous",
+      "following": [],
+      "followers": [],
+      "timestamp": 1657641837332,
+      "id": 5
+    },
+    {
+      "fName": "Paul ",
+      "lName": "Walker",
+      "birthday": "1990-01-01",
+      "username": "paulwalker",
+      "password": "paulwalker",
+      "picture": "https://cdn.motor1.com/images/mgl/QyprZ/s1/daughter-of-paul-walker-suing-porsche-over-his-death.jpg",
+      "bioform": "i like cars, badass with a golden heart",
+      "following": [
+        {
+          "username": "derekvogt",
+          "id": 1,
+          "picture": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*"
+        },
+        {
+          "username": "alextaylor",
+          "id": 2,
+          "picture": "https://cdn.mos.cms.futurecdn.net/JYEXpJURGks76oHVBc5cik.jpg"
+        },
+        {
+          "username": "bob",
+          "id": 3,
+          "picture": "https://lh3.googleusercontent.com/2hDpuTi-0AMKvoZJGd-yKWvK4tKdQr_kLIpB_qSeMau2TNGCNidAosMEvrEXFO9G6tmlFlPQplpwiqirgrIPWnCKMvElaYgI-HiVvXc=w600"
+        }
+      ],
+      "followers": [],
+      "timestamp": 1657649210324,
+      "id": 6
     }
   ],
   "posts": [

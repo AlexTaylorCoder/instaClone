@@ -1,7 +1,6 @@
-
 import { Routes, Route, useNavigate } from "react-router-dom";
 
-import { useContext, useEffect} from "react";
+import { useContext, useEffect } from "react";
 import { useLocalStorage } from "./customHooks/uselocalstorage";
 
 import CreateAccount from "./elements/Createaccount";
@@ -14,11 +13,8 @@ import NavigationBar from "./elements/Navbar";
 
 import { UserContext } from "./customHooks/userObj";
 
-
-
 function App() {
-
-  const {userObj, setuserObj} = useContext(UserContext)
+  const { userObj, setuserObj } = useContext(UserContext);
 
   function validCallback(obj = "{}") {
     setuserObj(obj);
@@ -30,7 +26,7 @@ function App() {
       navigate("/");
     }
   }, [userObj]);
-  
+
   useEffect(() => {
     if (JSON.stringify(userObj) === "{}") {
       navigate("/login");
@@ -53,7 +49,6 @@ function App() {
           element={<CreateAccount validCallback={validCallback} />}
         />
       </Routes>
-      <BottomBar />
     </div>
   );
 }
