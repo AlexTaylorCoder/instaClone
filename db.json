@@ -49,6 +49,17 @@
       "id": 2,
       "timeStamp": 1655821248892,
       "bio": "this is the bio for alex"
+    },
+    {
+      "fName": "Alan",
+      "lName": "Peaches",
+      "birthday": "1999-01-16",
+      "username": "celestinorino",
+      "password": "Ppeepee123poo",
+      "picture": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
+      "bioform": "Live love and laugh",
+      "timeofCreation": "2022-07-11T22:15:24.167Z",
+      "id": 3
     }
   ],
   "posts": [
@@ -86,6 +97,15 @@
       "likes": 0,
       "comments": [],
       "id": 3
+    },
+    {
+      "caption": "ayo peepee poopoo check\n",
+      "photo": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
+      "timeStamp": 1657577773330,
+      "userId": 3,
+      "likes": 0,
+      "comments": [],
+      "id": 4
     }
   ]
 }

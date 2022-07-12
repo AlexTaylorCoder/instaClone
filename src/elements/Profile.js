@@ -1,6 +1,8 @@
 import { Button } from "react-bootstrap";
 import OwnPostContainer from "../subelements/Ownpostcontainer";
 import {Row,Col,Container} from "react-bootstrap";
+import {BsGearWide} from "react-icons/bs"
+
 
 const styleObj = {
   display:"flex",
@@ -28,7 +30,7 @@ function Profile() {
               <p><b>num </b>Followers</p>
             </Col>
             <Col style={styleObj} xs= {{span:2}}>
-            <p>Placeholder </p>          
+            <BsGearWide style={{margin: "5px 0 15px 0"}}/>       
             <p><b>num </b>Following</p>
             </Col>
       </Row>
