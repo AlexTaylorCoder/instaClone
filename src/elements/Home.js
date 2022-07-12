@@ -23,14 +23,22 @@ function Home() {
     fetch("http://localhost:3001/users/" + userObj.following[i].id)
       .then((res) => res.json())
       .then((data) => {
-        setPosts((posts) => [...posts, ...data.posts]);
+        for (let post of data.posts) {
+          const fullPostObj = {
+            ...post,
+            profPic: userObj.following[i].picture,
+            username: userObj.following[i].username,
+          };
+
+          setPosts((posts) => [...posts, fullPostObj]);
+        }
 
         getPosts(i - 1);
       });
   }
 
   const postsToInclude = posts.map((post) => {
-    return <Post post={post} />;
+    return <Post key={post.id} post={post} />;
   });
 
   return (
