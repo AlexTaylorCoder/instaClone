@@ -26,17 +26,15 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (userObj) {
-      navigate("/");
+    console.log("fire")
+    if (!userObj || JSON.stringify(userObj) === "{}") {
+      navigate("/login");
+    }
+    else if (userObj){
+      navigate("/");   
     }
   }, [userObj]);
   
-  useEffect(() => {
-    if (JSON.stringify(userObj) === "{}") {
-      navigate("/login");
-    }
-  }, []);
-
   return (
     <div id="App">
       <NavigationBar userObj={userObj} />

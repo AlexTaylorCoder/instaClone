@@ -11,7 +11,6 @@ function UserProvider({children}) {
     const [userObj, setuserObj] = useLocalStorage("userObj", {});
 
     const value = {userObj, setuserObj}
-    console.log(value)
     return (
         <UserContext.Provider value={value}>
             {children}
