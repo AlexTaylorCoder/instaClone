@@ -23,12 +23,12 @@ function CreateAccount({ validCallback }) {
     const input = e.target.value;
     let res = allowedChar.test(input);
     if (e.target.id === "password") {
-      res = allowedCharPass.test(input) || input.length < 12;
+      res = allowedCharPass.test(input) || input.length > 30;
     } else if (e.target.id === "username") {
       console.log(input.length);
-      res = allowedCharUser.test(input) || input.length > 5;
+      res = allowedCharUser.test(input) || input.length > 30;
     } else {
-      res = false || input.length > 120;
+      res = false || input.length > 300;
     }
 
     if (!res) {

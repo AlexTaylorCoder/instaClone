@@ -49,8 +49,20 @@
       "id": 2,
       "timeStamp": 1655821248892,
       "bioForm": "this is the bio for alex"
+    },
+    {
+      "fName": "Alex",
+      "lName": "Taylor",
+      "birthday": "2022-07-22",
+      "username": "bob",
+      "password": "bob",
+      "picture": "https://lh3.googleusercontent.com/2hDpuTi-0AMKvoZJGd-yKWvK4tKdQr_kLIpB_qSeMau2TNGCNidAosMEvrEXFO9G6tmlFlPQplpwiqirgrIPWnCKMvElaYgI-HiVvXc=w600",
+      "bioform": "Uncaught Error: Invalid hook call. Hooks can only be called inside of the body of a function component.",
+      "following": [],
+      "followers": [],
+      "timestamp": 1657637821301,
+      "id": 3
     }
-
   ],
   "posts": [
     {

@@ -9,7 +9,8 @@ const postHeader = {
 };
 
 function postCreateUserAccount(returned, username, password) {
-  const timeofCreation = new Date().now();
+  const date = new Date()
+  let timeofCreation = date.getTime()
   return fetch(userUrl, {
     ...postHeader,
     body: JSON.stringify({
