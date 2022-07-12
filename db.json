@@ -16,29 +16,14 @@
       ],
       "following": [
         {
-          "username": "alextaylor",
-          "id": 2,
-          "picture": "https://cdn.mos.cms.futurecdn.net/JYEXpJURGks76oHVBc5cik.jpg"
-        },
-        {
-          "username": "rodgerfederer",
-          "id": 4,
-          "picture": "https://static01.nyt.com/images/2022/07/04/multimedia/04JPtennis-retirement1-print/04tennis-retirement1-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
-        },
-        {
-          "username": "kimkardashian",
-          "id": 5,
-          "picture": "https://cdn.britannica.com/42/184142-050-5B50BDC2/Kim-Kardashian-2008.jpg"
-        },
-        {
           "username": "bob",
           "id": 3,
           "picture": "https://lh3.googleusercontent.com/2hDpuTi-0AMKvoZJGd-yKWvK4tKdQr_kLIpB_qSeMau2TNGCNidAosMEvrEXFO9G6tmlFlPQplpwiqirgrIPWnCKMvElaYgI-HiVvXc=w600"
         },
         {
-          "username": "paulwalker",
-          "id": 6,
-          "picture": "https://cdn.motor1.com/images/mgl/QyprZ/s1/daughter-of-paul-walker-suing-porsche-over-his-death.jpg"
+          "username": "rodgerfederer",
+          "id": 4,
+          "picture": "https://static01.nyt.com/images/2022/07/04/multimedia/04JPtennis-retirement1-print/04tennis-retirement1-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
         }
       ],
       "id": 1,
@@ -88,6 +73,11 @@
           "username": "derekvogt",
           "id": 1,
           "picture": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*"
+        },
+        {
+          "username": "derekvogt",
+          "id": 1,
+          "picture": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*"
         }
       ],
       "timestamp": 1657637821301,
@@ -103,6 +93,11 @@
       "bioform": "i play tennis",
       "following": [],
       "followers": [
+        {
+          "username": "derekvogt",
+          "id": 1,
+          "picture": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*"
+        },
         {
           "username": "derekvogt",
           "id": 1,
