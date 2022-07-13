@@ -37,6 +37,7 @@ function Post({ post = {}, addcomment }) {
     }
   }, []);
 
+
   function handleLike() {
     let tempPostLikes = [...post.likes];
 
@@ -63,6 +64,13 @@ function Post({ post = {}, addcomment }) {
     var index = arr.indexOf(value);
     if (index > -1) {
       arr.splice(index, 1);
+
+    function handleSubmit() {
+        addcomment(post,comment)
+    }
+    function onExpand(e) {
+        setModalShow(true)
+
     }
     return arr;
   }

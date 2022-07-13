@@ -45,6 +45,40 @@ a:link {
         gap:2px;
         justify-content: center;
 }
+.post-cover-hover {
+        background-color: black;
+        opacity: .8;
+}
 #main-modal {
         min-width: 70%;
     }
+/* #ownpostcontainer {
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        flex-wrap: wrap;
+} */
+.own-post-img {
+        float:left;
+        width: 300px;
+        height: 300px;
+}
+.own-post-cover {
+        opacity: 1;
+        background-color: black;
+        z-index: 100
+}
+.img-hover {
+        filter: brightness(50%);
+}
+.overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        z-index: 5;
+}
+.absolute-pos {
+        position: absolute;
+}

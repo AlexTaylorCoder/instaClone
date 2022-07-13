@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import OwnPost from "./Ownpost"
-import { Row } from "react-bootstrap"
+import { Row, Col} from "react-bootstrap"
 
 function OwnPostContainer({posts=[]}) {
     
@@ -8,7 +8,7 @@ function OwnPostContainer({posts=[]}) {
 
     return (
         <div id = "ownpostcontainer">
-            <Row sm = {4}>
+            <Row style={{margin:"10px"}} sm = {8}>
             {postList}
             </Row>
         </div>
