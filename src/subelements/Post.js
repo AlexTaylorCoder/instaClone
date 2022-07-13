@@ -19,7 +19,6 @@ function Post({ post=[],addcomment}) {
     }
     function onExpand(e) {
         setModalShow(true)
-        console.log(e.target)
     }
   return (
     <>

@@ -1,28 +1,41 @@
 import { useState } from "react"
 import { Col } from "react-bootstrap"
+import { BsFillHeartFill } from "react-icons/bs"
+import {MdOutlineModeComment} from "react-icons/md"
+import PostPopup from "./PostPopup"
 
-const styleObj = {
-    margin: "30px 20px",
-    float:"left",
-    width: "300px",
-    height: "300px"
 
-}
 
 function OwnPost({post}) {
+
     const [hover, setHover] = useState(false)
+    const [modalShow, setModalShow] = useState(false);
 
     function handleHover() {
-        setHover(hover=>!hover)
+        setHover(()=>true)
+        
+    }
+    function offHover() {
+        setHover(()=>false)
+    }
+    function handleExpand() {
+        setModalShow(true)
     }
     return (
-        
-        <div onMouseEnter={handleHover}className = "ownPost">
-            <Col style={{margin:10}}>
-                <img style= {styleObj} src= {post.photo}/> 
-            </Col>
+        <>
+        <Col style={{margin:10}}>
+            <div className="pic-container absolute-pos" onClick = {handleExpand}>
+            {hover ? <p onMouseEnter={handleHover}
+            className="overlay-text"><BsFillHeartFill /> {post.likes}   
+            <MdOutlineModeComment />{post.comments.length} </p> : ""}
+                <img onMouseEnter={handleHover} onMouseLeave={offHover} className = {hover ? "img-hover own-post-img": "own-post-img"} src= {post.photo}/> 
+            </div>
 
-        </div>
+        </Col>
+        <PostPopup show={modalShow} 
+            onHide={() => setModalShow(false)} username={post.username}comments = {post.comments} photo = {post.photo} profPic={post.profPic}/>
+        </>
+
     )
 }
 
