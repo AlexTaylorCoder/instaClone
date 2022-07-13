@@ -30,36 +30,37 @@ function NavigationBar({ userObj }) {
             </div>
           </Link>
         </Navbar.Brand>
-        <SearchBar userObj={userObj} />
-
         <Nav className="me-auto">
-          <Link to={"/"}>
-            <h1>
-              {location.pathname === "/" ? <AiFillHome /> : <AiOutlineHome />}
-            </h1>
-          </Link>
-          <Link to={"/createpost"}>
-            <h1>
-              {location.pathname === "/createpost" ? (
-                <RiAddBoxFill />
-              ) : (
-                <RiAddBoxLine />
-              )}
-            </h1>
-          </Link>
-
-          <Link to={`/profile/${userObj.id}`}>
-            <h1>
-              {location.pathname === "/profile" ? (
-                <IoPerson />
-              ) : (
-                <IoPersonOutline />
-              )}
-            </h1>
-          </Link>
+          <SearchBar userObj={userObj} />
         </Nav>
+
+        <Link to={"/"}>
+          <h1 className="mx-2">
+            {location.pathname === "/" ? <AiFillHome /> : <AiOutlineHome />}
+          </h1>
+        </Link>
+        <Link to={"/createpost"}>
+          <h1 className="mx-2">
+            {location.pathname === "/createpost" ? (
+              <RiAddBoxFill />
+            ) : (
+              <RiAddBoxLine />
+            )}
+          </h1>
+        </Link>
+
+        <Link to={`/profile/${userObj.id}`}>
+          <h1 className="mx-2">
+            {location.pathname === "/profile" ? (
+              <IoPerson />
+            ) : (
+              <IoPersonOutline />
+            )}
+          </h1>
+        </Link>
+
         <div
-          className="profile-picture"
+          className="profile-picture mx-5"
           style={{
             width: "50px",
             height: "50px",
