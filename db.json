@@ -67,6 +67,11 @@
           "username": "derekvogt",
           "id": 1,
           "picture": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*"
+        },
+        {
+          "username": "os_x",
+          "id": 9,
+          "picture": ""
         }
       ],
       "following": [],
@@ -127,6 +132,11 @@
           "username": "therealdaddyyankee",
           "id": 8,
           "picture": "https://www.amwaycenter.com/assets/img/DY_Orlando_Event-Image_840x500-f5f63430d0.jpg"
+        },
+        {
+          "username": "os_x",
+          "id": 9,
+          "picture": ""
         }
       ],
       "timestamp": 1657638060395,
@@ -242,6 +252,30 @@
       "followers": [],
       "timestamp": 1657674185694,
       "id": 8
+    },
+    {
+      "fName": "os",
+      "lName": "x",
+      "birthday": "2012-12-05",
+      "username": "os_x",
+      "password": "123",
+      "picture": "",
+      "bioform": "hello",
+      "following": [
+        {
+          "username": "alextaylor",
+          "id": 2,
+          "picture": "https://cdn.mos.cms.futurecdn.net/JYEXpJURGks76oHVBc5cik.jpg"
+        },
+        {
+          "username": "rodgerfederer",
+          "id": 4,
+          "picture": "https://static01.nyt.com/images/2022/07/04/multimedia/04JPtennis-retirement1-print/04tennis-retirement1-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
+        }
+      ],
+      "followers": [],
+      "timestamp": 1657727686211,
+      "id": 9
     }
   ],
   "posts": [
@@ -335,6 +369,30 @@
           "timeStamp": 1657717153341,
           "profPic": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*",
           "username": "derekvogt"
+        },
+        {
+          "comment": "Hi!",
+          "timeStamp": 1657727805672,
+          "profPic": "",
+          "username": "os_x"
+        },
+        {
+          "comment": "Hi!",
+          "timeStamp": 1657727806600,
+          "profPic": "",
+          "username": "os_x"
+        },
+        {
+          "comment": "Hi!",
+          "timeStamp": 1657727808632,
+          "profPic": "",
+          "username": "os_x"
+        },
+        {
+          "comment": "Hi!",
+          "timeStamp": 1657727809117,
+          "profPic": "",
+          "username": "os_x"
         }
       ],
       "id": 9,
