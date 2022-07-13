@@ -14,6 +14,11 @@
           "username": "bobthebuilder",
           "id": 4,
           "picture": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg"
+        },
+        {
+          "username": "findingnemo",
+          "id": 6,
+          "picture": "https://www.looper.com/img/gallery/who-voices-marlin-in-finding-nemo/l-intro-1645998159.jpg"
         }
       ],
       "timestamp": 1657726327783,
@@ -39,6 +44,11 @@
           "username": "bobthebuilder",
           "id": 4,
           "picture": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg"
+        },
+        {
+          "username": "findingnemo",
+          "id": 6,
+          "picture": "https://www.looper.com/img/gallery/who-voices-marlin-in-finding-nemo/l-intro-1645998159.jpg"
         }
       ],
       "timestamp": 1657726449629,
@@ -93,9 +103,68 @@
           "picture": "https://www.tennisworldusa.org/imgb/119364/roger-federer-i-still-don-t-know-that-in-advance-.jpg"
         }
       ],
-      "followers": [],
+      "followers": [
+        {
+          "username": "findingnemo",
+          "id": 6,
+          "picture": "https://static.wikia.nocookie.net/pixar/images/a/aa/Nemo-FN.png/revision/latest/scale-to-width-down/1200?cb=20160710221104"
+        }
+      ],
       "timestamp": 1657727081925,
       "id": 4
+    },
+    {
+      "fName": "Harriet",
+      "lName": "Tubman",
+      "birthday": "1995-01-01",
+      "username": "harriettubman",
+      "password": "harriettubman",
+      "picture": "https://www.history.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY3OTgwNTYxNDc2ODg3ODI1/harriet_tubman_loc_54230a.jpg",
+      "bioform": "Im a historical figure",
+      "following": [],
+      "followers": [
+        {
+          "username": "findingnemo",
+          "id": 6,
+          "picture": "https://www.looper.com/img/gallery/who-voices-marlin-in-finding-nemo/l-intro-1645998159.jpg"
+        }
+      ],
+      "timestamp": 1657746373840,
+      "id": 5
+    },
+    {
+      "fName": "Nemo",
+      "lName": "Fish",
+      "birthday": "1995-01-01",
+      "username": "findingnemo",
+      "password": "findingnemo",
+      "picture": "https://www.looper.com/img/gallery/who-voices-marlin-in-finding-nemo/l-intro-1645998159.jpg",
+      "bioform": "cant find me",
+      "following": [
+        {
+          "username": "bobthebuilder",
+          "id": 4,
+          "picture": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg"
+        },
+        {
+          "username": "kimkardashian",
+          "id": 2,
+          "picture": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg"
+        },
+        {
+          "username": "rodgerfederer",
+          "id": 1,
+          "picture": "https://www.tennisworldusa.org/imgb/119364/roger-federer-i-still-don-t-know-that-in-advance-.jpg"
+        },
+        {
+          "username": "harriettubman",
+          "id": 5,
+          "picture": "https://www.history.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY3OTgwNTYxNDc2ODg3ODI1/harriet_tubman_loc_54230a.jpg"
+        }
+      ],
+      "followers": [],
+      "timestamp": 1657746566744,
+      "id": 6
     }
   ],
   "posts": [
@@ -105,10 +174,20 @@
       "timeStamp": 1657726372233,
       "userId": 1,
       "likes": [
-        4
+        4,
+        6
       ],
-      "comments": [],
-      "id": 1
+      "comments": [
+        {
+          "comment": "cool guy",
+          "timeStamp": 1657742760070,
+          "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
+          "username": "bobthebuilder"
+        }
+      ],
+      "id": 1,
+      "profPic": "https://www.tennisworldusa.org/imgb/119364/roger-federer-i-still-don-t-know-that-in-advance-.jpg",
+      "username": "rodgerfederer"
     },
     {
       "caption": "ball smacker",
@@ -116,7 +195,8 @@
       "timeStamp": 1657726402586,
       "userId": 1,
       "likes": [
-        4
+        4,
+        6
       ],
       "comments": [],
       "id": 2
@@ -126,11 +206,20 @@
       "photo": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-1178072900.jpg?crop=0.669xw:1.00xh;0.289xw,0&resize=640:*",
       "timeStamp": 1657726476515,
       "userId": 2,
-      "likes": [],
+      "likes": [
+        4,
+        6
+      ],
       "comments": [
         {
           "comment": "U up?",
           "timeStamp": 1657727197197,
+          "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
+          "username": "bobthebuilder"
+        },
+        {
+          "comment": "naaahhh just playin",
+          "timeStamp": 1657740832495,
           "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
           "username": "bobthebuilder"
         }
@@ -145,10 +234,20 @@
       "timeStamp": 1657726512571,
       "userId": 2,
       "likes": [
-        4
+        4,
+        6
       ],
-      "comments": [],
-      "id": 4
+      "comments": [
+        {
+          "comment": "hey ladies",
+          "timeStamp": 1657742469611,
+          "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
+          "username": "bobthebuilder"
+        }
+      ],
+      "id": 4,
+      "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
+      "username": "kimkardashian"
     },
     {
       "caption": "so hot right now",
@@ -156,83 +255,20 @@
       "timeStamp": 1657726835011,
       "userId": 3,
       "likes": [
-        2,
-        4,
-        2,
-        2
+        4
       ],
       "comments": [
         {
-          "comment": "",
-          "timeStamp": 1657735743624,
-          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
-          "username": "kimkardashian"
+          "comment": "wow",
+          "timeStamp": 1657742074545,
+          "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
+          "username": "bobthebuilder"
         },
         {
-          "comment": "",
-          "timeStamp": 1657735745570,
-          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
-          "username": "kimkardashian"
-        },
-        {
-          "comment": "",
-          "timeStamp": 1657736041630,
-          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
-          "username": "kimkardashian"
-        },
-        {
-          "comment": "",
-          "timeStamp": 1657736041782,
-          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
-          "username": "kimkardashian"
-        },
-        {
-          "comment": "",
-          "timeStamp": 1657736313596,
-          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
-          "username": "kimkardashian"
-        },
-        {
-          "comment": "",
-          "timeStamp": 1657736313760,
-          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
-          "username": "kimkardashian"
-        },
-        {
-          "comment": "",
-          "timeStamp": 1657736364462,
-          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
-          "username": "kimkardashian"
-        },
-        {
-          "comment": "",
-          "timeStamp": 1657736369938,
-          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
-          "username": "kimkardashian"
-        },
-        {
-          "comment": "",
-          "timeStamp": 1657736494705,
-          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
-          "username": "kimkardashian"
-        },
-        {
-          "comment": "",
-          "timeStamp": 1657736579326,
-          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
-          "username": "kimkardashian"
-        },
-        {
-          "comment": "",
-          "timeStamp": 1657736579788,
-          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
-          "username": "kimkardashian"
-        },
-        {
-          "comment": "",
-          "timeStamp": 1657736580046,
-          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
-          "username": "kimkardashian"
+          "comment": "nice",
+          "timeStamp": 1657742219338,
+          "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
+          "username": "bobthebuilder"
         }
       ],
       "id": 6,
@@ -245,19 +281,81 @@
       "timeStamp": 1657726993827,
       "userId": 2,
       "likes": [
-        4
+        4,
+        4,
+        6
       ],
-      "comments": [],
-      "id": 7
+      "comments": [
+        {
+          "comment": "cute",
+          "timeStamp": 1657741959537,
+          "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
+          "username": "bobthebuilder"
+        },
+        {
+          "comment": "wish this was me",
+          "timeStamp": 1657742801319,
+          "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
+          "username": "bobthebuilder"
+        },
+        {
+          "comment": "not to be creepy",
+          "timeStamp": 1657743040898,
+          "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
+          "username": "bobthebuilder"
+        },
+        {
+          "comment": "I'm just trying to build stuff",
+          "timeStamp": 1657743050768,
+          "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
+          "username": "bobthebuilder"
+        }
+      ],
+      "id": 7,
+      "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
+      "username": "kimkardashian"
     },
     {
       "caption": "gangs all here",
       "photo": "https://images.sr.roku.com/idType/roku/context/trc/id/e08c7aeebf155470ac65d87fdfed0a51/images/titan/assets/aHR0cHM6Ly9kaHgudGhlYmx1Y2xvdWQuY29tL0JvYiUyMHRoZSUyMEJ1aWxkZXIlMjAtQ2xhc3NpYy9lcGlzb2Rlcy9Cb2IlMjB0aGUlMjBCdWlsZGVyJTIwLUNsYXNzaWMlMjAtJTIwUzFFNCUyMC0lMjBCdWZmYWxvJTIwQm9iL3RodW1ibmFpbC9yb2t1L0JPQkIwMV8wNF9lcGlzb2RlX2FydHdvcmsuanBn.jpg/presets/6e8bb5957971a0bef8520ed6cb00990f",
       "timeStamp": 1657727141846,
       "userId": 4,
-      "likes": [],
+      "likes": [
+        6
+      ],
       "comments": [],
       "id": 8
+    },
+    {
+      "caption": "love big rigs",
+      "photo": "https://www.counterpointresearch.com/wp-content/uploads/2019/04/digger-4055456_1280.jpg",
+      "timeStamp": 1657746268474,
+      "userId": 4,
+      "likes": [
+        6
+      ],
+      "comments": [],
+      "id": 9
+    },
+    {
+      "caption": "absolute unit of a rig",
+      "photo": "https://acropolis-wp-content-uploads.s3.us-west-1.amazonaws.com/off-highway-truck.jpg",
+      "timeStamp": 1657746291402,
+      "userId": 4,
+      "likes": [
+        6
+      ],
+      "comments": [
+        {
+          "comment": "nice rigggggggggg",
+          "timeStamp": 1657746643325,
+          "profPic": "https://www.looper.com/img/gallery/who-voices-marlin-in-finding-nemo/l-intro-1645998159.jpg",
+          "username": "findingnemo"
+        }
+      ],
+      "id": 10,
+      "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
+      "username": "bobthebuilder"
     }
   ]
 }

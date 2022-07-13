@@ -1,10 +1,11 @@
-import { Card } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import PostPopup from "../subelements/PostPopup";
 import "../styles.css";
-import { BsHeartFill, BsHeart,BsChatRight } from "react-icons/bs";
-import {MdOutlineTagFaces} from "react-icons/md"
+import { BsHeartFill, BsHeart, BsChatRight } from "react-icons/bs";
 import { useState, useContext, useEffect } from "react";
 import { UserContext } from "../customHooks/userObj";
+import Form from "react-bootstrap/Form";
+import InputGroup from "react-bootstrap/InputGroup";
 
 function Post({ post = {}, addcomment }) {
   const [comment, setComment] = useState("");
@@ -12,23 +13,23 @@ function Post({ post = {}, addcomment }) {
   const [likeButton, setLikeButton] = useState(false);
   const { userObj, setuserObj } = useContext(UserContext);
   const [totalLikes, setTotalLikes] = useState(post.likes.length);
-
-  function handleInput(e) {
-    setComment(e.target.value);
-  }
+  const [likeArray, setLikeArray] = useState(post.likes);
+  const [totalComments, setToalComments] = useState(post.comments.length);
 
   function handleSubmit() {
+    console.log(comment);
     if (comment) addcomment(post, comment);
-
+    setComment("");
+    setToalComments((comments) => comments + 1);
   }
+
   function onExpand(e) {
     setModalShow(true);
-    console.log(e.target);
   }
 
   useEffect(() => {
     if (
-      post.likes.filter((e) => {
+      likeArray.filter((e) => {
         return e === userObj.id;
       }).length > 0
     ) {
@@ -38,9 +39,8 @@ function Post({ post = {}, addcomment }) {
     }
   }, []);
 
-
   function handleLike() {
-    let tempPostLikes = [...post.likes];
+    let tempPostLikes = [...likeArray];
 
     tempPostLikes.push(userObj.id);
 
@@ -56,7 +56,7 @@ function Post({ post = {}, addcomment }) {
       .then((res) => res.json())
       .then((data) => {
         setTotalLikes((likes) => likes + 1);
-
+        setLikeArray(tempPostLikes);
         setLikeButton(true);
       });
   }
@@ -65,20 +65,12 @@ function Post({ post = {}, addcomment }) {
     var index = arr.indexOf(value);
     if (index > -1) {
       arr.splice(index, 1);
-
-    function handleSubmit() {
-        addcomment(post,comment)
-    }
-    function onExpand(e) {
-        setModalShow(true)
-
-    }
-    return arr;
+      return arr;
     }
   }
 
   function handleUnlike() {
-    let tempPostLikes = removeItemOnce([...post.likes], userObj.id);
+    let tempPostLikes = removeItemOnce([...likeArray], userObj.id);
 
     const postObj = { likes: tempPostLikes };
 
@@ -92,14 +84,15 @@ function Post({ post = {}, addcomment }) {
       .then((res) => res.json())
       .then((data) => {
         setTotalLikes((likes) => likes - 1);
+        setLikeArray(tempPostLikes);
         setLikeButton(false);
       });
   }
 
   return (
     <>
-      <Card style={{ borderRadius: "10px"}} className="mx-auto m-3 w-50">
-        <Card.Header style={{backgroundColor:"white"}} >
+      <Card style={{ borderRadius: "10px" }} className="mx-auto m-3 w-50">
+        <Card.Header style={{ backgroundColor: "white" }}>
           <div className="d-flex center-text post-header">
             <div
               className="profile-picture"
@@ -109,7 +102,7 @@ function Post({ post = {}, addcomment }) {
                 backgroundImage: "url(" + post.profPic + ")",
               }}
             ></div>
-            <p style={{fontWeight: 600, marginTop:"5px"}}>{post.username}</p>
+            <p style={{ fontWeight: 600, marginTop: "5px" }}>{post.username}</p>
           </div>
         </Card.Header>
         <Card.Img variant="top" src={post.photo} />
@@ -118,7 +111,7 @@ function Post({ post = {}, addcomment }) {
             {!likeButton ? (
               <BsHeart onClick={handleLike} />
             ) : (
-              <BsHeartFill onClick={handleUnlike} />
+              <BsHeartFill onClick={handleUnlike} className="text-danger" />
             )}
           </h4>
           <h4 className="p-2">
@@ -133,21 +126,27 @@ function Post({ post = {}, addcomment }) {
             </p>
           </div>
           <Card.Text onClick={onExpand} className="mb-2 text-muted">
-            View all {post.comments.length} Comments
+            View all {totalComments} Comments
           </Card.Text>
         </Card.Body>
-        <Card.Footer className = "center-text" style={{backgroundColor: "white", padding: "5px 10px" }}>
-        <h4><MdOutlineTagFaces /></h4>
-          <input
-            value={comment}
-            onChange={handleInput}
-            className="inputNone"
-            type="text"
-            placeholder="Add a comment..."
-          />
-          <h4 style={{color:"#458eff"}}onClick={handleSubmit}>
-            Post
-          </h4>
+        <Card.Footer
+          className="center-text"
+          style={{ backgroundColor: "white", padding: "5px 10px" }}
+        >
+          <InputGroup className="mb-3">
+            <Form.Control
+              placeholder="add a comment..."
+              aria-label="comment"
+              aria-describedby="comment"
+              onChange={(e) => {
+                setComment(e.target.value);
+              }}
+              value={comment}
+            />
+            <Button onClick={handleSubmit} variant="outline-primary">
+              Post
+            </Button>
+          </InputGroup>
         </Card.Footer>
       </Card>
       <PostPopup
