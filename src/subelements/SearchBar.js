@@ -17,22 +17,31 @@ function SearchBar({ userObj }) {
   function handleSearch(e) {
     setSearch(e.target.value);
   }
-  const usersToInclude = users.filter((user) => {
-    const firstAndLast = user.fName + " " + user.lName;
+  const usersToInclude = users.filter(
+    function (user) {
+      const firstAndLast = user.fName + " " + user.lName;
 
-    if (user.id === userObj.id) {
-      return false;
-    } else if (search === "") {
-      return true;
-    } else if (
-      user.username.toLowerCase().includes(search.toLowerCase()) ||
-      firstAndLast.toLowerCase().includes(search.toLowerCase())
-    ) {
-      return true;
-    } else {
-      return false;
-    }
-  });
+      if (this.count > 6) {
+        return false;
+      }
+
+      this.count++;
+
+      if (user.id === userObj.id) {
+        return false;
+      } else if (search === "") {
+        return true;
+      } else if (
+        user.username.toLowerCase().includes(search.toLowerCase()) ||
+        firstAndLast.toLowerCase().includes(search.toLowerCase())
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+    { count: 0 }
+  );
 
   const searchResuts = usersToInclude.map((user) => {
     return <SearchResult key={user.id} user={user} />;

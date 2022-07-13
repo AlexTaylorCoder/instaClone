@@ -6,24 +6,28 @@ import Post from "../subelements/Post";
 const patcherHeader = {
   method: "PATCH",
   headers: {
-    'content-type':'application/json'
-  }
-}
+    "content-type": "application/json",
+  },
+};
 
 function Home() {
   const [posts, setPosts] = useState([]);
   const { userObj, setuserObj } = useContext(UserContext);
 
+  function addcomment(submitPost, comment) {
+    const date = new Date();
+    let timeofCreation = date.getTime();
 
-  function addcomment(submitPost,comment) {
-
-    const date = new Date()
-    let timeofCreation = date.getTime()
-
-    submitPost.comments.push({comment:comment,timeStamp:timeofCreation,profPic:userObj.picture,username:userObj.username})
-    fetch("http://localhost:3001/posts/"+submitPost.id,{...patcherHeader, body: JSON.stringify(
-      {...submitPost}
-    )})
+    submitPost.comments.push({
+      comment: comment,
+      timeStamp: timeofCreation,
+      profPic: userObj.picture,
+      username: userObj.username,
+    });
+    fetch("http://localhost:3001/posts/" + submitPost.id, {
+      ...patcherHeader,
+      body: JSON.stringify({ ...submitPost }),
+    });
   }
   function getPostsGlobalUserFollows() {
     setPosts([]);
@@ -35,7 +39,24 @@ function Home() {
   }, []);
 
   function getPosts(i) {
-    if (i < 1) {
+    if (i < 0) {
+      setPosts((posts) => {
+        let tempPosts = [...posts];
+
+        tempPosts.sort(function (a, b) {
+          if (a.timeStamp > b.timeStamp) {
+            return -1;
+          }
+          if (a.timeStamp < b.timeStamp) {
+            return 1;
+          }
+
+          // names must be equal
+          return 0;
+        });
+
+        return tempPosts;
+      });
       return;
     }
     fetch("http://localhost:3001/users/" + userObj.following[i].id)
@@ -56,7 +77,7 @@ function Home() {
   }
 
   const postsToInclude = posts.map((post) => {
-    return <Post key={post.id} post={post} addcomment = {addcomment} />;
+    return <Post key={post.id} post={post} addcomment={addcomment} />;
   });
 
   return (

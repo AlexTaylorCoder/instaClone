@@ -115,11 +115,60 @@ function Profile() {
     })
       .then((res) => res.json())
       .then((data) => {
-        setlocaluserObj(data);
+        const tempUserObj = { posts: localuserObj.posts, ...data };
+        setlocaluserObj(tempUserObj);
       });
   }
 
-  function handleUnfollow() {}
+  function handleUnfollow() {
+    const currentUserArray = userObj.following.filter((follow) => {
+      if (follow.id === localuserObj.id) {
+        return false;
+      } else {
+        return true;
+      }
+    });
+
+    const followedUserArray = localuserObj.followers.filter((follower) => {
+      if (follower.id === userObj.id) {
+        return false;
+      } else {
+        return true;
+      }
+    });
+
+    const currentUserObj = { following: currentUserArray };
+    const followedUserObj = { followers: followedUserArray };
+
+    //update the current users followers
+    fetch("http://localhost:3001/users/" + userObj.id, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: JSON.stringify(currentUserObj),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setuserObj(data);
+        setIsFollowing(false);
+      });
+    //update the followed users followers
+    fetch("http://localhost:3001/users/" + localuserObj.id, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: JSON.stringify(followedUserObj),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        const tempUserObj = { posts: localuserObj.posts, ...data };
+        setlocaluserObj(tempUserObj);
+      });
+  }
 
   return (
     <div id="profile" style={{ margin: "30px 200px 10px 350px" }}>
@@ -193,13 +242,14 @@ function Profile() {
                     size="sm"
                     onClick={handleFollow}
                   >
-                    Follow
+                    follow
                   </Button>
                 ) : (
                   <Button
                     style={{ width: "50%", marginBottom: "8px" }}
                     variant="secondary"
                     size="sm"
+                    onClick={handleUnfollow}
                   >
                     unfollow
                   </Button>
