@@ -157,10 +157,87 @@
       "userId": 3,
       "likes": [
         2,
-        4
+        4,
+        2,
+        2
       ],
-      "comments": [],
-      "id": 6
+      "comments": [
+        {
+          "comment": "",
+          "timeStamp": 1657735743624,
+          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
+          "username": "kimkardashian"
+        },
+        {
+          "comment": "",
+          "timeStamp": 1657735745570,
+          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
+          "username": "kimkardashian"
+        },
+        {
+          "comment": "",
+          "timeStamp": 1657736041630,
+          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
+          "username": "kimkardashian"
+        },
+        {
+          "comment": "",
+          "timeStamp": 1657736041782,
+          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
+          "username": "kimkardashian"
+        },
+        {
+          "comment": "",
+          "timeStamp": 1657736313596,
+          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
+          "username": "kimkardashian"
+        },
+        {
+          "comment": "",
+          "timeStamp": 1657736313760,
+          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
+          "username": "kimkardashian"
+        },
+        {
+          "comment": "",
+          "timeStamp": 1657736364462,
+          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
+          "username": "kimkardashian"
+        },
+        {
+          "comment": "",
+          "timeStamp": 1657736369938,
+          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
+          "username": "kimkardashian"
+        },
+        {
+          "comment": "",
+          "timeStamp": 1657736494705,
+          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
+          "username": "kimkardashian"
+        },
+        {
+          "comment": "",
+          "timeStamp": 1657736579326,
+          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
+          "username": "kimkardashian"
+        },
+        {
+          "comment": "",
+          "timeStamp": 1657736579788,
+          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
+          "username": "kimkardashian"
+        },
+        {
+          "comment": "",
+          "timeStamp": 1657736580046,
+          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
+          "username": "kimkardashian"
+        }
+      ],
+      "id": 6,
+      "profPic": "https://cdn.motor1.com/images/mgl/QyprZ/s1/daughter-of-paul-walker-suing-porsche-over-his-death.jpg",
+      "username": "paulwalker"
     },
     {
       "caption": "we are dating",

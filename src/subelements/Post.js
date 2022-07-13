@@ -1,8 +1,8 @@
 import { Card } from "react-bootstrap";
 import PostPopup from "../subelements/PostPopup";
 import "../styles.css";
-import { FaRegComment } from "react-icons/fa";
-import { BsHeartFill, BsHeart } from "react-icons/bs";
+import { BsHeartFill, BsHeart,BsChatRight } from "react-icons/bs";
+import {MdOutlineTagFaces} from "react-icons/md"
 import { useState, useContext, useEffect } from "react";
 import { UserContext } from "../customHooks/userObj";
 
@@ -18,7 +18,8 @@ function Post({ post = {}, addcomment }) {
   }
 
   function handleSubmit() {
-    addcomment(post, comment);
+    if (comment) addcomment(post, comment);
+
   }
   function onExpand(e) {
     setModalShow(true);
@@ -97,32 +98,32 @@ function Post({ post = {}, addcomment }) {
 
   return (
     <>
-      <Card style={{ borderRadius: "10px" }} className="mx-auto m-3 w-50">
-        <Card.Header>
-          <div className="d-flex">
+      <Card style={{ borderRadius: "10px"}} className="mx-auto m-3 w-50">
+        <Card.Header style={{backgroundColor:"white"}} >
+          <div className="d-flex center-text post-header">
             <div
               className="profile-picture"
               style={{
-                width: "50px",
-                height: "50px",
+                width: "40px",
+                height: "40px",
                 backgroundImage: "url(" + post.profPic + ")",
               }}
             ></div>
-            <h2>{post.username}</h2>
+            <p style={{fontWeight: 600, marginTop:"5px"}}>{post.username}</p>
           </div>
         </Card.Header>
         <Card.Img variant="top" src={post.photo} />
         <div className="d-flex">
-          <h1 className="p-2">
+          <h4 className="p-2">
             {!likeButton ? (
               <BsHeart onClick={handleLike} />
             ) : (
               <BsHeartFill onClick={handleUnlike} />
             )}
-          </h1>
-          <h1 className="p-2">
-            <FaRegComment />
-          </h1>
+          </h4>
+          <h4 className="p-2">
+            <BsChatRight />
+          </h4>
         </div>
         <Card.Body>
           <h5>{totalLikes} Likes</h5>
@@ -135,7 +136,8 @@ function Post({ post = {}, addcomment }) {
             View all {post.comments.length} Comments
           </Card.Text>
         </Card.Body>
-        <Card.Footer style={{ backgroundColor: "white", padding: "5px" }}>
+        <Card.Footer className = "center-text" style={{backgroundColor: "white", padding: "5px 10px" }}>
+        <h4><MdOutlineTagFaces /></h4>
           <input
             value={comment}
             onChange={handleInput}
@@ -143,9 +145,9 @@ function Post({ post = {}, addcomment }) {
             type="text"
             placeholder="Add a comment..."
           />
-          <p onClick={handleSubmit} className="postFooter ">
+          <h4 style={{color:"#458eff"}}onClick={handleSubmit}>
             Post
-          </p>
+          </h4>
         </Card.Footer>
       </Card>
       <PostPopup

@@ -3,6 +3,10 @@
         background-position:center;
         border-radius: 50%;
 }
+#root {
+        font-family: Arial, Helvetica, sans-serif;
+
+}
 .pic-container {
         background-size:cover;
         background-position:center;
@@ -10,10 +14,6 @@
 a:link {
         text-decoration: none;
 }
-#root {
-        background-color: whitesmoke;
-}
-
 .hover-cover {
         opacity: .4;
         background-color: black;
@@ -23,9 +23,12 @@ a:link {
         flex-direction: row;
         align-items: center;
 }
+.post-header {
+        gap: 10px;
+}
 
 .inputNone {
-        width: 90%;
+        width: 85%;
         border:white
 }
 .flex-grid-postPopup {
