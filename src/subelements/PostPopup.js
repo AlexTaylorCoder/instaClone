@@ -14,7 +14,7 @@ function PostPopup({show,onHide,comments, username,photo, profPic}) {
       >
         <Row>
             <Col md = {6}>
-                <img src={photo}/>
+                <img className="pic-container" width= "600px" height="auto"src={photo}/>
             </Col>
             <Col md = {6}>
                 <PostPopUpComment username={username} profPic={profPic} />

@@ -3,6 +3,10 @@
         background-position:center;
         border-radius: 50%;
 }
+.pic-container {
+        background-size:cover;
+        background-position:center;
+}
 a:link {
         text-decoration: none;
 }
