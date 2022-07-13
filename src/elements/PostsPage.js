@@ -30,7 +30,7 @@ function PostsPage({ userObj }) {
       photo: imageUrl,
       timeStamp: Date.now(),
       userId: userObj.id,
-      likes: 0,
+      likes: [],
       comments: [],
     };
 
