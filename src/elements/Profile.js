@@ -2,7 +2,7 @@ import { Button } from "react-bootstrap";
 import OwnPostContainer from "../subelements/Ownpostcontainer";
 import OwnPost from "../subelements/Ownpost";
 
-import { Row, Col, Container, ListGroup } from "react-bootstrap";
+import { Row, Col, Container, ListGroup,Modal } from "react-bootstrap";
 import { BsGearWide } from "react-icons/bs";
 import { useState, useContext, useEffect } from "react";
 import { UserContext } from "../customHooks/userObj";
@@ -24,9 +24,12 @@ function Profile() {
   const params = useParams();
   const navigate = useNavigate();
 
-  const [logoutDrop, setlogoutDrop] = useState(false);
-  const [localuserObj, setlocaluserObj] = useState({});
+  const [show, setShow] = useState(false);
 
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const [localuserObj, setlocaluserObj] = useState({});
   const [isFollowing, setIsFollowing] = useState(false);
 
   useEffect(() => {
@@ -58,11 +61,8 @@ function Profile() {
     id,
   } = localuserObj;
 
-  function handleLogOutToggle() {
-    console.log("click");
-    setlogoutDrop((logoutDrop) => !logoutDrop);
-  }
   function handleLogOut() {
+    handleClose()
     setuserObj({});
     navigate("/login");
     setlocaluserObj({});
@@ -175,7 +175,7 @@ function Profile() {
       <Container>
         <Row>
           <Col sm={{ span: 3 }}>
-            <img
+            <img className="fit-img"
               width={150}
               height={150}
               style={{ borderRadius: "50%" }}
@@ -197,6 +197,14 @@ function Profile() {
             </section>
           </Col>
 
+          <Modal centered show={show} onHide={handleClose}>
+              <ListGroup>
+                <ListGroup.Item onClick = {handleLogOut}>
+                  Log Out
+                </ListGroup.Item>
+              </ListGroup>
+          </Modal>
+
           {localuserObj.id === userObj.id ? (
             <>
               <Col style={styleObj} xs={{ span: 2 }}>
@@ -213,21 +221,12 @@ function Profile() {
                 </p>
               </Col>
               <Col style={styleObj} xs={{ span: 2 }}>
-                <BsGearWide
-                  onClick={handleLogOutToggle}
+                <h4><BsGearWide
+                  onClick={handleShow}
                   style={{ margin: "5px 0 15px 0" }}
                 />
-                {logoutDrop ? (
-                  <ListGroup
-                    style={{ position: "absolute", margin: "0 0 0 20px" }}
-                  >
-                    <ListGroup.Item active onClick={handleLogOut}>
-                      Log Out
-                    </ListGroup.Item>
-                  </ListGroup>
-                ) : null}
+                </h4>          
                 <p>
-                  <b></b>
                   {following.length} following
                 </p>
               </Col>

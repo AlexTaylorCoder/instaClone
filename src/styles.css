@@ -55,14 +55,8 @@ a:link {
 #main-modal {
         min-width: 70%;
     }
-/* #ownpostcontainer {
-        display: flex;
-        flex-direction: column;
-        gap:10px;
-        flex-wrap: wrap;
-} */
 .own-post-img {
-        float:left;
+        position: relative;
         width: 300px;
         height: 300px;
 }
@@ -84,4 +78,18 @@ a:link {
 }
 .absolute-pos {
         position: absolute;
+}
+.fit-img {
+        object-fit: cover;
+        max-width: 100%;
+    max-height: 100%;
+}
+#img-grid-prof {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 40px 0px
+}
+
+.blueHov:hover {
+        background-color: #DCDCDC;
 }
