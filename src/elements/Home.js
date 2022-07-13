@@ -20,10 +20,9 @@ function Home() {
     const date = new Date()
     let timeofCreation = date.getTime()
 
-    submitPost.comments.push(comment, timeofCreation)
-    
+    submitPost.comments.push({comment:comment,timeStamp:timeofCreation,profPic:userObj.picture,username:userObj.username})
     fetch("http://localhost:3001/posts/"+submitPost.id,{...patcherHeader, body: JSON.stringify(
-      {...submitPost,lastComment:timeofCreation}
+      {...submitPost}
     )})
   }
   function getPostsGlobalUserFollows() {

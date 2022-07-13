@@ -24,8 +24,23 @@ a:link {
         width: 90%;
         border:white
 }
-
+.flex-grid-postPopup {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        flex-wrap: wrap;
+        padding: 10px 0;
+}
 .postFooter {
         display: inline-block;
         color:"#458eff"     
 }
+.flex-grid-align-time {
+        display: flex;
+        flex-direction: column;
+        gap:2px;
+        justify-content: center;
+}
+#main-modal {
+        min-width: 70%;
+    }

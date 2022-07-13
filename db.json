@@ -218,15 +218,7 @@
       "timeStamp": 1655821248892,
       "userId": 1,
       "likes": 0,
-      "comments": [
-        {
-          "username": "alextaylor",
-          "id": 1,
-          "userId": 2,
-          "picture": "https://static.wikia.nocookie.net/monster/images/6/6e/DragonRed.jpg/revision/latest/scale-to-width-down/1200?cb=20160809235604",
-          "comment": "some comment"
-        }
-      ]
+      "comments": []
     },
     {
       "caption": "this is a picture of kim K",
@@ -298,14 +290,23 @@
       "userId": 4,
       "likes": 0,
       "comments": [
-        "wwooooo",
-        "awfawf",
-        "awrawr",
-        "rgdbdbdr"
+        {
+          "comment": "First Comment",
+          "timeStamp": 1657681312862,
+          "profPic": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*",
+          "username": "derekvogt"
+        },
+        {
+          "comment": "Second Comment",
+          "timeStamp": 1657717153341,
+          "profPic": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*",
+          "username": "derekvogt"
+        }
       ],
       "id": 9,
       "profPic": "https://static01.nyt.com/images/2022/07/04/multimedia/04JPtennis-retirement1-print/04tennis-retirement1-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
-      "username": "rodgerfederer"
+      "username": "rodgerfederer",
+      "lastComment": 1657676716134
     },
     {
       "caption": "check out my sisters",
@@ -314,7 +315,10 @@
       "userId": 4,
       "likes": 0,
       "comments": [],
-      "id": 10
+      "id": 10,
+      "username": "rodgerfederer",
+      "lastComment": 1657676382191,
+      "profPic": "https://static01.nyt.com/images/2022/07/04/multimedia/04JPtennis-retirement1-print/04tennis-retirement1-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
     },
     {
       "caption": "Yeezzzzyyy",
@@ -323,7 +327,9 @@
       "userId": 4,
       "likes": 0,
       "comments": [],
-      "id": 11
+      "id": 11,
+      "profPic": "https://static01.nyt.com/images/2022/07/04/multimedia/04JPtennis-retirement1-print/04tennis-retirement1-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
+      "username": "rodgerfederer"
     },
     {
       "caption": "hey",
