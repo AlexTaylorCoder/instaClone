@@ -1,9 +1,10 @@
 import { Modal, Button, Container, Row, Col } from "react-bootstrap";
 import PostPopUpComment from "./PostPopUpComment";
 import { Card } from "react-bootstrap";
+import { InputGroup } from "react-bootstrap";
 
-function PostPopup({ show, onHide, comments, username, photo, profPic }) {
-  const commentList = comments.map((comment, index) => (
+function PostPopup({ show, onHide, post }) {
+  const commentList = post.comments.map((comment, index) => (
     <PostPopUpComment
       key={index}
       username={comment.username}
@@ -14,8 +15,14 @@ function PostPopup({ show, onHide, comments, username, photo, profPic }) {
   ));
   return (
     <Modal id="main-modal" show={show} onHide={onHide} centered>
-      <div className="d-flex w-100 h-100">
-        <img src={photo} className="w-50 h-auto" />
+      <div className="d-flex w-100" style={{ height: "75vh" }}>
+        <div className="d-flex w-50 h-auto bg-black">
+          <img
+            src={post.photo}
+            className="w-100 h-auto"
+            style={{ objectFit: "contain" }}
+          />
+        </div>
         <div className="d-flex flex-column flex-grow-1 p-2 align-items-start">
           <Modal.Header className="align-self-stretch">
             <div className="d-flex align-items-center">
@@ -24,14 +31,23 @@ function PostPopup({ show, onHide, comments, username, photo, profPic }) {
                 style={{
                   width: "50px",
                   height: "50px",
-                  backgroundImage: "url(" + profPic + ")",
+                  backgroundImage: "url(" + post.profPic + ")",
                 }}
               ></div>
-              <h2 className="m-2">{username}</h2>
+              <h2 className="m-2">{post.username}</h2>
             </div>
           </Modal.Header>
 
-          <div className="flex-grow-1 m-2 overflow-auto">{commentList}</div>
+          <div className="flex-grow-1 m-2 overflow-auto align-self-stretch">
+            <PostPopUpComment
+              key={"captioncommentuniqueid"}
+              username={post.username}
+              profPic={post.profPic}
+              comment={post.caption}
+              timestamp={post.timeStamp}
+            />
+            {commentList}
+          </div>
         </div>
       </div>
     </Modal>

@@ -41,7 +41,6 @@ function Post({ post = {}, addcomment }) {
     }
   }, []);
 
-
   function handleLike() {
     let tempPostLikes = [...likeArray];
 
@@ -118,7 +117,7 @@ function Post({ post = {}, addcomment }) {
             )}
           </h4>
           <h4 className="p-2">
-            <BsChatRight onClick={onExpand}/>
+            <BsChatRight onClick={onExpand} />
           </h4>
         </div>
         <Card.Body>
@@ -130,7 +129,9 @@ function Post({ post = {}, addcomment }) {
           </div>
           <Card.Text onClick={onExpand} className="mb-2 text-muted">
             View all {totalComments} Comments
-            <p style={{ fontSize: "11px"}}>{timeDiff(post.timeStamp,true)}</p>
+            <p style={{ fontSize: "11px" }} className={"mt-4"}>
+              {timeDiff(post.timeStamp, true)}
+            </p>
           </Card.Text>
         </Card.Body>
         <Card.Footer
@@ -156,10 +157,7 @@ function Post({ post = {}, addcomment }) {
       <PostPopup
         show={modalShow}
         onHide={() => setModalShow(false)}
-        username={post.username}
-        comments={post.comments}
-        photo={post.photo}
-        profPic={post.profPic}
+        post={post}
       />
     </>
   );

@@ -2,7 +2,7 @@ import { Button } from "react-bootstrap";
 import OwnPostContainer from "../subelements/Ownpostcontainer";
 import OwnPost from "../subelements/Ownpost";
 import NavigationBar from "./Navbar";
-import { Row, Col, Container, ListGroup,Modal } from "react-bootstrap";
+import { Row, Col, Container, ListGroup, Modal } from "react-bootstrap";
 import { BsGearWide } from "react-icons/bs";
 import { useState, useContext, useEffect } from "react";
 import { UserContext } from "../customHooks/userObj";
@@ -62,7 +62,7 @@ function Profile() {
   } = localuserObj;
 
   function handleLogOut() {
-    handleClose()
+    handleClose();
     setuserObj({});
     navigate("/login");
     setlocaluserObj({});
@@ -172,109 +172,107 @@ function Profile() {
 
   return (
     <>
-    <NavigationBar userObj={userObj} />
-    <div id="profile" style={{ margin: "30px 200px 10px 350px" }}>
-      <Container>
-        <Row>
-          <Col sm={{ span: 3 }}>
-            <img className="fit-img"
-              width={150}
-              height={150}
-              style={{ borderRadius: "50%" }}
-              src={picture}
-            />
-          </Col>
-          <Col style={styleObj} xs={{ span: 2 }}>
-            <p style={{ fontSize: "1.75em", fontWeight: "lighter" }}>
-              {username}
-            </p>
-            <p>
-              <b></b>Posts
-            </p>
-            <section style={{ marginTop: "15px" }}>
-              <b>
-                {fName} {lName}
-              </b>
-              <p>{bioForm}</p>
-            </section>
-          </Col>
+      <NavigationBar userObj={userObj} />
+      <div id="profile" style={{ margin: "30px 200px 10px 350px" }}>
+        <Container>
+          <Row>
+            <Col sm={{ span: 3 }}>
+              <img
+                className="fit-img"
+                width={150}
+                height={150}
+                style={{ borderRadius: "50%" }}
+                src={picture}
+              />
+            </Col>
+            <Col style={styleObj} xs={{ span: 2 }}>
+              <p style={{ fontSize: "1.75em", fontWeight: "lighter" }}>
+                {username}
+              </p>
+              <p>
+                <b></b>Posts
+              </p>
+              <section style={{ marginTop: "15px" }}>
+                <b>
+                  {fName} {lName}
+                </b>
+                <p>{bioForm}</p>
+              </section>
+            </Col>
 
-          <Modal centered show={show} onHide={handleClose}>
+            <Modal centered show={show} onHide={handleClose}>
               <ListGroup>
-                <ListGroup.Item onClick = {handleLogOut}>
-                  Log Out
-                </ListGroup.Item>
+                <ListGroup.Item onClick={handleLogOut}>Log Out</ListGroup.Item>
               </ListGroup>
-          </Modal>
+            </Modal>
 
-          {localuserObj.id === userObj.id ? (
-            <>
-              <Col style={styleObj} xs={{ span: 2 }}>
-                <Button
-                  style={{ width: "50%", marginBottom: "8px" }}
-                  variant="outline-secondary"
-                  size="sm"
-                >
-                  Edit
-                </Button>
-                <p>
-                  <b></b>
-                  {followers.length} followers
-                </p>
-              </Col>
-              <Col style={styleObj} xs={{ span: 2 }}>
-                <h4><BsGearWide
-                  onClick={handleShow}
-                  style={{ margin: "5px 0 15px 0" }}
-                />
-                </h4>          
-                <p>
-                  {following.length} following
-                </p>
-              </Col>
-            </>
-          ) : (
-            <>
-              <Col style={styleObj} xs={{ span: 2 }}>
-                {!isFollowing ? (
+            {localuserObj.id === userObj.id ? (
+              <>
+                <Col style={styleObj} xs={{ span: 2 }}>
                   <Button
                     style={{ width: "50%", marginBottom: "8px" }}
-                    variant="primary"
+                    variant="outline-secondary"
                     size="sm"
-                    onClick={handleFollow}
                   >
-                    follow
+                    Edit
                   </Button>
-                ) : (
-                  <Button
-                    style={{ width: "50%", marginBottom: "8px" }}
-                    variant="secondary"
-                    size="sm"
-                    onClick={handleUnfollow}
-                  >
-                    unfollow
-                  </Button>
-                )}
-                <p>
+                  <p>
+                    <b></b>
+                    {followers.length} followers
+                  </p>
+                </Col>
+                <Col style={styleObj} xs={{ span: 2 }}>
+                  <h4>
+                    <BsGearWide
+                      onClick={handleShow}
+                      style={{ margin: "5px 0 15px 0" }}
+                    />
+                  </h4>
+                  <p>{following.length} following</p>
+                </Col>
+              </>
+            ) : (
+              <>
+                <Col style={styleObj} xs={{ span: 2 }}>
+                  {!isFollowing ? (
+                    <Button
+                      style={{ width: "50%", marginBottom: "8px" }}
+                      variant="primary"
+                      size="sm"
+                      onClick={handleFollow}
+                    >
+                      follow
+                    </Button>
+                  ) : (
+                    <Button
+                      style={{ width: "50%", marginBottom: "8px" }}
+                      variant="secondary"
+                      size="sm"
+                      onClick={handleUnfollow}
+                    >
+                      unfollow
+                    </Button>
+                  )}
+                  <p>
+                    <b></b>
+                    {followers.length} followers
+                  </p>
+                </Col>
+                <Col style={styleObj} xs={{ span: 2 }}>
+                  <div style={{ height: "40px" }}></div>
                   <b></b>
-                  {followers.length} followers
-                </p>
-              </Col>
-              <Col style={styleObj} xs={{ span: 2 }}>
-                <div style={{ height: "40px" }}></div>
-                <b></b>
-                <p>
-                  <b></b>
-                  {following.length} following
-                </p>
-              </Col>
-            </>
-          )}
-        </Row>
-        <hr />
-      </Container>
-      <OwnPostContainer posts={posts} />
-    </div>
+                  <p>
+                    <b></b>
+                    {following.length} following
+                  </p>
+                </Col>
+              </>
+            )}
+          </Row>
+          <hr />
+        </Container>
+        <OwnPostContainer posts={posts} />
+      </div>
     </>
   );
 }

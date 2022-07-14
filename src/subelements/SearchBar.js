@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { Form, Dropdown } from "react-bootstrap";
 import SearchResult from "./SearchResult";
 
-import {FiSearch} from "react-icons/fi"
-
+import { FiSearch } from "react-icons/fi";
 
 function SearchBar({ userObj }) {
   const [search, setSearch] = useState("");
@@ -20,35 +19,34 @@ function SearchBar({ userObj }) {
   function handleSearch(e) {
     setSearch(e.target.value);
   }
-  const usersToInclude = users.filter(
-    function (user) {
-      const firstAndLast = user.fName + " " + user.lName;
+  const usersToInclude = users.filter(function (user) {
+    const firstAndLast = user.fName + " " + user.lName;
 
+    if (user.id === userObj.id) {
+      return false;
+    } else if (search === "") {
+      return true;
+    } else if (
+      user.username.toLowerCase().includes(search.toLowerCase()) ||
+      firstAndLast.toLowerCase().includes(search.toLowerCase())
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+
+  const searchResuts = usersToInclude.map(
+    function (user) {
       if (this.count > 6) {
-        return false;
+        return null;
       }
 
       this.count++;
-
-      if (user.id === userObj.id) {
-        return false;
-      } else if (search === "") {
-        return true;
-      } else if (
-        user.username.toLowerCase().includes(search.toLowerCase()) ||
-        firstAndLast.toLowerCase().includes(search.toLowerCase())
-      ) {
-        return true;
-      } else {
-        return false;
-      }
+      return <SearchResult key={user.id} user={user} />;
     },
     { count: 0 }
   );
-
-  const searchResuts = usersToInclude.map((user) => {
-    return <SearchResult key={user.id} user={user} />;
-  });
 
   function handleBlur(e) {
     // if the blur was because of outside focus
@@ -58,15 +56,16 @@ function SearchBar({ userObj }) {
     }
   }
   return (
-    <Form style={{marginLeft:"350px"}}
+    <Form
+      style={{ marginLeft: "350px" }}
       className="d-flex"
       onFocus={focusSearch}
       onBlur={handleBlur}
       onChange={handleSearch}
     >
-      <Form.Control 
+      <Form.Control
         type="search"
-        placeholder= "Search"
+        placeholder="Search"
         className="me-2"
         aria-label="Search"
       />
@@ -74,7 +73,7 @@ function SearchBar({ userObj }) {
       <Dropdown.Menu
         style={{
           position: "fixed",
-          left: "33%",
+          left: "45%",
           width: "500px",
           top: "100px",
         }}

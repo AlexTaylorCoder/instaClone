@@ -6,35 +6,33 @@ import { Link } from "react-router-dom";
 import { AiFillHome, AiOutlineHome } from "react-icons/ai";
 import { RiAddBoxLine, RiAddBoxFill, RiSaveLine } from "react-icons/ri";
 import { IoPerson, IoPersonOutline } from "react-icons/io5";
-import {HiOutlineSwitchHorizontal} from "react-icons/hi"
+import { HiOutlineSwitchHorizontal } from "react-icons/hi";
 
-import {CgProfile} from "react-icons/cg"
-import {BsGearWide} from "react-icons/bs"
+import { CgProfile } from "react-icons/cg";
+import { BsGearWide } from "react-icons/bs";
 import { useLocation } from "react-router-dom";
 import "../styles.css";
 import { useContext } from "react";
-import {UserContext} from "../customHooks/userObj"
-import {Popover,OverlayTrigger, ListGroup }from "react-bootstrap";
-
+import { UserContext } from "../customHooks/userObj";
+import { Popover, OverlayTrigger, ListGroup } from "react-bootstrap";
 
 function NavigationBar({ userObj }) {
-
   const location = useLocation();
 
   function handleDropDown() {
-    console.log("e")
+    console.log("e");
   }
   return (
-    <Navbar className="post-box-shadow"bg="light" variant="light">
+    <Navbar className="post-box-shadow" bg="light" variant="light">
       <Container>
         <Navbar.Brand>
-          <Link to={""}>
+          <Link to={"/"}>
             <div className="d-flex align-items-center">
-              <h1>Fake</h1>
-              <img 
+              <h1 className="text-dark">Fake</h1>
+              <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png"
-                  width="auto"
-                  height="75px"
+                width="auto"
+                height="75px"
               ></img>
             </div>
           </Link>
@@ -44,37 +42,42 @@ function NavigationBar({ userObj }) {
         </Nav>
         <Link to={"/"}>
           <h1 className="mx-2">
-            {location.pathname === "/" ? <AiFillHome /> : <AiOutlineHome />}
+            {location.pathname === "/" ? (
+              <AiFillHome className="text-dark" />
+            ) : (
+              <AiOutlineHome className="text-dark" />
+            )}
           </h1>
         </Link>
         <Link to={"/createpost"}>
           <h1 className="mx-2">
             {location.pathname === "/createpost" ? (
-              <RiAddBoxFill />
+              <RiAddBoxFill className="text-dark" />
             ) : (
-              <RiAddBoxLine />
+              <RiAddBoxLine className="text-dark" />
             )}
           </h1>
         </Link>
 
         <Link to={`/profile/${userObj.id}`}>
-          <h1 className="mx-2"> 
-            {location.pathname === "/profile" ? (
-              <IoPerson />
+          <h1 className="mx-2">
+            {location.pathname === "/profile/" + userObj.id ? (
+              <IoPerson className="text-dark" />
             ) : (
-              <IoPersonOutline />
+              <IoPersonOutline className="text-dark" />
             )}
           </h1>
         </Link>
         <OverlayTrigger trigger="click" placement="bottom" overlay={popover}>
-        <div
-          className="profile-picture mx-5" onClick={handleDropDown}
-          style={{
-            width: "50px",
-            height: "50px",
-            backgroundImage: "url(" + userObj.picture + ")",
-          }}
-        ></div>
+          <div
+            className="profile-picture mx-5"
+            onClick={handleDropDown}
+            style={{
+              width: "50px",
+              height: "50px",
+              backgroundImage: "url(" + userObj.picture + ")",
+            }}
+          ></div>
         </OverlayTrigger>
       </Container>
     </Navbar>
@@ -82,23 +85,21 @@ function NavigationBar({ userObj }) {
 }
 
 const popover = (
-  
   <Popover id="popover-basic">
     <ListGroup>
-        <ListGroup.Item className = "blueHov">
-          <CgProfile/> Profile
-        </ListGroup.Item>
-        <ListGroup.Item className = "blueHov">
-          <RiSaveLine/> Saved
-        </ListGroup.Item>
-        <ListGroup.Item className = "blueHov">
-          <BsGearWide/> Settings
-        </ListGroup.Item>
-        <ListGroup.Item className = "blueHov">
-          <HiOutlineSwitchHorizontal/> Switch Account
-        </ListGroup.Item>
+      <ListGroup.Item className="blueHov">
+        <CgProfile /> Profile
+      </ListGroup.Item>
+      <ListGroup.Item className="blueHov">
+        <RiSaveLine /> Saved
+      </ListGroup.Item>
+      <ListGroup.Item className="blueHov">
+        <BsGearWide /> Settings
+      </ListGroup.Item>
+      <ListGroup.Item className="blueHov">
+        <HiOutlineSwitchHorizontal /> Switch Account
+      </ListGroup.Item>
       <ListGroup.Item className="blueHov">Log Out</ListGroup.Item>
-      
     </ListGroup>
   </Popover>
 );

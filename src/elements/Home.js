@@ -84,12 +84,12 @@ function Home() {
   return (
     <>
       <NavigationBar userObj={userObj} />
-    <div id="home" className="d-flex">
-      <div className="w-75 overflow-auto">{postsToInclude}</div>
-      <div>
-        <div></div>
+      <div id="home" className="d-flex">
+        <div className="w-75 overflow-auto">{postsToInclude}</div>
+        <div>
+          <div></div>
+        </div>
       </div>
-    </div>
     </>
   );
 }
