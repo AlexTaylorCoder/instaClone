@@ -4,20 +4,15 @@
       "fName": "Rodger",
       "lName": "Federer",
       "birthday": "1995-01-01",
-      "username": "rodgerfederertheman",
+      "username": "rodgergggg",
       "password": "rodgerfederer",
-      "picture": "https://images.newindianexpress.com/uploads/user/imagelibrary/2022/6/26/w1200X800/Roger_Federer_AP.jpg",
+      "picture": "https://www.tennisworldusa.org/imgb/119364/roger-federer-i-still-don-t-know-that-in-advance-.jpg",
       "bioform": "I play tennis",
       "following": [
         {
           "username": "bobthebuilder",
           "id": 4,
           "picture": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg"
-        },
-        {
-          "username": "kimkardashian",
-          "id": 2,
-          "picture": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg"
         }
       ],
       "followers": [
@@ -30,11 +25,6 @@
           "username": "findingnemo",
           "id": 6,
           "picture": "https://www.looper.com/img/gallery/who-voices-marlin-in-finding-nemo/l-intro-1645998159.jpg"
-        },
-        {
-          "username": "drphillthethrill",
-          "id": 10,
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/7/75/Dr.Phil2013.jpg"
         }
       ],
       "timestamp": 1657726327783,
