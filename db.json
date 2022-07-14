@@ -4,9 +4,9 @@
       "fName": "Rodger",
       "lName": "Federer",
       "birthday": "1995-01-01",
-      "username": "rodgergggg",
+      "username": "rodgerfederergoat",
       "password": "rodgerfederer",
-      "picture": "https://www.tennisworldusa.org/imgb/119364/roger-federer-i-still-don-t-know-that-in-advance-.jpg",
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeVB8T-fgqEflpXCU6iVT0BoIVukXEzK7eqQ&usqp=CAU",
       "bioform": "I play tennis",
       "following": [
         {
@@ -60,16 +60,6 @@
           "username": "findingnemo",
           "id": 6,
           "picture": "https://www.looper.com/img/gallery/who-voices-marlin-in-finding-nemo/l-intro-1645998159.jpg"
-        },
-        {
-          "username": "rodgerfederertheman",
-          "id": 1,
-          "picture": "https://images.newindianexpress.com/uploads/user/imagelibrary/2022/6/26/w1200X800/Roger_Federer_AP.jpg"
-        },
-        {
-          "username": "drphillthethrill",
-          "id": 10,
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/7/75/Dr.Phil2013.jpg"
         }
       ],
       "timestamp": 1657726449629,
@@ -94,11 +84,6 @@
           "username": "bobthebuilder",
           "id": 4,
           "picture": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg"
-        },
-        {
-          "username": "drphillthethrill",
-          "id": 10,
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/7/75/Dr.Phil2013.jpg"
         }
       ],
       "timestamp": 1657726572108,
@@ -144,11 +129,6 @@
           "username": "Chapo",
           "id": 7,
           "picture": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAFwAXAMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAAFBgIEAQMHAP/EADgQAAIBAwIDBQcDAAsAAAAAAAECAwAEEQUhBhIxE0FRYXEiIzKBkaHBFLHRFSQzQkNSU2JykvH/xAAZAQADAQEBAAAAAAAAAAAAAAABAwQCBQD/xAAhEQACAgICAgMBAAAAAAAAAAAAAQIRAxIEISIxMlFhQf/aAAwDAQACEQMRAD8AdMYrBFSrxqMqo1SMsaM7sFVRkk9AKTtS4pur26Npw+oYA4a4YZHy8q9xhqUt7cf0TZMwjU/1h17z/lpj4S4cgsbJJHjAZwD06UvJkUEMhDZ9gaw4dlvFjbVr2e6IG8bNhR/PWi8GgWHZ8gsYiU6+7B+9NSWEDjHIB6VYSwiUYQFdqn3lIdcIiXc8L6fdKR+hiU4GCi8pH0oPLo2uaHm40qeS4gXJa2lJIx5V1BLVE6DfvNa5IlUHCiipziBuEv4JOha7bavGVXMVwm0kLkZB8vKitLvGmj/or+HVdOPYTHYlO8+YotpN6L+xjn25yMOB3MOtUwlsrESjq6Led96l86wK8RWgGc1CWQJGznoqkmsg5FVtRBawuVU4YxNg/KvAFHh5Vur4zSHJklZiPEk/+11CBQqqO7Fcr4DUz6vyP0jTtK6Hfa1DYkIY5JZjjCIM5qTM/KivHF69B+Eit+dqS5+Ir+Fg76TIIz15ZASPWjelaql/CHjzjOMd4rKkkZlhlVhdjtWiZvZoPqurTWx7K1Xnnb4V670Ni1DX0YNd2aPGe9GGR60HKwxwtdhDXbZbqwdXXOBkeVK3DCtbzXVuTkZDjH0P4ptM6Xlq6uhXIwQaTOHCV1jUYiciLCg+O5pmB26BmVRsZhWQKwMYrORVROVublbyqNy4/Ty5UkchyAeu1TOCN6gTjfGfWvP0CPtATg3Tha6rdIC3K0KMpYbgEnY006hos92G/TXRtyww0nLk48vOtFlbpa6jKR3qq/QUciuOcco7qgcrfZ0HcfiKVnwJGb4SzXTvEEwQVy5bGM83Xzpl0jTI9LYpEzyZHtNIcknxq3LcpEMA5YjpS8eLtNgv2tzMHlUZZcHai3ZlKck69F7UdCj1K4MrTSR4PtKh+IeFBrHhjUbXmMd8BN2mU5QeQp4MPOi2mcQ2d/cSpbShpI25ZEGdqNhlIDrjB76C6VHpSnBqwRJay29mWfPORuKU+GLcpHcXMjAyTvzHHQDu/n5093swaJvSla0gFrCIwoGd6Zg+VIxk7hci0GNS5j5VrBqWRVZIgb2sh6TNXhcGOWMyzExhxzbDpneihK94H0ofqUsaRn2EPqtE8XlvI7m5E8BJjdiBny2oojhAWG+aTdPvQI+VQByucAUyafdLMpyenn0rnzVM6MZbIuq+Gy3xN1P4qhPoGlXLEiKAOTliuAT61CbTo7pu1uJZ2TujSTlH23+9ajYWAOFsrkr3lZ2GfvRizev6ErHSbKwYy28aCRhylgeoFW0kC5VdlO4HhQQaTHgNpt7dWzKd1di6n1BP7GiNqJez98RzjvHShJmXEleOVhc567Ch92YsQHnHP2ftY+35qWpXShAuRsd6GWaQyHmKnJJOzGmYI3KxGeVRotjlPR69t/qCpC3h8G/7GvGCHvDfWrCRGMjHWhOryBYzS1d8S6jKzCNxEPBF6D1NCzcT3Cnt55JPHnckUxYmYcw7psguJp4Y5F7QAMADv4fxRW0vBbzAzvy4+IZxSdwSwj4h8ElDoB6b/g0+a1pKXkOUGJBupBxmoeRHXJRfx3tjGK0nheNXZlO21WVWCQZVtv8Aaa5TNdX2nuYkeRSDgq4/NbE4i1NQBzdPPrSlD6HnUJEi5fdt8xQy9v8AsVIU+1npmkiPiPUGBTZc9/U1f0uwvLkm7vpGEZ+FScE0HGvYLfonqV6z7jYMeX+auaXJlRSzxdc3ltcwNZxdrbRAiVEGSGODnHpiieg6pbTrGO1COw2V9s1Zih4WiHO/OhpQ7Vkn1rUp261LfxNMFnKo/akkPnisv7uJz5V6L+//AMjU5RlQD0JqsnM6S4srm1uGH9mwZvMd/wBs105iwQEbrjbFcvbotdK4cY3XD9pJLu6gxZHeF2GfPAqDmx6Ui/hT7cSjqEcF2eW5TDDo9L8lmn6krzKEUnFOtzEiYwoPrVKTRbNgZCrZO+M7VCmXtUDbGzsrcpJIVkk7hnaizTmRcttGvWq/YpEhKDBXYUF1GaV71bcuwjOM4PWvVYLSNlw0fb3F2AAhbmPngAD7AClKafnuiyqAhf8AembiL3WnKkewyPzStygLFt1bJro8SPjsc3lT71Dmn67d2LBSxmhH+G53+R7qZIuJNNZAXkkjbvVoySPoCKSHH71kneqXBMmUmf/Z"
-        },
-        {
-          "username": "drphillthethrill",
-          "id": 10,
-          "picture": "https://upload.wikimedia.org/wikipedia/commons/7/75/Dr.Phil2013.jpg"
         }
       ],
       "timestamp": 1657727081925,
@@ -206,6 +186,25 @@
       "followers": [],
       "timestamp": 1657746566744,
       "id": 6
+    },
+    {
+      "fName": "Joaquín ",
+      "lName": "Guzmán",
+      "birthday": "1957-04-04",
+      "username": "Chapo",
+      "password": "Chapo",
+      "picture": "data:image/jpeg;base64,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",
+      "bioform": "I break out every time.",
+      "following": [
+        {
+          "username": "bobthebuilder",
+          "id": 4,
+          "picture": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg"
+        }
+      ],
+      "followers": [],
+      "timestamp": 1657810446120,
+      "id": 8
     },
     {
       "fName": "i",
@@ -295,40 +294,6 @@
       "followers": [],
       "timestamp": 1657810331950,
       "id": 7
-    },
-    {
-      "fName": "Dr",
-      "lName": "Phill",
-      "birthday": "1775-01-01",
-      "username": "drphillthethrill2",
-      "password": "drphillthethrill",
-      "picture": "https://upload.wikimedia.org/wikipedia/commons/7/75/Dr.Phil2013.jpg",
-      "bioform": "hey I am a doc",
-      "following": [
-        {
-          "username": "rodgerfederertheman",
-          "id": 1,
-          "picture": "https://images.newindianexpress.com/uploads/user/imagelibrary/2022/6/26/w1200X800/Roger_Federer_AP.jpg"
-        },
-        {
-          "username": "kimkardashian",
-          "id": 2,
-          "picture": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg"
-        },
-        {
-          "username": "paulwalker",
-          "id": 3,
-          "picture": "https://cdn.motor1.com/images/mgl/QyprZ/s1/daughter-of-paul-walker-suing-porsche-over-his-death.jpg"
-        },
-        {
-          "username": "bobthebuilder",
-          "id": 4,
-          "picture": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg"
-        }
-      ],
-      "followers": [],
-      "timestamp": 1657826195207,
-      "id": 10
     }
   ],
   "posts": [
@@ -347,18 +312,11 @@
           "timeStamp": 1657742760070,
           "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
           "username": "bobthebuilder"
-        },
-        {
-          "comment": "hey daddy",
-          "timeStamp": 1657826222868,
-          "profPic": "https://upload.wikimedia.org/wikipedia/commons/7/75/Dr.Phil2013.jpg",
-          "username": "drphillthethrill2",
-          "id": 10
         }
       ],
       "id": 1,
-      "profPic": "https://images.newindianexpress.com/uploads/user/imagelibrary/2022/6/26/w1200X800/Roger_Federer_AP.jpg",
-      "username": "rodgerfederertheman"
+      "profPic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeVB8T-fgqEflpXCU6iVT0BoIVukXEzK7eqQ&usqp=CAU",
+      "username": "rodgerfederergoat"
     },
     {
       "caption": "ball smacker",
@@ -532,16 +490,8 @@
         {
           "comment": "Random text",
           "timeStamp": 1657755733159,
-          "profPic": "https://images.newindianexpress.com/uploads/user/imagelibrary/2022/6/26/w1200X800/Roger_Federer_AP.jpg",
-          "username": "rodgerfederertheman",
-          "id": 1
-        },
-        {
-          "comment": "It is me Dr.Phil",
-          "timeStamp": 1657826519911,
-          "profPic": "https://upload.wikimedia.org/wikipedia/commons/7/75/Dr.Phil2013.jpg",
-          "username": "drphillthethrill2",
-          "userId": 10
+          "profPic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeVB8T-fgqEflpXCU6iVT0BoIVukXEzK7eqQ&usqp=CAU",
+          "username": "rodgerfederergoat"
         }
       ],
       "id": 10,

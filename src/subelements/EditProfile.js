@@ -62,23 +62,27 @@ function EditProfile() {
               if (post.username === prevUsername) {
                 fetch("http://localhost:3001/posts/"+post.id,{...patcherHeader,
                     body:JSON.stringify({...post,username:inputs.username, profPic:inputs.picture}), 
-                  })
+                  }).then(checkComment)
               }
-              match = false
-                for (let comment of post.comments) {
-                  if (comment.username === prevUsername) {
-                    match = true
-                    comment.profPic = inputs.picture
-                    comment.username = inputs.username
-                  }
-                }        
-                if (match) {
-                  fetch("http://localhost:3001/posts/"+post.id,{...patcherHeader,
-                    body:JSON.stringify({...post,comments:post.comments}), 
-                  })
-                }
-              }
+            }
+        })
+    }
+            
+      function checkComment(post) {
+          match = false
+          for (let comment of post.comments) {
+            if (comment.username === prevUsername) {
+              match = true
+              comment.profPic = inputs.picture
+              comment.username = inputs.username
+            }
+          }        
+          if (match) {
+            fetch("http://localhost:3001/posts/"+post.id,{...patcherHeader,
+              body:JSON.stringify({...post,comments:post.comments}), 
             }).then(resp=>resp.json(console.log(resp))).then(()=>navigate("/profile/" + userObj.id))
+
+          }
         }
     }
 
