@@ -3,9 +3,14 @@
         background-position:center;
         border-radius: 50%;
 }
-#root {
+/* #root {
         font-family: Arial, Helvetica, sans-serif;
 
+} */
+#app-overall {
+        font-family: Arial, Helvetica, sans-serif;
+        min-height:100vh;
+        background-color:whitesmoke
 }
 .pic-container {
         background-size:cover;
@@ -82,12 +87,15 @@ a:link {
 .fit-img {
         object-fit: cover;
         max-width: 100%;
-    max-height: 100%;
+        max-height: 100%;
 }
 #img-grid-prof {
         display: grid;
-        grid-template-columns: auto auto auto;
-        gap: 40px 0px
+        grid-template-columns: auto auto auto auto;
+        gap: 30px 30px;
+        max-width: fit-content;
+        margin-left: 15px;
+        margin-top: 30px;
 }
 
 .blueHov:hover {

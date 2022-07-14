@@ -7,31 +7,28 @@ import { BsGearWide } from "react-icons/bs";
 import { useState, useContext, useEffect } from "react";
 import { UserContext } from "../customHooks/userObj";
 // import checkDB from "../helperFunc/checkDB";
-import { useNavigate, useParams, useRoute } from "react-router-dom";
-
+import {
+  Link,
+  Navigate,
+  useNavigate,
+  useParams,
+  useRoute,
+} from "react-router-dom";
 const styleObj = {
   display: "flex",
   flexDirection: "column",
 };
-
 function Profile() {
   //get main user object
-
   const { userObj, setuserObj } = useContext(UserContext);
-
   //get params, will be id to get the user
-
   const params = useParams();
   const navigate = useNavigate();
-
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
   const [localuserObj, setlocaluserObj] = useState({});
   const [isFollowing, setIsFollowing] = useState(false);
-
   useEffect(() => {
     fetch("http://localhost:3001/users/" + params.id)
       .then((resp) => resp.json())
@@ -48,10 +45,9 @@ function Profile() {
         }
       });
   }, []);
-
   const {
     fName,
-    bioForm,
+    bioform,
     lName,
     picture,
     username,
@@ -60,7 +56,6 @@ function Profile() {
     posts,
     id,
   } = localuserObj;
-
   function handleLogOut() {
     handleClose();
     setuserObj({});
@@ -77,7 +72,6 @@ function Profile() {
         picture: localuserObj.picture,
       },
     ];
-
     const followedUserArray = [
       ...localuserObj.followers,
       {
@@ -86,10 +80,8 @@ function Profile() {
         picture: userObj.picture,
       },
     ];
-
     const currentUserObj = { following: currentUserArray };
     const followedUserObj = { followers: followedUserArray };
-
     //update the current users followers
     fetch("http://localhost:3001/users/" + userObj.id, {
       method: "PATCH",
@@ -119,7 +111,6 @@ function Profile() {
         setlocaluserObj(tempUserObj);
       });
   }
-
   function handleUnfollow() {
     const currentUserArray = userObj.following.filter((follow) => {
       if (follow.id === localuserObj.id) {
@@ -128,7 +119,6 @@ function Profile() {
         return true;
       }
     });
-
     const followedUserArray = localuserObj.followers.filter((follower) => {
       if (follower.id === userObj.id) {
         return false;
@@ -136,10 +126,8 @@ function Profile() {
         return true;
       }
     });
-
     const currentUserObj = { following: currentUserArray };
     const followedUserObj = { followers: followedUserArray };
-
     //update the current users followers
     fetch("http://localhost:3001/users/" + userObj.id, {
       method: "PATCH",
@@ -169,7 +157,6 @@ function Profile() {
         setlocaluserObj(tempUserObj);
       });
   }
-
   return (
     <>
       <NavigationBar userObj={userObj} />
@@ -196,26 +183,26 @@ function Profile() {
                 <b>
                   {fName} {lName}
                 </b>
-                <p>{bioForm}</p>
+                <p>{bioform}</p>
               </section>
             </Col>
-
             <Modal centered show={show} onHide={handleClose}>
               <ListGroup>
                 <ListGroup.Item onClick={handleLogOut}>Log Out</ListGroup.Item>
               </ListGroup>
             </Modal>
-
             {localuserObj.id === userObj.id ? (
               <>
                 <Col style={styleObj} xs={{ span: 2 }}>
-                  <Button
-                    style={{ width: "50%", marginBottom: "8px" }}
-                    variant="outline-secondary"
-                    size="sm"
-                  >
-                    Edit
-                  </Button>
+                  <Link to="/profile/edit">
+                    <button
+                      type="button"
+                      className="btn btn-outline-secondary"
+                      style={{ width: "50%", marginBottom: "8px" }}
+                    >
+                      Edit
+                    </button>
+                  </Link>
                   <p>
                     <b></b>
                     {followers.length} followers
@@ -276,5 +263,4 @@ function Profile() {
     </>
   );
 }
-
 export default Profile;

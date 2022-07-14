@@ -1,37 +1,62 @@
-import { Card } from "react-bootstrap";
-import { Outlet } from "react-router-dom";
-
+import { useContext, useState } from "react"
+import { UserContext } from "../customHooks/userObj"
 import { useLocalStorage } from "../customHooks/uselocalstorage";
-import handleNewAccount from "../helperFunc/handleNewAccount";
+import { Navigate,useNavigate } from "react-router-dom";
 
 import filterInput from "../helperFunc/filterInput";
 
+import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-function CreateAccount({ validCallback }) {
-  const [inputs, setInputs] = useLocalStorage("accountobj", {
-    fName: "",
-    lName: "",
-    birthday: "",
-    username: "",
-    password: "",
-    picture: "",
-    bioform: "",
-  });
+const patcherHeader = {
+    method: "PATCH",
+    headers: {
+      "content-type": "application/json",
+    },
+  };
 
+function EditProfile() {
+    const navigate = useNavigate();
+
+    const { userObj, setuserObj } = useContext(UserContext);
+
+    const [inputs, setInputs] = useState({
+        fName: userObj.fName,
+        lName: userObj.lName,
+        username: userObj.username,
+        password: userObj.password,
+        picture: userObj.picture,
+        bioform: userObj.bioform,
+    })
+
+      
   function handleInput(e) {
     const res = filterInput(e.target.value,e.target.id)
     if (!res) {
       setInputs({ ...inputs, [e.target.id]: e.target.value });
     }
   }
+
   function handleSubmit(e) {
-    e.preventDefault();
-    handleNewAccount(inputs).then(validCallback);
+    e.preventDefault()
+
+    const newObj = {...userObj, 
+        fName: inputs.fName,
+        lName: inputs.lName,
+        username: inputs.username,
+        password: inputs.password,
+        picture: inputs.picture,
+        bioform: inputs.bioform, }
+    fetch("http://localhost:3001/users/"+userObj.id,{...patcherHeader,
+    body:JSON.stringify(newObj),
+    }).then(resp=>resp.json()).then((resp)=>setuserObj(resp)).then(()=>navigate("/profile/" + userObj.id))
+
   }
-  return (
-    <div className="create-account-card">
-    <Card style={{ padding: "25px" }}>
-    <img style={{margin:"0 auto"}}width="250px" height="auto"
+
+    return (
+    <div id ="edit-profile-page" className="create-account-card">
+        <Card style={{ padding: "25px" }}>
+            <img style={{margin:"0 auto"}}width="250px" height="auto"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png"/>
       <Card.Body style={{ padding: "40px 70px" }}>
         <form onSubmit={handleSubmit} className="row g-3">
@@ -43,7 +68,7 @@ function CreateAccount({ validCallback }) {
               required
               onChange={handleInput}
               value={inputs.fName}
-              type="text"
+              type="text" placeholder={userObj.fName}
               className="form-control"
               id="fName"
             />
@@ -56,22 +81,9 @@ function CreateAccount({ validCallback }) {
               required
               onChange={handleInput}
               value={inputs.lName}
-              type="text"
+              type="text" placeholder={userObj.lName}
               className="form-control"
               id="lName"
-            />
-          </div>
-          <div className="col-md-12">
-            <label htmlFor="birthday" className="form-label">
-              Birthday:
-            </label>
-            <input
-              required
-              onChange={handleInput}
-              value={inputs.birthday}
-              type="date"
-              className="form-control"
-              id="birthday"
             />
           </div>
           <div className="col-md-12">
@@ -79,10 +91,10 @@ function CreateAccount({ validCallback }) {
               Username:
             </label>
             <input
-              required
+              required 
               onChange={handleInput}
               value={inputs.username}
-              type="text"
+              type="text" placeholder={userObj.username}
               className="form-control"
               id="username"
             />
@@ -95,7 +107,7 @@ function CreateAccount({ validCallback }) {
               required
               onChange={handleInput}
               value={inputs.password}
-              type="password"
+              type="password" placeholder={userObj.password}
               className="form-control"
               id="password"
             />
@@ -107,7 +119,7 @@ function CreateAccount({ validCallback }) {
             <input
               onChange={handleInput}
               value={inputs.picture}
-              type="text"
+              type="text" placeholder={userObj.picture}
               className="form-control"
               id="picture"
             />
@@ -119,20 +131,19 @@ function CreateAccount({ validCallback }) {
             <textarea
               onChange={handleInput}
               value={inputs.bioform}
-              type="text"
+              type="text" placeholder={userObj.bioform}
               className="form-control"
               id="bioform"
             />
           </div>
-            <button type="submit" className="btn btn-success btn-lg btn-block">
-              Create Account
+            <button type="submit" className="btn btn-primary btn-lg btn-block">
+              Edit Account
             </button>
         </form>
       </Card.Body>
-      <Outlet />
     </Card>
-    </div>
-  );
+        </div>
+    )
 }
 
-export default CreateAccount;
+export default EditProfile

@@ -9,7 +9,7 @@ import PostsPage from "./elements/PostsPage";
 import Home from "./elements/Home";
 import Profile from "./elements/Profile";
 import BottomBar from "./components/Bottombar";
-import NavigationBar from "./elements/Navbar";
+import EditProfile from "./subelements/EditProfile";
 
 import { UserContext } from "./customHooks/userObj";
 
@@ -34,7 +34,7 @@ function App() {
   }, [userObj]);
 
   return (
-    <div id="App">
+    <div id="app-overall" >
       <Routes>
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/createpost" element={<PostsPage userObj={userObj} />} />
@@ -47,6 +47,7 @@ function App() {
           element={<CreateAccount validCallback={validCallback} />}
         />
         <Route path="/" element={<Home userObj={userObj} />} />
+        <Route path="/profile/edit" element={<EditProfile/>}/>
       </Routes>
     </div>
   );
