@@ -3,10 +3,14 @@
         background-position:center;
         border-radius: 50%;
 }
-/* #root {
-        font-family: Arial, Helvetica, sans-serif;
+ 
+button:hover, .profile-picture:hover, .card-text:hover, .overlay-text {
+        cursor: pointer;
 
-} */
+}
+.icon-hover:hover {
+        cursor: pointer;
+}
 #app-overall {
         font-family: Arial, Helvetica, sans-serif;
         min-height:100vh;
@@ -72,6 +76,7 @@ a:link {
 }
 .img-hover {
         filter: brightness(50%);
+        cursor: pointer;
 }
 .overlay-text {
         position: absolute;
@@ -81,6 +86,7 @@ a:link {
         color: white;
         z-index: 5;
 }
+
 .absolute-pos {
         position: absolute;
 }

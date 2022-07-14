@@ -189,6 +189,7 @@ function Profile() {
             <Modal centered show={show} onHide={handleClose}>
               <ListGroup>
                 <ListGroup.Item onClick={handleLogOut}>Log Out</ListGroup.Item>
+                <Link to = {"/profile/edit"}> <ListGroup.Item>Edit Account</ListGroup.Item> </Link>
               </ListGroup>
             </Modal>
             {localuserObj.id === userObj.id ? (
