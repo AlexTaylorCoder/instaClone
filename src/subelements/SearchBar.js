@@ -73,6 +73,9 @@ function SearchBar({ userObj }) {
       <Dropdown.Menu
         style={{
           position: "absolute",
+          left: "-150px",
+          top: "69px",
+          width: "500px",
         }}
         show={showDropdown}
       >
