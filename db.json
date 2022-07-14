@@ -203,6 +203,95 @@
         }
       ],
       "followers": [],
+      "timestamp": 1657810446120,
+      "id": 8
+    },
+    {
+      "fName": "i",
+      "lName": "Robot",
+      "birthday": "1883-02-04",
+      "username": "irobot",
+      "password": "irobot",
+      "picture": "https://i0.wp.com/www.studyfinds.org/wp-content/uploads/2019/03/AdobeStock_210969565.jpeg?resize=392%2C250&ssl=1",
+      "bioform": "i am a bot",
+      "following": [
+        {
+          "username": "kimkardashian",
+          "id": 2,
+          "picture": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg"
+        },
+        {
+          "username": "rodgerfederer",
+          "id": 1,
+          "picture": "https://www.tennisworldusa.org/imgb/119364/roger-federer-i-still-don-t-know-that-in-advance-.jpg"
+        },
+        {
+          "username": "paulwalker",
+          "id": 3,
+          "picture": "https://cdn.motor1.com/images/mgl/QyprZ/s1/daughter-of-paul-walker-suing-porsche-over-his-death.jpg"
+        },
+        {
+          "username": "bobthebuilder",
+          "id": 4,
+          "picture": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg"
+        },
+        {
+          "username": "harriettubman",
+          "id": 5,
+          "picture": "https://www.history.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY3OTgwNTYxNDc2ODg3ODI1/harriet_tubman_loc_54230a.jpg"
+        },
+        {
+          "username": "findingnemo",
+          "id": 6,
+          "picture": "https://www.looper.com/img/gallery/who-voices-marlin-in-finding-nemo/l-intro-1645998159.jpg"
+        },
+        {
+          "username": "thereal007",
+          "id": 7,
+          "picture": "https://cdn.mos.cms.futurecdn.net/XYy74TGgsNcJhWfwyBF3BS.jpg"
+        }
+      ],
+      "followers": [
+        {
+          "username": "sillywilly",
+          "id": 10,
+          "picture": "https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Gene_Wilder_as_Willy_Wonka.jpeg/220px-Gene_Wilder_as_Willy_Wonka.jpeg"
+        }
+      ],
+      "timestamp": 1657811107898,
+      "id": 9
+    },
+    {
+      "fName": "Willy",
+      "lName": "Wonka",
+      "birthday": "1883-02-04",
+      "username": "sillywilly",
+      "password": "sillywilly",
+      "picture": "https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Gene_Wilder_as_Willy_Wonka.jpeg/220px-Gene_Wilder_as_Willy_Wonka.jpeg",
+      "bioform": "I like candy and children",
+      "following": [
+        {
+          "username": "irobot",
+          "id": 9,
+          "picture": "https://i0.wp.com/www.studyfinds.org/wp-content/uploads/2019/03/AdobeStock_210969565.jpeg?resize=392%2C250&ssl=1"
+        },
+        {
+          "username": "paulwalker",
+          "id": 3,
+          "picture": "https://cdn.motor1.com/images/mgl/QyprZ/s1/daughter-of-paul-walker-suing-porsche-over-his-death.jpg"
+        },
+        {
+          "username": "bobthebuilder",
+          "id": 4,
+          "picture": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg"
+        },
+        {
+          "username": "kimkardashian",
+          "id": 2,
+          "picture": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg"
+        }
+      ],
+      "followers": [],
       "timestamp": 1657810331950,
       "id": 7
     }
@@ -262,6 +351,12 @@
           "timeStamp": 1657740832495,
           "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
           "username": "bobthebuilder"
+        },
+        {
+          "comment": "hey",
+          "timeStamp": 1657822242160,
+          "profPic": "https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Gene_Wilder_as_Willy_Wonka.jpeg/220px-Gene_Wilder_as_Willy_Wonka.jpeg",
+          "username": "sillywilly"
         }
       ],
       "id": 3,
