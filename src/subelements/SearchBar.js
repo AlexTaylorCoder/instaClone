@@ -57,7 +57,7 @@ function SearchBar({ userObj }) {
   }
   return (
     <Form
-      style={{ marginLeft: "350px" }}
+      style={{ marginLeft: "350px", position: "relative" }}
       className="d-flex"
       onFocus={focusSearch}
       onBlur={handleBlur}
@@ -72,10 +72,7 @@ function SearchBar({ userObj }) {
 
       <Dropdown.Menu
         style={{
-          position: "fixed",
-          left: "45%",
-          width: "500px",
-          top: "100px",
+          position: "absolute",
         }}
         show={showDropdown}
       >

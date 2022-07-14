@@ -379,13 +379,7 @@
           "picture": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg"
         }
       ],
-      "followers": [
-        {
-          "username": "sillywilly",
-          "id": 10,
-          "picture": "https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Gene_Wilder_as_Willy_Wonka.jpeg/220px-Gene_Wilder_as_Willy_Wonka.jpeg"
-        }
-      ],
+      "followers": [],
       "timestamp": 1657810446120,
       "id": 8
     },
@@ -469,11 +463,6 @@
           "picture": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg"
         },
         {
-          "username": "ronswanson",
-          "id": 8,
-          "picture": "https://pbs.twimg.com/profile_images/1262480275/ron-swanson-250fp011911_400x400.jpg"
-        },
-        {
           "username": "kimkardashian",
           "id": 2,
           "picture": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg"
@@ -552,6 +541,12 @@
           "timeStamp": 1657740832495,
           "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
           "username": "bobthebuilder"
+        },
+        {
+          "comment": "hey",
+          "timeStamp": 1657822242160,
+          "profPic": "https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Gene_Wilder_as_Willy_Wonka.jpeg/220px-Gene_Wilder_as_Willy_Wonka.jpeg",
+          "username": "sillywilly"
         }
       ],
       "id": 3,
