@@ -7,7 +7,7 @@ import { BsGearWide } from "react-icons/bs";
 import { useState, useContext, useEffect } from "react";
 import { UserContext } from "../customHooks/userObj";
 // import checkDB from "../helperFunc/checkDB";
-import { useNavigate, useParams, useRoute } from "react-router-dom";
+import { Link, Navigate, useNavigate, useParams, useRoute } from "react-router-dom";
 
 const styleObj = {
   display: "flex",
@@ -51,7 +51,7 @@ function Profile() {
 
   const {
     fName,
-    bioForm,
+    bioform,
     lName,
     picture,
     username,
@@ -67,6 +67,7 @@ function Profile() {
     navigate("/login");
     setlocaluserObj({});
   }
+ 
 
   function handleFollow() {
     const currentUserArray = [
@@ -128,6 +129,7 @@ function Profile() {
         return true;
       }
     });
+
 
     const followedUserArray = localuserObj.followers.filter((follower) => {
       if (follower.id === userObj.id) {
@@ -195,7 +197,7 @@ function Profile() {
               <b>
                 {fName} {lName}
               </b>
-              <p>{bioForm}</p>
+              <p>{bioform}</p>
             </section>
           </Col>
 
@@ -210,13 +212,12 @@ function Profile() {
           {localuserObj.id === userObj.id ? (
             <>
               <Col style={styleObj} xs={{ span: 2 }}>
-                <Button
-                  style={{ width: "50%", marginBottom: "8px" }}
-                  variant="outline-secondary"
-                  size="sm"
-                >
+              <Link to= "/profile/edit">
+              <button type="button" className="btn btn-outline-secondary"
+                  style={{ width: "50%", marginBottom: "8px" }} >
                   Edit
-                </Button>
+                  </button>
+              </Link>
                 <p>
                   <b></b>
                   {followers.length} followers
