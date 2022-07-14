@@ -91,5 +91,40 @@ a:link {
 }
 
 .blueHov:hover {
-        background-color: #DCDCDC;
+        background-color: #F5F5F5;
+}
+.create-account-card {
+        width: 45%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.create-account-card input, .create-account-card textarea{
+        background-color: #F5F5F5;
+}
+.post-box-shadow {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px;
+}
+.center-insta-logo {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        padding:30px
+}
+.login-in-card {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 25%;
+        border-radius:0;
+}
+.bottomcardstyleObj {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        padding:3px;
+        margin-top: 10px
 }

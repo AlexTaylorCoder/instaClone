@@ -8,7 +8,13 @@
       "password": "rodgerfederer",
       "picture": "https://www.tennisworldusa.org/imgb/119364/roger-federer-i-still-don-t-know-that-in-advance-.jpg",
       "bioform": "I play tennis",
-      "following": [],
+      "following": [
+        {
+          "username": "bobthebuilder",
+          "id": 4,
+          "picture": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg"
+        }
+      ],
       "followers": [
         {
           "username": "bobthebuilder",
@@ -113,6 +119,11 @@
           "username": "findingnemo",
           "id": 6,
           "picture": "https://static.wikia.nocookie.net/pixar/images/a/aa/Nemo-FN.png/revision/latest/scale-to-width-down/1200?cb=20160710221104"
+        },
+        {
+          "username": "rodgerfederer",
+          "id": 1,
+          "picture": "https://www.tennisworldusa.org/imgb/119364/roger-federer-i-still-don-t-know-that-in-advance-.jpg"
         }
       ],
       "timestamp": 1657727081925,
@@ -356,6 +367,12 @@
           "timeStamp": 1657746643325,
           "profPic": "https://www.looper.com/img/gallery/who-voices-marlin-in-finding-nemo/l-intro-1645998159.jpg",
           "username": "findingnemo"
+        },
+        {
+          "comment": "Random text",
+          "timeStamp": 1657755733159,
+          "profPic": "https://www.tennisworldusa.org/imgb/119364/roger-federer-i-still-don-t-know-that-in-advance-.jpg",
+          "username": "rodgerfederer"
         }
       ],
       "id": 10,

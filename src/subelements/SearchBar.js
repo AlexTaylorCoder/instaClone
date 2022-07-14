@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { Form, Dropdown } from "react-bootstrap";
 import SearchResult from "./SearchResult";
 
+import {FiSearch} from "react-icons/fi"
+
+
 function SearchBar({ userObj }) {
   const [search, setSearch] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
@@ -55,15 +58,15 @@ function SearchBar({ userObj }) {
     }
   }
   return (
-    <Form
+    <Form style={{marginLeft:"350px"}}
       className="d-flex"
       onFocus={focusSearch}
       onBlur={handleBlur}
       onChange={handleSearch}
     >
-      <Form.Control
+      <Form.Control 
         type="search"
-        placeholder="Search"
+        placeholder= "Search"
         className="me-2"
         aria-label="Search"
       />

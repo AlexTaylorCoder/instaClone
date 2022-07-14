@@ -4,9 +4,12 @@ import Navbar from "react-bootstrap/Navbar";
 import SearchBar from "../subelements/SearchBar";
 import { Link } from "react-router-dom";
 import { AiFillHome, AiOutlineHome } from "react-icons/ai";
-import { RiAddBoxLine, RiAddBoxFill } from "react-icons/ri";
+import { RiAddBoxLine, RiAddBoxFill, RiSaveLine } from "react-icons/ri";
 import { IoPerson, IoPersonOutline } from "react-icons/io5";
+import {HiOutlineSwitchHorizontal} from "react-icons/hi"
+
 import {CgProfile} from "react-icons/cg"
+import {BsGearWide} from "react-icons/bs"
 import { useLocation } from "react-router-dom";
 import "../styles.css";
 import { useContext } from "react";
@@ -22,7 +25,7 @@ function NavigationBar({ userObj }) {
     console.log("e")
   }
   return (
-    <Navbar bg="light" variant="light">
+    <Navbar className="post-box-shadow"bg="light" variant="light">
       <Container>
         <Navbar.Brand>
           <Link to={""}>
@@ -30,10 +33,8 @@ function NavigationBar({ userObj }) {
               <h1>Fake</h1>
               <img 
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png"
-                style={{
-                  width: "auto",
-                  height: "75px",
-                }}
+                  width="auto"
+                  height="75px"
               ></img>
             </div>
           </Link>
@@ -57,7 +58,7 @@ function NavigationBar({ userObj }) {
         </Link>
 
         <Link to={`/profile/${userObj.id}`}>
-          <h1 className="mx-2">
+          <h1 className="mx-2"> 
             {location.pathname === "/profile" ? (
               <IoPerson />
             ) : (
@@ -84,11 +85,20 @@ const popover = (
   
   <Popover id="popover-basic">
     <ListGroup>
-      <Popover.Body className = "blueHov">
-        <CgProfile/> Profile
-      </Popover.Body>
-      <ListGroup.Item className="blueHov">
-      Log Out</ListGroup.Item>
+        <ListGroup.Item className = "blueHov">
+          <CgProfile/> Profile
+        </ListGroup.Item>
+        <ListGroup.Item className = "blueHov">
+          <RiSaveLine/> Saved
+        </ListGroup.Item>
+        <ListGroup.Item className = "blueHov">
+          <BsGearWide/> Settings
+        </ListGroup.Item>
+        <ListGroup.Item className = "blueHov">
+          <HiOutlineSwitchHorizontal/> Switch Account
+        </ListGroup.Item>
+      <ListGroup.Item className="blueHov">Log Out</ListGroup.Item>
+      
     </ListGroup>
   </Popover>
 );

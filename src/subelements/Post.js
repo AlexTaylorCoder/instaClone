@@ -7,6 +7,8 @@ import { UserContext } from "../customHooks/userObj";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
+import timeDiff from "../helperFunc/timeDiff";
+
 function Post({ post = {}, addcomment }) {
   const [comment, setComment] = useState("");
   const [modalShow, setModalShow] = useState(false);
@@ -38,6 +40,7 @@ function Post({ post = {}, addcomment }) {
       setLikeButton(false);
     }
   }, []);
+
 
   function handleLike() {
     let tempPostLikes = [...likeArray];
@@ -91,7 +94,7 @@ function Post({ post = {}, addcomment }) {
 
   return (
     <>
-      <Card style={{ borderRadius: "10px" }} className="mx-auto m-3 w-50">
+      <Card className="mx-auto m-3 w-50 post-box-shadow">
         <Card.Header style={{ backgroundColor: "white" }}>
           <div className="d-flex center-text post-header">
             <div
@@ -115,7 +118,7 @@ function Post({ post = {}, addcomment }) {
             )}
           </h4>
           <h4 className="p-2">
-            <BsChatRight />
+            <BsChatRight onClick={onExpand}/>
           </h4>
         </div>
         <Card.Body>
@@ -127,6 +130,7 @@ function Post({ post = {}, addcomment }) {
           </div>
           <Card.Text onClick={onExpand} className="mb-2 text-muted">
             View all {totalComments} Comments
+            <p style={{ fontSize: "11px"}}>{timeDiff(post.timeStamp,true)}</p>
           </Card.Text>
         </Card.Body>
         <Card.Footer

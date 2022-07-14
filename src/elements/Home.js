@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { UserContext } from "../customHooks/userObj";
 import "../styles.css";
 import Post from "../subelements/Post";
+import NavigationBar from "./Navbar";
 
 const patcherHeader = {
   method: "PATCH",
@@ -81,12 +82,15 @@ function Home() {
   });
 
   return (
+    <>
+      <NavigationBar userObj={userObj} />
     <div id="home" className="d-flex">
       <div className="w-75 overflow-auto">{postsToInclude}</div>
       <div>
         <div></div>
       </div>
     </div>
+    </>
   );
 }
 

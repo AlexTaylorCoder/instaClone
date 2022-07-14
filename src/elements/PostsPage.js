@@ -7,7 +7,7 @@ import "../styles.css";
 import InputGroup from "react-bootstrap/InputGroup";
 import { useNavigate } from "react-router-dom";
 import { FaChevronLeft } from "react-icons/fa";
-
+import NavigationBar from "./Navbar";
 function PostsPage({ userObj }) {
   const [show, setShow] = useState(false);
   const [imageUrl, setImageUrl] = useState("");
@@ -51,6 +51,7 @@ function PostsPage({ userObj }) {
 
   return (
     <>
+      <NavigationBar userObj={userObj} />
       {imageUrl === "" ? (
         <Card className="mx-auto m-3 w-25">
           <Card.Header>Create new post</Card.Header>

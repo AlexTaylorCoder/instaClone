@@ -35,7 +35,6 @@ function App() {
 
   return (
     <div id="App">
-      <NavigationBar userObj={userObj} />
       <Routes>
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/createpost" element={<PostsPage userObj={userObj} />} />

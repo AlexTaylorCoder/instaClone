@@ -44,12 +44,15 @@ function CreateAccount({ validCallback }) {
     handleNewAccount(inputs).then(validCallback);
   }
   return (
-    <Card style={{ width: "40%", margin: "20px auto" }}>
-      <Card.Body style={{ padding: "20px" }}>
+    <div className="create-account-card">
+    <Card style={{ padding: "25px" }}>
+    <img style={{margin:"0 auto"}}width="250px" height="auto"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png"/>
+      <Card.Body style={{ padding: "40px 70px" }}>
         <form onSubmit={handleSubmit} className="row g-3">
           <div className="col-md-6">
             <label htmlFor="fName" className="form-label">
-              First Name:
+              <p>First Name:</p>
             </label>
             <input
               required
@@ -62,7 +65,7 @@ function CreateAccount({ validCallback }) {
           </div>
           <div className="col-md-6">
             <label htmlFor="lName" className="form-label">
-              Last Name:
+              <p>Last Name:</p>
             </label>
             <input
               required
@@ -136,15 +139,14 @@ function CreateAccount({ validCallback }) {
               id="bioform"
             />
           </div>
-          <div className="col-12">
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-success btn-lg btn-block">
               Create Account
             </button>
-          </div>
         </form>
       </Card.Body>
       <Outlet />
     </Card>
+    </div>
   );
 }
 

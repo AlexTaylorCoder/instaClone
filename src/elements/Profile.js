@@ -1,7 +1,7 @@
 import { Button } from "react-bootstrap";
 import OwnPostContainer from "../subelements/Ownpostcontainer";
 import OwnPost from "../subelements/Ownpost";
-
+import NavigationBar from "./Navbar";
 import { Row, Col, Container, ListGroup,Modal } from "react-bootstrap";
 import { BsGearWide } from "react-icons/bs";
 import { useState, useContext, useEffect } from "react";
@@ -171,6 +171,8 @@ function Profile() {
   }
 
   return (
+    <>
+    <NavigationBar userObj={userObj} />
     <div id="profile" style={{ margin: "30px 200px 10px 350px" }}>
       <Container>
         <Row>
@@ -273,6 +275,7 @@ function Profile() {
       </Container>
       <OwnPostContainer posts={posts} />
     </div>
+    </>
   );
 }
 
