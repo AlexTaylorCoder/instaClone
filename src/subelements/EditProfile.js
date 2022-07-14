@@ -58,9 +58,14 @@ function EditProfile() {
     if (inputs.username !== userObj.username || inputs.picture !== userObj.picture) {
         fetch("http://localhost:3001/posts").then(resp=>resp.json()).then(postData=>{
             for (let post of postData) {
+              console.log(post.username,post)
+              if (post.username === prevUsername) {
+                fetch("http://localhost:3001/posts/"+post.id,{...patcherHeader,
+                    body:JSON.stringify({...post,username:inputs.username, profPic:inputs.picture}), 
+                  })
+              }
               match = false
                 for (let comment of post.comments) {
-                  console.log(comment.username, userObj.username)
                   if (comment.username === prevUsername) {
                     match = true
                     comment.profPic = inputs.picture
@@ -68,7 +73,6 @@ function EditProfile() {
                   }
                 }        
                 if (match) {
-                  console.log(post.comments)
                   fetch("http://localhost:3001/posts/"+post.id,{...patcherHeader,
                     body:JSON.stringify({...post,comments:post.comments}), 
                   })
