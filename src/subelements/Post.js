@@ -6,7 +6,7 @@ import { useState, useContext, useEffect } from "react";
 import { UserContext } from "../customHooks/userObj";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-
+import { useNavigate } from "react-router-dom";
 import timeDiff from "../helperFunc/timeDiff";
 
 function Post({ post = {}, addcomment }) {
@@ -93,12 +93,15 @@ function Post({ post = {}, addcomment }) {
       });
   }
 
+  const navigate = useNavigate();
+
   return (
     <>
       <Card className="mx-auto m-3 w-50 post-box-shadow">
         <Card.Header style={{ backgroundColor: "white" }}>
           <div className="d-flex center-text post-header icon-hover">
             <div
+              onClick={() => navigate("/profile/" + post.userId)}
               className="profile-picture"
               style={{
                 width: "40px",
@@ -106,6 +109,7 @@ function Post({ post = {}, addcomment }) {
                 backgroundImage: "url(" + post.profPic + ")",
               }}
             ></div>
+
             <p style={{ fontWeight: 600, marginTop: "5px" }}>{post.username}</p>
           </div>
         </Card.Header>
@@ -136,11 +140,10 @@ function Post({ post = {}, addcomment }) {
             </p>
           </Card.Text>
         </Card.Body>
-        <Card.Footer
-          style={{ backgroundColor: "white", padding: "5px 10px" }}
-        >
+        <Card.Footer style={{ backgroundColor: "white", padding: "5px 10px" }}>
           <InputGroup className="mb-3 bottomcardstyleObj">
-            <Form.Control style={{borderStyle:"none"}}
+            <Form.Control
+              style={{ borderStyle: "none" }}
               placeholder="Add a comment..."
               aria-label="comment"
               aria-describedby="comment"
@@ -149,7 +152,10 @@ function Post({ post = {}, addcomment }) {
               }}
               value={comment}
             />
-            <Button id= {comment? "input-active":"post-button"} onClick={handleSubmit}>
+            <Button
+              id={comment ? "input-active" : "post-button"}
+              onClick={handleSubmit}
+            >
               Post
             </Button>
           </InputGroup>
