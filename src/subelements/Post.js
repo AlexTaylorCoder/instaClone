@@ -20,9 +20,11 @@ function Post({ post = {}, addcomment }) {
 
   function handleSubmit() {
     console.log(comment);
-    if (comment) addcomment(post, comment);
-    setComment("");
-    setToalComments((comments) => comments + 1);
+    if (comment) {
+      addcomment(post, comment);
+      setComment("");
+      setToalComments((comments) => comments + 1);
+    }
   }
 
   function onExpand(e) {
@@ -109,14 +111,14 @@ function Post({ post = {}, addcomment }) {
         </Card.Header>
         <Card.Img variant="top" src={post.photo} />
         <div className="d-flex">
-          <h4 className="p-2">
+          <h4 className="p-2 icon-hover">
             {!likeButton ? (
               <BsHeart onClick={handleLike} />
             ) : (
               <BsHeartFill onClick={handleUnlike} className="text-danger" />
             )}
           </h4>
-          <h4 className="p-2">
+          <h4 className="p-2 icon-hover">
             <BsChatRight onClick={onExpand} />
           </h4>
         </div>
@@ -135,12 +137,11 @@ function Post({ post = {}, addcomment }) {
           </Card.Text>
         </Card.Body>
         <Card.Footer
-          className="center-text"
           style={{ backgroundColor: "white", padding: "5px 10px" }}
         >
-          <InputGroup className="mb-3">
-            <Form.Control
-              placeholder="add a comment..."
+          <InputGroup className="mb-3 bottomcardstyleObj">
+            <Form.Control style={{borderStyle:"none"}}
+              placeholder="Add a comment..."
               aria-label="comment"
               aria-describedby="comment"
               onChange={(e) => {
@@ -148,7 +149,7 @@ function Post({ post = {}, addcomment }) {
               }}
               value={comment}
             />
-            <Button onClick={handleSubmit} variant="outline-primary">
+            <Button id= {comment? "input-active":"post-button"} onClick={handleSubmit}>
               Post
             </Button>
           </InputGroup>

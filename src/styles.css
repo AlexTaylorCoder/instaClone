@@ -3,10 +3,14 @@
         background-position:center;
         border-radius: 50%;
 }
-/* #root {
-        font-family: Arial, Helvetica, sans-serif;
+ 
+button:hover, .profile-picture:hover, .card-text:hover, .overlay-text {
+        cursor: pointer;
 
-} */
+}
+.icon-hover:hover {
+        cursor: pointer;
+}
 #app-overall {
         font-family: Arial, Helvetica, sans-serif;
         min-height:100vh;
@@ -27,6 +31,7 @@ a:link {
         display: flex;
         flex-direction: row;
         align-items: center;
+        
 }
 .post-header {
         gap: 10px;
@@ -72,6 +77,7 @@ a:link {
 }
 .img-hover {
         filter: brightness(50%);
+        cursor: pointer;
 }
 .overlay-text {
         position: absolute;
@@ -81,6 +87,7 @@ a:link {
         color: white;
         z-index: 5;
 }
+
 .absolute-pos {
         position: absolute;
 }
@@ -133,6 +140,24 @@ a:link {
         display:flex;
         align-items: center;
         justify-content: center;
-        padding:3px;
-        margin-top: 10px
+        margin-top: 10px;
+}
+.post-page {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+}
+#post-button {
+        background-color:white;
+        border:none;
+        color:#87CEFA;
+        opacity: .3;
+}
+#input-active {
+        opacity: .9;
+        background-color:white;
+        border:none;
+        color:#1E90FF;
 }

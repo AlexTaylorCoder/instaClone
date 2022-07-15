@@ -189,6 +189,7 @@ function Profile() {
             <Modal centered show={show} onHide={handleClose}>
               <ListGroup>
                 <ListGroup.Item onClick={handleLogOut}>Log Out</ListGroup.Item>
+                <Link to = {"/profile/edit"}> <ListGroup.Item>Edit Account</ListGroup.Item> </Link>
               </ListGroup>
             </Modal>
             {localuserObj.id === userObj.id ? (
@@ -210,7 +211,7 @@ function Profile() {
                 </Col>
                 <Col style={styleObj} xs={{ span: 2 }}>
                   <h4>
-                    <BsGearWide
+                    <BsGearWide className="icon-hover"
                       onClick={handleShow}
                       style={{ margin: "5px 0 15px 0" }}
                     />

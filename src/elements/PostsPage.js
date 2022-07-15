@@ -8,6 +8,7 @@ import InputGroup from "react-bootstrap/InputGroup";
 import { useNavigate } from "react-router-dom";
 import { FaChevronLeft } from "react-icons/fa";
 import NavigationBar from "./Navbar";
+
 function PostsPage({ userObj }) {
   const [show, setShow] = useState(false);
   const [imageUrl, setImageUrl] = useState("");
@@ -52,9 +53,10 @@ function PostsPage({ userObj }) {
   return (
     <>
       <NavigationBar userObj={userObj} />
+      <div className="post-page">
       {imageUrl === "" ? (
-        <Card className="mx-auto m-3 w-25 text-center">
-          <Card.Header>
+        <Card style={{borderRadius:"10px"}}className="mx-auto m-3 w-25 text-center post-box-shadow">
+          <Card.Header style={{backgroundColor:"white"}}>
             <b>Create new post</b>
           </Card.Header>
           <Card.Body>
@@ -92,7 +94,7 @@ function PostsPage({ userObj }) {
         <Card className="mx-auto m-3 w-75">
           <Card.Header>
             <div className="d-flex justify-content-between">
-              <h4 onClick={() => setImageUrl("")}>
+              <h4 className="icon-hover" onClick={() => setImageUrl("")}>
                 <FaChevronLeft />
               </h4>
               <h3>Create new post</h3>{" "}
@@ -145,6 +147,7 @@ function PostsPage({ userObj }) {
           </Form>
         </Modal.Body>
       </Modal>
+      </div>
     </>
   );
 }

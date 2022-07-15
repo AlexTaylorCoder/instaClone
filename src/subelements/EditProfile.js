@@ -40,6 +40,9 @@ function EditProfile() {
   function handleSubmit(e) {
     e.preventDefault()
 
+    const prevUsername = userObj.username
+    const prevPic = userObj.picture
+
     const newObj = {...userObj, 
         fName: inputs.fName,
         lName: inputs.lName,
@@ -51,7 +54,30 @@ function EditProfile() {
     body:JSON.stringify(newObj),
     }).then(resp=>resp.json()).then((resp)=>setuserObj(resp)).then(()=>navigate("/profile/" + userObj.id))
 
-  }
+    let match = false
+    if (inputs.username !== userObj.username || inputs.picture !== userObj.picture) {
+        fetch("http://localhost:3001/posts").then(resp=>resp.json()).then(postData=>{
+            for (let post of postData) {
+              match = false
+                for (let comment of post.comments) {
+                  console.log(comment.username, userObj.username)
+                  if (comment.username === prevUsername) {
+                    match = true
+                    comment.profPic = inputs.picture
+                    comment.username = inputs.username
+                    comment["id"] = userObj.id
+                  }
+                }        
+                if (match) {
+                  console.log(post.comments)
+                  fetch("http://localhost:3001/posts/"+post.id,{...patcherHeader,
+                    body:JSON.stringify({...post,comments:post.comments}), 
+                  })
+                }
+              }
+            }).then(resp=>resp.json(console.log(resp))).then(()=>navigate("/profile/" + userObj.id))
+        }
+    }
 
     return (
     <div id ="edit-profile-page" className="create-account-card">

@@ -21,7 +21,7 @@ function OwnPost({ post }) {
       <div className="own-post-img" onClick={handleExpand}>
         {hover ? (
           <p onMouseEnter={handleHover} className="overlay-text">
-            <BsFillHeartFill /> {post.likes + "   "}
+            <BsFillHeartFill className="icon-hover"/> {post.likes.length + "   "}
             <BsFillChatRightFill />
             {"  " + post.comments.length}{" "}
           </p>
