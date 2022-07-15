@@ -147,7 +147,7 @@ function Post({ post = {}, addcomment }) {
               }}
               value={comment}
             />
-            <Button id="post-button" onClick={handleSubmit}>
+            <Button id= {comment? "input-active":"post-button"} onClick={handleSubmit}>
               Post
             </Button>
           </InputGroup>

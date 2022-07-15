@@ -153,9 +153,11 @@ a:link {
         background-color:white;
         border:none;
         color:#87CEFA;
-        opacity: .5;
+        opacity: .3;
 }
-.input-active {
-        opacity: 1;
-        color: #3F729B;
+#input-active {
+        opacity: .9;
+        background-color:white;
+        border:none;
+        color:#1E90FF;
 }
