@@ -53,7 +53,7 @@ function Profile() {
     username,
     followers = 0,
     following = 0,
-    posts,
+    posts=[],
     id,
   } = localuserObj;
   function handleLogOut() {
@@ -177,7 +177,7 @@ function Profile() {
                 {username}
               </p>
               <p>
-                <b></b>Posts
+                <b>{posts.length}</b> Posts
               </p>
               <section style={{ marginTop: "15px" }}>
                 <b>
@@ -188,8 +188,8 @@ function Profile() {
             </Col>
             <Modal centered show={show} onHide={handleClose}>
               <ListGroup>
-                <ListGroup.Item onClick={handleLogOut}>Log Out</ListGroup.Item>
-                <Link to = {"/profile/edit"}> <ListGroup.Item>Edit Account</ListGroup.Item> </Link>
+                <ListGroup.Item className = "list-item"onClick={handleLogOut}>Log Out</ListGroup.Item>
+                <Link to = {"/profile/edit"}> <ListGroup.Item className = "list-item">Edit Account</ListGroup.Item> </Link>
               </ListGroup>
             </Modal>
             {localuserObj.id === userObj.id ? (
@@ -199,14 +199,13 @@ function Profile() {
                     <button
                       type="button"
                       className="btn btn-outline-secondary"
-                      style={{ width: "50%", marginBottom: "8px" }}
+                      style={{ width: "50%", marginBottom: "15px" }}
                     >
                       Edit
                     </button>
                   </Link>
-                  <p>
-                    <b></b>
-                    {followers.length} followers
+                  <p>                  
+                    <b>{followers.length}</b> followers
                   </p>
                 </Col>
                 <Col style={styleObj} xs={{ span: 2 }}>
@@ -216,7 +215,9 @@ function Profile() {
                       style={{ margin: "5px 0 15px 0" }}
                     />
                   </h4>
-                  <p>{following.length} following</p>
+                  <p>
+                    <b>{following.length}</b> following
+                  </p>
                 </Col>
               </>
             ) : (

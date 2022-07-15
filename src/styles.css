@@ -1,3 +1,8 @@
+
+::-webkit-scrollbar {
+        display: none;
+}
+
 .profile-picture{
         background-size:cover;
         background-position:center;
@@ -11,10 +16,14 @@ button:hover, .profile-picture:hover, .card-text:hover, .overlay-text {
 .icon-hover:hover {
         cursor: pointer;
 }
+.list-item:hover {
+        cursor: pointer;
+        background-color: whitesmoke;
+}
 #app-overall {
         font-family: Arial, Helvetica, sans-serif;
         min-height:100vh;
-        background-color:whitesmoke
+        background-color:whitesmoke;
 }
 .pic-container {
         background-size:cover;
