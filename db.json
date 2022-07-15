@@ -4,7 +4,7 @@
       "fName": "Rodger",
       "lName": "Federer",
       "birthday": "1995-01-01",
-      "username": "rodgerfederertheman",
+      "username": "rodgerfeder1",
       "password": "rodgerfederer",
       "picture": "https://images.newindianexpress.com/uploads/user/imagelibrary/2022/6/26/w1200X800/Roger_Federer_AP.jpg",
       "bioform": "I play tennis",
@@ -35,6 +35,11 @@
           "username": "drphillthethrill",
           "id": 10,
           "picture": "https://upload.wikimedia.org/wikipedia/commons/7/75/Dr.Phil2013.jpg"
+        },
+        {
+          "username": "rickymartin",
+          "id": 11,
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/d/df/Ricky_Martin_Golden_Globe_Awards_2018.jpg"
         }
       ],
       "timestamp": 1657726327783,
@@ -44,7 +49,7 @@
       "fName": "Kim",
       "lName": "Kardashian",
       "birthday": "1995-01-01",
-      "username": "kimkardashian",
+      "username": "kimkardashian1",
       "password": "testpass123",
       "picture": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
       "bioform": "I am famous",
@@ -80,6 +85,11 @@
           "username": "drphillthethrill",
           "id": 10,
           "picture": "https://upload.wikimedia.org/wikipedia/commons/7/75/Dr.Phil2013.jpg"
+        },
+        {
+          "username": "rickymartin",
+          "id": 11,
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/d/df/Ricky_Martin_Golden_Globe_Awards_2018.jpg"
         }
       ],
       "timestamp": 1657726449629,
@@ -109,6 +119,11 @@
           "username": "drphillthethrill",
           "id": 10,
           "picture": "https://upload.wikimedia.org/wikipedia/commons/7/75/Dr.Phil2013.jpg"
+        },
+        {
+          "username": "rickymartin",
+          "id": 11,
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/d/df/Ricky_Martin_Golden_Globe_Awards_2018.jpg"
         }
       ],
       "timestamp": 1657726572108,
@@ -159,6 +174,11 @@
           "username": "drphillthethrill",
           "id": 10,
           "picture": "https://upload.wikimedia.org/wikipedia/commons/7/75/Dr.Phil2013.jpg"
+        },
+        {
+          "username": "rickymartin",
+          "id": 11,
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/d/df/Ricky_Martin_Golden_Globe_Awards_2018.jpg"
         }
       ],
       "timestamp": 1657727081925,
@@ -213,7 +233,13 @@
           "picture": "https://www.history.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY3OTgwNTYxNDc2ODg3ODI1/harriet_tubman_loc_54230a.jpg"
         }
       ],
-      "followers": [],
+      "followers": [
+        {
+          "username": "rickymartin",
+          "id": 11,
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/d/df/Ricky_Martin_Golden_Globe_Awards_2018.jpg"
+        }
+      ],
       "timestamp": 1657746566744,
       "id": 6
     },
@@ -302,7 +328,13 @@
           "picture": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg"
         }
       ],
-      "followers": [],
+      "followers": [
+        {
+          "username": "rickymartin",
+          "id": 11,
+          "picture": "https://upload.wikimedia.org/wikipedia/commons/d/df/Ricky_Martin_Golden_Globe_Awards_2018.jpg"
+        }
+      ],
       "timestamp": 1657810331950,
       "id": 7
     },
@@ -339,6 +371,50 @@
       "followers": [],
       "timestamp": 1657826195207,
       "id": 10
+    },
+    {
+      "fName": "Ricky",
+      "lName": "Martin",
+      "birthday": "1883-02-04",
+      "username": "rickymartin",
+      "password": "rickymartin",
+      "picture": "https://upload.wikimedia.org/wikipedia/commons/d/df/Ricky_Martin_Golden_Globe_Awards_2018.jpg",
+      "bioform": "livin la vida loca",
+      "following": [
+        {
+          "username": "rodgerfederertheman",
+          "id": 1,
+          "picture": "https://images.newindianexpress.com/uploads/user/imagelibrary/2022/6/26/w1200X800/Roger_Federer_AP.jpg"
+        },
+        {
+          "username": "kimkardashian",
+          "id": 2,
+          "picture": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg"
+        },
+        {
+          "username": "paulwalker",
+          "id": 3,
+          "picture": "https://cdn.motor1.com/images/mgl/QyprZ/s1/daughter-of-paul-walker-suing-porsche-over-his-death.jpg"
+        },
+        {
+          "username": "findingnemo",
+          "id": 6,
+          "picture": "https://www.looper.com/img/gallery/who-voices-marlin-in-finding-nemo/l-intro-1645998159.jpg"
+        },
+        {
+          "username": "bobthebuilder",
+          "id": 4,
+          "picture": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg"
+        },
+        {
+          "username": "sillywilly",
+          "id": 7,
+          "picture": "https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Gene_Wilder_as_Willy_Wonka.jpeg/220px-Gene_Wilder_as_Willy_Wonka.jpeg"
+        }
+      ],
+      "followers": [],
+      "timestamp": 1657827744301,
+      "id": 11
     }
   ],
   "posts": [
@@ -510,8 +586,18 @@
       "likes": [
         6
       ],
-      "comments": [],
-      "id": 8
+      "comments": [
+        {
+          "comment": "looking good bob",
+          "timeStamp": 1657828493816,
+          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
+          "username": "kimkardashian1",
+          "userId": 2
+        }
+      ],
+      "id": 8,
+      "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
+      "username": "bobthebuilder"
     },
     {
       "caption": "love big rigs",
@@ -519,7 +605,8 @@
       "timeStamp": 1657746268474,
       "userId": 4,
       "likes": [
-        6
+        6,
+        2
       ],
       "comments": [],
       "id": 9
@@ -530,7 +617,8 @@
       "timeStamp": 1657746291402,
       "userId": 4,
       "likes": [
-        6
+        6,
+        2
       ],
       "comments": [
         {
@@ -543,8 +631,8 @@
           "comment": "Random text",
           "timeStamp": 1657755733159,
           "profPic": "https://images.newindianexpress.com/uploads/user/imagelibrary/2022/6/26/w1200X800/Roger_Federer_AP.jpg",
-          "username": "rodgerfederertheman",
-          "id": 1
+          "username": "rodgerfeder1",
+          "userId": 1
         },
         {
           "comment": "It is me Dr.Phil",
@@ -552,6 +640,13 @@
           "profPic": "https://upload.wikimedia.org/wikipedia/commons/7/75/Dr.Phil2013.jpg",
           "username": "drphillthethrill2",
           "userId": 10
+        },
+        {
+          "comment": "Rodger likes trucks",
+          "timeStamp": 1657827882957,
+          "profPic": "https://images.newindianexpress.com/uploads/user/imagelibrary/2022/6/26/w1200X800/Roger_Federer_AP.jpg",
+          "username": "rodgerfeder1",
+          "userId": 1
         }
       ],
       "id": 10,

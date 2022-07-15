@@ -24,7 +24,7 @@ function Home() {
       timeStamp: timeofCreation,
       profPic: userObj.picture,
       username: userObj.username,
-      userId: userObj.id
+      userId: userObj.id,
     });
     fetch("http://localhost:3001/posts/" + submitPost.id, {
       ...patcherHeader,
