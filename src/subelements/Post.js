@@ -99,10 +99,10 @@ function Post({ post = {}, addcomment }) {
     <>
       <Card className="mx-auto m-3 w-50 post-box-shadow">
         <Card.Header style={{ backgroundColor: "white" }}>
-          <div className="d-flex center-text post-header icon-hover">
+          <div className="d-flex center-text post-header">
             <div
               onClick={() => navigate("/profile/" + post.userId)}
-              className="profile-picture"
+              className="profile-picture icon-hover"
               style={{
                 width: "40px",
                 height: "40px",
