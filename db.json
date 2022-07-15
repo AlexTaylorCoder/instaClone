@@ -4,7 +4,7 @@
       "fName": "Rodger",
       "lName": "Federer",
       "birthday": "1995-01-01",
-      "username": "rodgerfederer",
+      "username": "roddyricher",
       "password": "rodgerfederer",
       "picture": "https://www.tennisworldusa.org/imgb/119364/roger-federer-i-still-don-t-know-that-in-advance-.jpg",
       "bioform": "I play tennis",
@@ -25,7 +25,11 @@
           "username": "findingnemo",
           "id": 6,
           "picture": "https://www.looper.com/img/gallery/who-voices-marlin-in-finding-nemo/l-intro-1645998159.jpg"
-        }
+
+        },
+
+
+
       ],
       "timestamp": 1657726327783,
       "id": 1
@@ -34,7 +38,7 @@
       "fName": "Kim",
       "lName": "Kardashian",
       "birthday": "1995-01-01",
-      "username": "kimkardashian",
+      "username": "kimmyK",
       "password": "testpass123",
       "picture": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
       "bioform": "I am famous",
@@ -60,6 +64,11 @@
           "username": "findingnemo",
           "id": 6,
           "picture": "https://www.looper.com/img/gallery/who-voices-marlin-in-finding-nemo/l-intro-1645998159.jpg"
+        },
+        {
+          "username": "rodgerfederertheman",
+          "id": 1,
+          "picture": "https://images.newindianexpress.com/uploads/user/imagelibrary/2022/6/26/w1200X800/Roger_Federer_AP.jpg"
         }
       ],
       "timestamp": 1657726449629,
@@ -183,7 +192,9 @@
           "picture": "https://www.history.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY3OTgwNTYxNDc2ODg3ODI1/harriet_tubman_loc_54230a.jpg"
         }
       ],
+
       "followers": [],
+
       "timestamp": 1657746566744,
       "id": 6
     },
@@ -291,10 +302,13 @@
           "picture": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg"
         }
       ],
-      "followers": [],
+      "followers": [
+
+      ],
       "timestamp": 1657810331950,
       "id": 7
     }
+   
   ],
   "posts": [
     {
@@ -317,7 +331,7 @@
       ],
       "id": 1,
       "profPic": "https://www.tennisworldusa.org/imgb/119364/roger-federer-i-still-don-t-know-that-in-advance-.jpg",
-      "username": "rodgerfederer"
+      "username": "roddyricher"
     },
     {
       "caption": "ball smacker",
@@ -328,52 +342,12 @@
         4,
         6
       ],
+
       "comments": [
-        {
-          "comment": "Can I volunteer?",
-          "timeStamp": 1657889849226,
-          "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
-          "username": "bobthebuilder69"
-        }
-      ],
-      "id": 2,
-      "profPic": "https://www.tennisworldusa.org/imgb/119364/roger-federer-i-still-don-t-know-that-in-advance-.jpg",
-      "username": "rodgerfederer"
-    },
-    {
-      "caption": "look at me",
-      "photo": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-1178072900.jpg?crop=0.669xw:1.00xh;0.289xw,0&resize=640:*",
-      "timeStamp": 1657726476515,
-      "userId": 2,
-      "likes": [
-        4,
-        6
-      ],
-      "comments": [
-        {
-          "comment": "U up?",
-          "timeStamp": 1657727197197,
-          "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
-          "username": "bobthebuilder69",
-          "id": 4
-        },
-        {
-          "comment": "naaahhh just playin",
-          "timeStamp": 1657740832495,
-          "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
-          "username": "bobthebuilder69",
-          "id": 4
-        },
-        {
-          "comment": "hey",
-          "timeStamp": 1657822242160,
-          "profPic": "https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Gene_Wilder_as_Willy_Wonka.jpeg/220px-Gene_Wilder_as_Willy_Wonka.jpeg",
-          "username": "sillywilly"
-        }
       ],
       "id": 3,
       "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
-      "username": "kimkardashian"
+      "username": "kimmyK"
     },
     {
       "caption": "we are famous",
@@ -385,22 +359,10 @@
         6
       ],
       "comments": [
-        {
-          "comment": "hey ladies",
-          "timeStamp": 1657742469611,
-          "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
-          "username": "bobthebuilder"
-        },
-        {
-          "comment": "which one of you fine ladies can i take out on a date? ;)",
-          "timeStamp": 1657836574720,
-          "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
-          "username": "bobthebuilder"
-        }
       ],
       "id": 4,
       "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
-      "username": "kimkardashian"
+      "username": "kimmyK"
     },
     {
       "caption": "so hot right now",
@@ -420,12 +382,6 @@
         {
           "comment": "nice",
           "timeStamp": 1657742219338,
-          "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
-          "username": "bobthebuilder"
-        },
-        {
-          "comment": "you looking so hot brudda",
-          "timeStamp": 1657836521227,
           "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
           "username": "bobthebuilder"
         }
@@ -472,7 +428,7 @@
       ],
       "id": 7,
       "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
-      "username": "kimkardashian"
+      "username": "kimmyK"
     },
     {
       "caption": "gangs all here",
@@ -482,8 +438,18 @@
       "likes": [
         6
       ],
-      "comments": [],
-      "id": 8
+      "comments": [
+        {
+          "comment": "looking good bob",
+          "timeStamp": 1657828493816,
+          "profPic": "https://ca-times.brightspotcdn.com/dims4/default/779e2c1/2147483647/strip/true/crop/3500x2366+0+0/resize/1486x1005!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F6c%2F5c%2Fd7fe5c9c4359b975ba35e3595489%2Fsnl-kim-kardashian-95156.jpg",
+          "username": "kimkardashian1",
+          "userId": 2
+        }
+      ],
+      "id": 8,
+      "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
+      "username": "bobthebuilder"
     },
     {
       "caption": "love big rigs",
@@ -491,7 +457,6 @@
       "timeStamp": 1657746268474,
       "userId": 4,
       "likes": [
-        6
       ],
       "comments": [],
       "id": 9
@@ -502,7 +467,6 @@
       "timeStamp": 1657746291402,
       "userId": 4,
       "likes": [
-        6
       ],
       "comments": [
         {
@@ -512,10 +476,11 @@
           "username": "findingnemo"
         },
         {
-          "comment": "Random text",
-          "timeStamp": 1657755733159,
-          "profPic": "https://www.tennisworldusa.org/imgb/119364/roger-federer-i-still-don-t-know-that-in-advance-.jpg",
-          "username": "rodgerfederer"
+          "comment": "Rodger likes trucks",
+          "timeStamp": 1657827882957,
+          "profPic": "https://images.newindianexpress.com/uploads/user/imagelibrary/2022/6/26/w1200X800/Roger_Federer_AP.jpg",
+          "username": "rodgerfeder1",
+          "userId": 1
         }
       ],
       "id": 10,
