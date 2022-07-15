@@ -328,8 +328,17 @@
         4,
         6
       ],
-      "comments": [],
-      "id": 2
+      "comments": [
+        {
+          "comment": "Can I volunteer?",
+          "timeStamp": 1657889849226,
+          "profPic": "https://i.ytimg.com/vi/8kFfHnre85o/maxresdefault.jpg",
+          "username": "bobthebuilder69"
+        }
+      ],
+      "id": 2,
+      "profPic": "https://www.tennisworldusa.org/imgb/119364/roger-federer-i-still-don-t-know-that-in-advance-.jpg",
+      "username": "rodgerfederer"
     },
     {
       "caption": "look at me",

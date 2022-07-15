@@ -20,9 +20,11 @@ function Post({ post = {}, addcomment }) {
 
   function handleSubmit() {
     console.log(comment);
-    if (comment) addcomment(post, comment);
-    setComment("");
-    setToalComments((comments) => comments + 1);
+    if (comment) {
+      addcomment(post, comment);
+      setComment("");
+      setToalComments((comments) => comments + 1);
+    }
   }
 
   function onExpand(e) {
