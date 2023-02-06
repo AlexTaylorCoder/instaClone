@@ -13,3 +13,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+<img src="https://gyazo.com/0824ef62dbfdd3973ebf97902b93f3f8"/>
