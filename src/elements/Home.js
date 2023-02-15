@@ -3,6 +3,7 @@ import { UserContext } from "../customHooks/userObj";
 import "../styles.css";
 import Post from "../subelements/Post";
 import NavigationBar from "./Navbar";
+import { useNavigate } from "react-router-dom";
 
 const patcherHeader = {
   method: "PATCH",
@@ -13,7 +14,15 @@ const patcherHeader = {
 
 function Home() {
   const [posts, setPosts] = useState([]);
-  const { userObj, setuserObj } = useContext(UserContext);
+  const { userObj } = useContext(UserContext);
+
+  const navigate = useNavigate();
+
+  if (!userObj || JSON.stringify(userObj) === "{}") {
+    navigate("/login")
+
+    return <h1>Redirecting...</h1>
+  }
 
   function addcomment(submitPost, comment) {
     const date = new Date();
@@ -32,11 +41,11 @@ function Home() {
     });
   }
   function getPostsGlobalUserFollows() {
-    setPosts([]);
-    getPosts(userObj.following.length - 1);
+    getPosts(userObj.following?.length - 1);
   }
-
-  useEffect(() => {
+  
+  //eslint-disable-next-line
+  useEffect(() => { 
     getPostsGlobalUserFollows();
   }, []);
 
@@ -45,14 +54,13 @@ function Home() {
       setPosts((posts) => {
         let tempPosts = [...posts];
 
-        tempPosts.sort(function (a, b) {
+        tempPosts.sort((a, b) => {
           if (a.timeStamp > b.timeStamp) {
             return -1;
           }
           if (a.timeStamp < b.timeStamp) {
             return 1;
           }
-
           // names must be equal
           return 0;
         });

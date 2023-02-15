@@ -137,6 +137,10 @@ a:link {
         align-items:center;
         padding:30px
 }
+
+.heart:hover {
+        transform: scale(1.2);
+}
 .login-in-card {
         position: absolute;
         left: 50%;

@@ -11,13 +11,19 @@ import { HiOutlineSwitchHorizontal } from "react-icons/hi";
 import { CgProfile } from "react-icons/cg";
 import { BsGearWide } from "react-icons/bs";
 import { useLocation } from "react-router-dom";
-import "../styles.css";
-import { useContext } from "react";
+
 import { UserContext } from "../customHooks/userObj";
+import { useContext } from "react";
+
+import "../styles.css";
+
 import { Popover, OverlayTrigger, ListGroup } from "react-bootstrap";
 
-function NavigationBar({ userObj }) {
+function NavigationBar() {
   const location = useLocation();
+
+  const { userObj } = useContext(UserContext);
+
 
   function handleDropDown() {
     console.log("e");

@@ -10,6 +10,7 @@ import { FaChevronLeft } from "react-icons/fa";
 import NavigationBar from "./Navbar";
 
 function PostsPage({ userObj }) {
+
   const [show, setShow] = useState(false);
   const [imageUrl, setImageUrl] = useState("");
   const [caption, setCaption] = useState("");
@@ -31,6 +32,8 @@ function PostsPage({ userObj }) {
       photo: imageUrl,
       timeStamp: Date.now(),
       userId: userObj.id,
+      profPic: userObj.picture,
+      username: userObj.username,
       likes: [],
       comments: [],
     };

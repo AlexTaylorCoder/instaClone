@@ -1,7 +1,6 @@
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 
 import { useContext, useEffect } from "react";
-import { useLocalStorage } from "./customHooks/uselocalstorage";
 
 import CreateAccount from "./elements/Createaccount";
 import Login from "./elements/Login";
@@ -23,7 +22,6 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(location);
     if (!userObj || JSON.stringify(userObj) === "{}") {
       navigate("/login");
     } else if (location.pathname.includes("/profile")) {

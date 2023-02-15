@@ -1,16 +1,18 @@
+//See if all args match
+// Need to speed up algorithm if possible
+// currently O(n * args) complexity 
 
-function checkDB(userUrl,...args) {
+function checkDB(userUrl,args) {
+    const objLength = Object.keys(args).length 
     return fetch(userUrl).then(resp=>resp.json()).then(userData=>{
             const filteredUsers = userData.filter(user=> {
-            for (let arg of args) {
-                for (let prop in arg) {
-                    if (arg[prop]===user[prop]) {
-                        return true;
+                let count = 0
+                for (let prop in args) {
+                    if (args[prop] === user[prop]) {
+                        count += 1
                     }
                 }
-            }
-            return false;
-
+                return count === objLength
         })
         if (filteredUsers.length === 0) return false
         return filteredUsers[0]

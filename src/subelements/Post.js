@@ -13,7 +13,7 @@ function Post({ post = {}, addcomment }) {
   const [comment, setComment] = useState("");
   const [modalShow, setModalShow] = useState(false);
   const [likeButton, setLikeButton] = useState(false);
-  const { userObj, setuserObj } = useContext(UserContext);
+  const { userObj } = useContext(UserContext);
   const [totalLikes, setTotalLikes] = useState(post.likes.length);
   const [likeArray, setLikeArray] = useState(post.likes);
   const [totalComments, setToalComments] = useState(post.comments.length);
@@ -41,7 +41,7 @@ function Post({ post = {}, addcomment }) {
     } else {
       setLikeButton(false);
     }
-  }, []);
+  }, [likeArray]);
 
   function handleLike() {
     let tempPostLikes = [...likeArray];
@@ -117,9 +117,9 @@ function Post({ post = {}, addcomment }) {
         <div className="d-flex">
           <h4 className="p-2 icon-hover">
             {!likeButton ? (
-              <BsHeart onClick={handleLike} />
+              <BsHeart className="heart" onClick={handleLike} />
             ) : (
-              <BsHeartFill onClick={handleUnlike} className="text-danger" />
+              <BsHeartFill onClick={handleUnlike} className="text-danger heart" />
             )}
           </h4>
           <h4 className="p-2 icon-hover">

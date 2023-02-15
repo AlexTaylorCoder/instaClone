@@ -1,9 +1,8 @@
-import { Modal, Button, Container, Row, Col } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import PostPopUpComment from "./PostPopUpComment";
-import { Card } from "react-bootstrap";
-import { InputGroup } from "react-bootstrap";
 
 function PostPopup({ show, onHide, post }) {
+
   const commentList = post.comments.map((comment, index) => (
     <PostPopUpComment
       key={index}
@@ -18,6 +17,7 @@ function PostPopup({ show, onHide, post }) {
       <div className="d-flex w-100" style={{ height: "75vh" }}>
         <div className="d-flex w-50 h-auto bg-black">
           <img
+            alt={post.caption}
             src={post.photo}
             className="w-100 h-auto"
             style={{ objectFit: "contain" }}

@@ -3,18 +3,41 @@ import { Card } from "react-bootstrap";
 
 import handleLogin from "../helperFunc/handleLogin";
 import { useLocalStorage } from "../customHooks/uselocalstorage";
+import { useEffect, useState } from "react";
 
 function Login({ validCallback }) {
   const [username, setUsername] = useLocalStorage("username", "");
   const [password, setPassword] = useLocalStorage("password", "");
 
+  const [isSuccess, setSuccess] = useState(true)
+
   function handleSubmit(e) {
     e.preventDefault();
-    handleLogin(username, password).then(validCallback);
+    handleLogin(username, password).then(data => {
+      if (!data) {
+        setSuccess(false)
+      }
+      else {
+        validCallback(data)
+      }
+    }
+      );
   }
+
+  //Countdown timer to eventually change back to login after use fails authentication
+  useEffect(()=> {
+    const timer = setTimeout(() => {
+      setSuccess(true)
+    }, 2000);
+    return () => clearInterval(timer);
+
+
+  },[isSuccess])
   return (
-    <div id="loginbox" className="login-in-card">
-      <Card className="post-box-shadow">
+    <div className="login-in-card">
+
+      {/* <img src="https://www.save-insta.com/wp-content/uploads/2021/02/click-on-the-three-dots-in-profile-insta-ios.png"/> */}
+      <Card style={{padding: "80px 20px"}} className="post-box-shadow">
         <h1 className="center-insta-logo">
           <img
             width="auto"
@@ -51,8 +74,8 @@ function Login({ validCallback }) {
             <input
               type="submit"
               className="btn btn-primary btn-sm"
-              value="Login"
-            />
+              value= {isSuccess ? "Login" : "Failed!"}
+            /> 
           </form>
         </Card.Body>
       </Card>

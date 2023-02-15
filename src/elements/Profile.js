@@ -1,18 +1,15 @@
 import { Button } from "react-bootstrap";
 import OwnPostContainer from "../subelements/Ownpostcontainer";
-import OwnPost from "../subelements/Ownpost";
 import NavigationBar from "./Navbar";
 import { Row, Col, Container, ListGroup, Modal } from "react-bootstrap";
 import { BsGearWide } from "react-icons/bs";
 import { useState, useContext, useEffect } from "react";
 import { UserContext } from "../customHooks/userObj";
-// import checkDB from "../helperFunc/checkDB";
+
 import {
   Link,
-  Navigate,
   useNavigate,
   useParams,
-  useRoute,
 } from "react-router-dom";
 const styleObj = {
   display: "flex",
@@ -25,26 +22,33 @@ function Profile() {
   const params = useParams();
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
+
+  //handle modal
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [localuserObj, setlocaluserObj] = useState({});
   const [isFollowing, setIsFollowing] = useState(false);
+
+  //Fetch user data
+  //Could be made more efficient user's own profile by checking if context id (user id) equals params id (url id)
   useEffect(() => {
-    fetch("http://localhost:3001/users/" + params.id)
-      .then((resp) => resp.json())
-      .then((data) => {
-        setlocaluserObj(data);
-        if (
-          userObj.following.filter((e) => {
-            return e.id === data.id;
-          }).length > 0
-        ) {
-          setIsFollowing(true);
-        } else {
-          setIsFollowing(false);
-        }
-      });
-  }, []);
+    if (params.id !== userObj.id) {
+      fetch("http://localhost:3001/users/" + params.id)
+        .then((resp) => resp.json())
+        .then((data) => {
+          setlocaluserObj(data);
+          if (
+            userObj.following.filter((e) => {
+              return e.id === data.id;
+            }).length > 0
+          ) {
+            setIsFollowing(true);
+          } else {
+            setIsFollowing(false);
+          }
+        });
+    }
+  }, [params.id]);
   const {
     fName,
     bioform,
@@ -54,7 +58,6 @@ function Profile() {
     followers = 0,
     following = 0,
     posts=[],
-    id,
   } = localuserObj;
   function handleLogOut() {
     handleClose();
@@ -157,6 +160,7 @@ function Profile() {
         setlocaluserObj(tempUserObj);
       });
   }
+  console.log(params.id, userObj.id)
   return (
     <>
       <NavigationBar userObj={userObj} />
@@ -165,6 +169,7 @@ function Profile() {
           <Row>
             <Col sm={{ span: 3 }}>
               <img
+                alt = "Profile"
                 className="fit-img"
                 width={150}
                 height={150}
@@ -192,7 +197,8 @@ function Profile() {
                 <Link to = {"/profile/edit"}> <ListGroup.Item className = "list-item">Edit Account</ListGroup.Item> </Link>
               </ListGroup>
             </Modal>
-            {localuserObj.id === userObj.id ? (
+            {/* Param is string b/c from url userobj is int so compared with == */}
+            {params.id == userObj.id ? (
               <>
                 <Col style={styleObj} xs={{ span: 2 }}>
                   <Link to="/profile/edit">
@@ -231,7 +237,7 @@ function Profile() {
                       onClick={handleFollow}
                     >
                       follow
-                    </Button>
+                    </Button> 
                   ) : (
                     <Button
                       style={{ width: "50%", marginBottom: "8px" }}
