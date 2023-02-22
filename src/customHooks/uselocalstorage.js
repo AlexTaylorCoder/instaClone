@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 function getLocalStorageValue(key) {
+    // Handle if empty object
     const storedValue = localStorage.getItem(key);
     try {
+      //if JSON value turn to dict, else do nothing
       return JSON.parse(storedValue);
     } catch {}
     return storedValue;
@@ -13,6 +15,7 @@ function getLocalStorageValue(key) {
   }
   
   export function useLocalStorage(key, initialValue = null) {
+    //Get value from localstorage first, if null get intial value
     const storedValue = getLocalStorageValue(key);
     const [state, setState] = useState(storedValue || initialValue);
   
@@ -25,9 +28,10 @@ function getLocalStorageValue(key) {
         const newValue = getLocalStorageValue(key);
         setState(newValue);
       }
-  
+      // Adds to when mounts
       window.addEventListener("storage", handleChange);
-  
+      
+      // Removes when dismounts
       return function cleanup() {
         window.removeEventListener("storage", handleChange);
       };

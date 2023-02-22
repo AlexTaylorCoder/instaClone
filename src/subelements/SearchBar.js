@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Form, Dropdown } from "react-bootstrap";
 import SearchResult from "./SearchResult";
 
-import { FiSearch } from "react-icons/fi";
-
 function SearchBar({ userObj }) {
   const [search, setSearch] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
@@ -19,7 +17,7 @@ function SearchBar({ userObj }) {
   function handleSearch(e) {
     setSearch(e.target.value);
   }
-  const usersToInclude = users.filter(function (user) {
+  const usersToInclude = users.filter( user => {
     const firstAndLast = user.fName + " " + user.lName;
 
     if (user.id === userObj.id) {
@@ -38,6 +36,7 @@ function SearchBar({ userObj }) {
 
   const searchResuts = usersToInclude.map(
     function (user) {
+      console.log(this)
       if (this.count > 6) {
         return null;
       }

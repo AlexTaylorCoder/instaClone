@@ -31,8 +31,10 @@ function Post({ post = {}, addcomment }) {
     setModalShow(true);
   }
 
+  //Set likes
   useEffect(() => {
     if (
+      //Check if liked post
       likeArray.filter((e) => {
         return e === userObj.id;
       }).length > 0
@@ -45,11 +47,13 @@ function Post({ post = {}, addcomment }) {
 
   function handleLike() {
     let tempPostLikes = [...likeArray];
+    console.log(tempPostLikes)
 
     tempPostLikes.push(userObj.id);
 
     const postObj = { likes: tempPostLikes };
 
+    //Handle like, like is represented by each user's id. Total likes = length
     fetch("http://localhost:3001/posts/" + post.id, {
       method: "PATCH",
       headers: {
@@ -67,6 +71,7 @@ function Post({ post = {}, addcomment }) {
 
   function removeItemOnce(arr, value) {
     var index = arr.indexOf(value);
+    //If index if found remove
     if (index > -1) {
       arr.splice(index, 1);
       return arr;

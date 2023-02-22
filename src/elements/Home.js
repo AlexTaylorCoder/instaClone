@@ -40,14 +40,14 @@ function Home() {
       body: JSON.stringify({ ...submitPost }),
     });
   }
-  function getPostsGlobalUserFollows() {
-    getPosts(userObj.following?.length - 1);
-  }
-  
   //eslint-disable-next-line
   useEffect(() => { 
     getPostsGlobalUserFollows();
   }, []);
+
+  function getPostsGlobalUserFollows() {
+    getPosts(userObj.following?.length - 1);
+  }
 
   function getPosts(i) {
     if (i < 0) {

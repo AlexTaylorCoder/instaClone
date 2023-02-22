@@ -37,6 +37,7 @@ function Profile() {
         .then((resp) => resp.json())
         .then((data) => {
           setlocaluserObj(data);
+          //If within currently viewing user followers toggle button to true
           if (
             userObj.following.filter((e) => {
               return e.id === data.id;
@@ -49,6 +50,7 @@ function Profile() {
         });
     }
   }, [params.id]);
+  //Destructure from local obj
   const {
     fName,
     bioform,
@@ -59,11 +61,13 @@ function Profile() {
     following = 0,
     posts=[],
   } = localuserObj;
+
+  //Clear both userObj ---> login page
   function handleLogOut() {
     handleClose();
     setuserObj({});
-    navigate("/login");
     setlocaluserObj({});
+    navigate("/login");
   }
 
   function handleFollow() {
@@ -115,6 +119,7 @@ function Profile() {
       });
   }
   function handleUnfollow() {
+    //Remove from followers and following
     const currentUserArray = userObj.following.filter((follow) => {
       if (follow.id === localuserObj.id) {
         return false;
